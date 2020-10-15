@@ -7,14 +7,14 @@
     ],
     "tools": null,
     "languages": [
-      ["Common, Dwarvish", "Common, Elvish", "Common, Giant", "Common, Gnomish", "Common, Goblin", "Common, Halfling", "Common, Orc", "Dwarvish, Common", "Dwarvish, Elvish", "Dwarvish, Giant", "Dwarvish, Gnomish", "Dwarvish, Goblin", "Dwarvish, Halfling", "Dwarvish, Orc", "Elvish, Common", "Elvish, Dwarvish", "Elvish, Giant", "Elvish, Gnomish", "Elvish, Goblin", "Elvish, Halfling", "Elvish, Orc", "Giant, Common", "Giant, Dwarvish", "Giant, Elvish", "Giant, Gnomish", "Giant, Goblin", "Giant, Halfling", "Giant, Orc", "Gnomish, Common", "Gnomish, Dwarvish", "Gnomish, Elvish", "Gnomish, Giant", "Gnomish, Goblin", "Gnomish, Halfling", "Gnomish, Orc", "Goblin, Common", "Goblin, Dwarvish", "Goblin, Elvish", "Goblin, Giant", "Goblin, Gnomish", "Goblin, Halfling", "Goblin, Orc", "Halfling, Common", "Halfling, Dwarvish", "Halfling, Elvish", "Halfling, Giant", "Halfling, Gnomish", "Halfling, Goblin", "Halfling, Orc", "Orc, Common", "Orc, Dwarvish", "Orc, Elvish", "Orc, Giant", "Orc, Gnomish", "Orc, Goblin", "Orc, Halfling"]
+      [2, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
     "equipment": [
-      ["Holy Symbol"],
+      "Holy Symbol",
       ["Prayer Book", "Prayer Wheel"],
-      ["5x Stick of Incense"],
-      ["Vestments"],
-      ["Common Clothes"]
+      "5x Stick of Incense",
+      "Vestments",
+      "Common Clothes"
     ],
     "money": 1500,
     "extra": null,
@@ -30,14 +30,14 @@
       "Sleight of Hand"
     ],
     "tools": [
-      ["Disguise Kit"],
-      ["Forgery Kit"]
+      "Disguise Kit",
+      "Forgery Kit"
     ],
     "languages": null,
     "equipment": [
-      ["Fine Clothes"],
-      ["Disguise Kit"],
-      ["1x Stoppered Bottles filled with colored liquid", "A set of weighted dice", "A deck of marked cards", "A signet ring of an imaginary duke"]
+      "Fine Clothes",
+      "Disguise Kit",
+      [1, "1x Stoppered Bottles filled with colored liquid", "A set of weighted dice", "A deck of marked cards", "A signet ring of an imaginary duke"]
     ],
     "money": 1500,
     "extra": [
@@ -63,13 +63,13 @@
       "Stealth"
     ],
     "tools": [
-      ["Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
-      ["Thieves' Tools"]
+      [1, "Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
+      "Thieves' Tools"
     ],
     "languages": null,
     "equipment": [
-      ["Crowbar"],
-      ["Dark Common Clothes with hood"]
+      "Crowbar",
+      "Dark Common Clothes with hood"
     ],
     "money": 1500,
     "extra": [
@@ -96,14 +96,14 @@
       "Performance"
     ],
     "tools": [
-      ["Disguise Kit"],
-      ["Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"]
+      "Disguise Kit",
+      [1, "Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"]
     ],
     "languages": null,
     "equipment": [
-      ["Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"],
-      ["A love letter from an admirer", "A lock of hair from an admirer", "A trinket from an admirer"],
-      ["Costume"]
+      [1, "Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"],
+      [1, "A love letter from an admirer", "A lock of hair from an admirer", "A trinket from an admirer"],
+      "Costume"
     ],
     "money": 1500,
     "extra": [
@@ -132,15 +132,15 @@
       "Survival"
     ],
     "tools": [
-      ["Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
-      ["Vehicles (land)"]
+      [1, "Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
+      "Vehicles (land)"
     ],
     "languages": null,
     "equipment": [
-      ["Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
-      ["Shovel"],
-      ["Iron pot"],
-      ["Common clothes"]
+      [1, "Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
+      "Shovel",
+      "Iron pot",
+      "Common clothes"
     ],
     "money": 1000,
     "extra": [
@@ -169,15 +169,15 @@
       "Persuasion"
     ],
     "tools": [
-      ["Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"]
+      [1, "Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"]
     ],
     "languages": [
-      ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
+      [1, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
     "equipment": [
-      ["Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
-      ["A letter of introduction from your guild"],
-      ["Traveler's clothes"]
+      [1, "Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
+      "A letter of introduction from your guild",
+      "Traveler's clothes"
     ],
     "money": 1500,
     "extra": [
@@ -219,13 +219,13 @@
       "Herbalism Kit"
     ],
     "languages": [
-      ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
+      [1, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
     "equipment": [
-      ["A scroll stuffed full of notes from your studies", "A scroll stuffed full of notes from your prayers"],
-      ["Winter blanket"],
-      ["Common clothes"],
-      ["Herbalism kit"]
+      [1, "A scroll stuffed full of notes from your studies", "A scroll stuffed full of notes from your prayers"],
+      "Winter blanket",
+      "Common clothes",
+      "Herbalism kit"
     ],
     "money": 500,
     "extra": [
@@ -252,15 +252,15 @@
       "Persuasion"
     ],
     "tools": [
-      ["Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"]
+      [1, "Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"]
     ],
     "languages": [
-      ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
+      [1, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
     "equipment": [
-      ["Fine clothes"],
-      ["Signet ring"],
-      ["Scroll of pedigree"]
+      "Fine clothes",
+      "Signet ring",
+      "Scroll of pedigree"
     ],
     "money": 2500,
     "extra": null,
@@ -276,15 +276,15 @@
       "Survival"
     ],
     "tools": [
-      ["Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"]
+      [1, "Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"]
     ],
     "languages": [
-      ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
+      [1, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
     "equipment": [
-      ["Staff"],
-      ["Hunting trap"],
-      ["Trophy from an animal you killed"]
+      "Staff",
+      "Hunting trap",
+      "Trophy from an animal you killed"
     ],
     "money": 1000,
     "extra": [
@@ -315,14 +315,14 @@
     ],
     "tools": null,
     "languages": [
-      ["Common, Dwarvish", "Common, Elvish", "Common, Giant", "Common, Gnomish", "Common, Goblin", "Common, Halfling", "Common, Orc", "Dwarvish, Common", "Dwarvish, Elvish", "Dwarvish, Giant", "Dwarvish, Gnomish", "Dwarvish, Goblin", "Dwarvish, Halfling", "Dwarvish, Orc", "Elvish, Common", "Elvish, Dwarvish", "Elvish, Giant", "Elvish, Gnomish", "Elvish, Goblin", "Elvish, Halfling", "Elvish, Orc", "Giant, Common", "Giant, Dwarvish", "Giant, Elvish", "Giant, Gnomish", "Giant, Goblin", "Giant, Halfling", "Giant, Orc", "Gnomish, Common", "Gnomish, Dwarvish", "Gnomish, Elvish", "Gnomish, Giant", "Gnomish, Goblin", "Gnomish, Halfling", "Gnomish, Orc", "Goblin, Common", "Goblin, Dwarvish", "Goblin, Elvish", "Goblin, Giant", "Goblin, Gnomish", "Goblin, Halfling", "Goblin, Orc", "Halfling, Common", "Halfling, Dwarvish", "Halfling, Elvish", "Halfling, Giant", "Halfling, Gnomish", "Halfling, Goblin", "Halfling, Orc", "Orc, Common", "Orc, Dwarvish", "Orc, Elvish", "Orc, Giant", "Orc, Gnomish", "Orc, Goblin", "Orc, Halfling"]
+      [2, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
     "equipment": [
-      ["bottle of black ink"],
-      ["quill"],
-      ["small knife"],
-      ["A letter from a dead colleague posing a question you have not yet been able to answer"],
-      ["Common clothes"]
+      "bottle of black ink",
+      "quill",
+      "small knife",
+      "A letter from a dead colleague posing a question you have not yet been able to answer",
+      "Common clothes"
     ],
     "money": 1000,
     "extra": [
@@ -349,15 +349,15 @@
       "Perception"
     ],
     "tools": [
-      ["Navigator's tools"],
-      ["Vehicles (water)"]
+      "Navigator's tools",
+      "Vehicles (water)"
     ],
     "languages": null,
     "equipment": [
-      ["belaying pin (club)"],
-      ["50 feet of silk rope"],
-      ["A mummified goblin hand", "A piece of crystal that faintly glows in the moonlight", "A gold coin minted in an unknown land", "A diary written in a language you don’t know", "A brass ring that never tarnishes", "An old chess piece made from glass", "A pair of knucklebone dice, each with a skull symbol on the side that would normally show six pips", "A small idol depicting a nightmarish creature that gives you unsettling dreams when you sleep near it", "A rope necklace from which dangles four mummified elf fingers", "The deed for a parcel of land in a realm unknown to you", "A 1-ounce block made from an unknown material", "A small cloth doll skewered with needles", "A tooth from an unknown beast", "An enormous scale, perhaps from a dragon", "A bright green feather", "An old divination card bearing your likeness", "A glass orb filled with moving smoke", "A 1-pound egg with a bright red shell", "A pipe that blows bubbles", "A glass jar containing a weird bit of flesh floating in pickling fluid", "A tiny gnome-crafted music box that plays a song you dimly remember from your childhood", "A small wooden statuette of a smug halfling", "A brass orb etched with strange runes", "A multicolored stone disk", "A tiny silver icon of a raven", "A bag containing forty-seven humanoid teeth, one of which is rotten", "A shard of obsidian that always feels warm to the touch", "A dragon's bony talon hanging from a plain leather necklace", "A pair of old socks", "A blank book whose pages refuse to hold ink, chalk, graphite, or any other substance or marking", "A silver badge in the shape of a five-pointed star", "A knife that belonged to a relative", "A glass vial filled with nail clippings", "A rectangular metal device with two tiny metal cups on one end that throws sparks when wet", "A white, sequined glove sized for a human", "A vest with one hundred tiny pockets", "A small, weightless stone block", "A tiny sketch portrait of a goblin", "An empty glass vial that smells of perfume when opened", "A gemstone that looks like a lump of coal when examined by anyone but you", "A scrap of cloth from an old banner", "A rank insignia from a lost legionnaire", "A tiny silver bell without a clapper", "A mechanical canary inside a gnome-crafted lamp", "A tiny chest carved to look like it has numerous feet on the bottom", "A dead sprite inside a clear glass bottle", "A metal can that has no opening but sounds as if it is filled with liquid", "A metal can that has no opening but sounds as if it is filled with sand", "A metal can that has no opening but sounds as if it is filled with broken glass", "A glass orb filled with water, in which swims a clockwork goldfish", "A silver spoon with an M engraved on the handle", "A whistle made from gold-colored wood", "A dead scarab beetle the size of your hand", "Two toy soldiers, one with a missing head", "A small box filled with different-sized buttons", "A candle that can’t be lit", "A tiny cage with no door", "An old key", "An indecipherable treasure map", "A hilt from a broken sword", "A rabbit’s foot", "A glass eye", "A cameo carved in the likeness of a hideous person", "A silver skull the size of a coin", "An alabaster mask", "A pyramid of sticky black incense that smells very bad", "A nightcap that, when worn, gives you pleasant dreams", "A single caltrop made from bone", "A gold monocle frame without the lens", "A 1-inch cube, each side painted a different color", "A crystal knob from a door", "A small packet filled with pink dust", "A fragment of a beautiful song, written as musical notes on two pieces of parchment", "A silver teardrop earring made from a real teardrop", "The shell of an egg painted with scenes of human misery in disturbing detail", "A fan that, when unfolded, shows a sleeping cat", "A set of bone pipes", "A four-leaf clover pressed inside a book discussing manners and etiquette", "A sheet of parchment upon which is drawn a complex mechanical contraption", "An ornate scabbard that fits no blade you have found so far", "An invitation to a party where a murder happened", "A bronze pentacle with an etching of a rat's head in its center", "A purple handkerchief embroidered with the name of a powerful archmage", "Half of a floorplan for a temple, castle, or some other structure", "A bit of folded cloth that, when unfolded, turns into a stylish cap", "A receipt of deposit at a bank in a far-flung city", "A diary with seven missing pages", "An empty silver snuffbox bearing an inscription on the surface that says \"dreams\"", "An iron holy symbol devoted to an unknown god", "A book that tells the story of a legendary hero's rise and fall, with the last chapter missing", "A vial of dragon blood", "An ancient arrow of elven design", "A needle that never bends", "An ornate brooch of dwarven design", "An empty wine bottle bearing a pretty label that says, \"The Wizard of Wines Winery, Red Dragon Crush, 331422-W\"", "A mosaic tile with a multicolored, glazed surface", "A petrified mouse", "A black pirate flag adorned with a dragon's skull and crossbones", "A tiny mechanical crab or spider that moves about when it’s not being observed", "A glass jar containing lard with a label that reads, \"Griffon Grease\"", "A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body", "A metal urn containing the ashes of a hero"],
-      ["Common clothes"]
+      "belaying pin (club)",
+      "50 feet of silk rope",
+      [1, "A mummified goblin hand", "A piece of crystal that faintly glows in the moonlight", "A gold coin minted in an unknown land", "A diary written in a language you don’t know", "A brass ring that never tarnishes", "An old chess piece made from glass", "A pair of knucklebone dice, each with a skull symbol on the side that would normally show six pips", "A small idol depicting a nightmarish creature that gives you unsettling dreams when you sleep near it", "A rope necklace from which dangles four mummified elf fingers", "The deed for a parcel of land in a realm unknown to you", "A 1-ounce block made from an unknown material", "A small cloth doll skewered with needles", "A tooth from an unknown beast", "An enormous scale, perhaps from a dragon", "A bright green feather", "An old divination card bearing your likeness", "A glass orb filled with moving smoke", "A 1-pound egg with a bright red shell", "A pipe that blows bubbles", "A glass jar containing a weird bit of flesh floating in pickling fluid", "A tiny gnome-crafted music box that plays a song you dimly remember from your childhood", "A small wooden statuette of a smug halfling", "A brass orb etched with strange runes", "A multicolored stone disk", "A tiny silver icon of a raven", "A bag containing forty-seven humanoid teeth, one of which is rotten", "A shard of obsidian that always feels warm to the touch", "A dragon's bony talon hanging from a plain leather necklace", "A pair of old socks", "A blank book whose pages refuse to hold ink, chalk, graphite, or any other substance or marking", "A silver badge in the shape of a five-pointed star", "A knife that belonged to a relative", "A glass vial filled with nail clippings", "A rectangular metal device with two tiny metal cups on one end that throws sparks when wet", "A white, sequined glove sized for a human", "A vest with one hundred tiny pockets", "A small, weightless stone block", "A tiny sketch portrait of a goblin", "An empty glass vial that smells of perfume when opened", "A gemstone that looks like a lump of coal when examined by anyone but you", "A scrap of cloth from an old banner", "A rank insignia from a lost legionnaire", "A tiny silver bell without a clapper", "A mechanical canary inside a gnome-crafted lamp", "A tiny chest carved to look like it has numerous feet on the bottom", "A dead sprite inside a clear glass bottle", "A metal can that has no opening but sounds as if it is filled with liquid", "A metal can that has no opening but sounds as if it is filled with sand", "A metal can that has no opening but sounds as if it is filled with broken glass", "A glass orb filled with water, in which swims a clockwork goldfish", "A silver spoon with an M engraved on the handle", "A whistle made from gold-colored wood", "A dead scarab beetle the size of your hand", "Two toy soldiers, one with a missing head", "A small box filled with different-sized buttons", "A candle that can’t be lit", "A tiny cage with no door", "An old key", "An indecipherable treasure map", "A hilt from a broken sword", "A rabbit’s foot", "A glass eye", "A cameo carved in the likeness of a hideous person", "A silver skull the size of a coin", "An alabaster mask", "A pyramid of sticky black incense that smells very bad", "A nightcap that, when worn, gives you pleasant dreams", "A single caltrop made from bone", "A gold monocle frame without the lens", "A 1-inch cube, each side painted a different color", "A crystal knob from a door", "A small packet filled with pink dust", "A fragment of a beautiful song, written as musical notes on two pieces of parchment", "A silver teardrop earring made from a real teardrop", "The shell of an egg painted with scenes of human misery in disturbing detail", "A fan that, when unfolded, shows a sleeping cat", "A set of bone pipes", "A four-leaf clover pressed inside a book discussing manners and etiquette", "A sheet of parchment upon which is drawn a complex mechanical contraption", "An ornate scabbard that fits no blade you have found so far", "An invitation to a party where a murder happened", "A bronze pentacle with an etching of a rat's head in its center", "A purple handkerchief embroidered with the name of a powerful archmage", "Half of a floorplan for a temple, castle, or some other structure", "A bit of folded cloth that, when unfolded, turns into a stylish cap", "A receipt of deposit at a bank in a far-flung city", "A diary with seven missing pages", "An empty silver snuffbox bearing an inscription on the surface that says \"dreams\"", "An iron holy symbol devoted to an unknown god", "A book that tells the story of a legendary hero's rise and fall, with the last chapter missing", "A vial of dragon blood", "An ancient arrow of elven design", "A needle that never bends", "An ornate brooch of dwarven design", "An empty wine bottle bearing a pretty label that says, \"The Wizard of Wines Winery, Red Dragon Crush, 331422-W\"", "A mosaic tile with a multicolored, glazed surface", "A petrified mouse", "A black pirate flag adorned with a dragon's skull and crossbones", "A tiny mechanical crab or spider that moves about when it’s not being observed", "A glass jar containing lard with a label that reads, \"Griffon Grease\"", "A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body", "A metal urn containing the ashes of a hero"],
+      "Common clothes"
     ],
     "money": 1000,
     "extra": null,
@@ -373,15 +373,15 @@
       "Intimidation"
     ],
     "tools": [
-      ["Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
-      ["Vehicles (land)"]
+      [1, "Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
+      "Vehicles (land)"
     ],
     "languages": null,
     "equipment": [
-      ["An insignia of rank"],
-      ["A trophy taken from a fallen enemy"],
-      ["A set of bone dice", "A deck of cards"],
-      ["A set of common clothes"]
+      "An insignia of rank",
+      "A trophy taken from a fallen enemy",
+      [1, "A set of bone dice", "A deck of cards"],
+      "A set of common clothes"
     ],
     "money": 1000,
     "extra": [
@@ -408,16 +408,16 @@
       "Stealth"
     ],
     "tools": [
-      ["Disguise kit"],
-      ["Thieves' tools"]
+      "Disguise kit",
+      "Thieves' tools"
     ],
     "languages": null,
     "equipment": [
-      ["small knife"],
-      ["map of the city you grew up in"],
-      ["A pet mouse"],
-      ["A token to remember your parents by"],
-      ["Common clothes"]
+      "small knife",
+      "map of the city you grew up in",
+      "A pet mouse",
+      "A token to remember your parents by",
+      "Common clothes"
     ],
     "money": 1000,
     "extra": null,

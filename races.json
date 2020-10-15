@@ -14,8 +14,8 @@
         "saving_throw_proficiencies": null,
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Draconic"]
+            "Common",
+            "Draconic"
         ],
         "age": [15, 80],
         "base_height": 66,
@@ -23,7 +23,7 @@
         "base_weight": 175,
         "weight_modifier": "2d6",
         "trait": [
-            ["Black Dragon", "Blue Dragon", "Brass Dragon", "Bronze Dragon", "Copper Dragon", "Gold Dragon", "Green Dragon", "Red Dragon", "Silver Dragon", "White Dragon"]
+            [1, "Black Dragon", "Blue Dragon", "Brass Dragon", "Bronze Dragon", "Copper Dragon", "Gold Dragon", "Green Dragon", "Red Dragon", "Silver Dragon", "White Dragon"]
         ]
     },
     {
@@ -44,15 +44,15 @@
             "Warhammer"
         ],
         "tool_proficiencies": [
-            ["Smith's tools", "Brewer's supplies", "Mason's tools"]
+            [1, "Smith's tools", "Brewer's supplies", "Mason's tools"]
         ],
         "saving_throw_proficiencies": [
             "Poison"
         ],
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Dwarvish"]
+            "Common",
+            "Dwarvish"
         ],
         "age": [50, 350],
         "base_height": 44,
@@ -72,8 +72,8 @@
             "cha": 0
         },
         "armor_proficiencies": [
-            ["Light Armor"],
-            ["Medium Armor"]
+            "Light Armor",
+            "Medium Armor"
         ],
         "weapon_proficiencies": [
             "Battleaxe",
@@ -82,15 +82,15 @@
             "Warhammer"
         ],
         "tool_proficiencies": [
-            ["Smith's tools", "Brewer's supplies", "Mason's tools"]
+            [1, "Smith's tools", "Brewer's supplies", "Mason's tools"]
         ],
         "saving_throw_proficiencies": [
             "Poison"
         ],
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Dwarvish"]
+            "Common",
+            "Dwarvish"
         ],
         "age": [50, 350],
         "base_height": 48,
@@ -121,12 +121,12 @@
             "Charmed"
         ],
         "skill_proficiencies": [
-            ["Perception"]
+            "Perception"
         ],
         "languages": [
-            ["Common"],
-            ["Elvish"],
-            ["Dwarvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
+            "Common",
+            "Elvish",
+            [1, "Dwarvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
         ],
         "age": [100, 750],
         "base_height": 54,
@@ -154,14 +154,14 @@
         ],
         "tool_proficiencies": null,
         "saving_throw_proficiencies": [
-            ["Charmed"]
+            "Charmed"
         ],
         "skill_proficiencies": [
-            ["Perception"]
+            "Perception"
         ],
         "languages": [
-            ["Common"],
-            ["Elvish"]
+            "Common",
+            "Elvish"
         ],
         "age": [100, 750],
         "base_height": 54,
@@ -191,11 +191,11 @@
             "Charmed"
         ],
         "skill_proficiencies": [
-            ["Perception"]
+            "Perception"
         ],
         "languages": [
-            ["Common"],
-            ["Elvish"]
+            "Common",
+            "Elvish"
         ],
         "age": [100, 750],
         "base_height": 54,
@@ -224,8 +224,8 @@
         ],
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Gnomish"]
+            "Common",
+            "Gnomish"
         ],
         "age": [40, 500],
         "base_height": 35,
@@ -247,7 +247,7 @@
         "armor_proficiencies": null,
         "weapon_proficiencies": null,
         "tool_proficiencies": [
-            ["Tinker's Tools"]
+            "Tinker's Tools"
         ],
         "saving_throw_proficiencies": [
             "Intelligence vs Magic",
@@ -256,8 +256,8 @@
         ],
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Gnomish"]
+            "Common",
+            "Gnomish"
         ],
         "age": [40, 500],
         "base_height": 35,
@@ -283,21 +283,19 @@
             "Charmed"
         ],
         "skill_proficiencies": [
-            ["Athletics, Acrobatics", "Athletics, Sleight of Hand", "Athletics, Stealth", "Athletics, Arcana", "Athletics, History", "Athletics, Investigation", "Athletics, Nature", "Athletics, Religion", "Athletics, Animal Handling", "Athletics, Insight", "Athletics, Medicine", "Athletics, Perception", "Athletics, Survival", "Athletics, Deception", "Athletics, Intimidation", "Athletics, Performance", "Athletics, Persuasion", "Acrobatics, Athletics", "Acrobatics, Sleight of Hand", "Acrobatics, Stealth", "Acrobatics, Arcana", "Acrobatics, History", "Acrobatics, Investigation", "Acrobatics, Nature", "Acrobatics, Religion", "Acrobatics, Animal Handling", "Acrobatics, Insight", "Acrobatics, Medicine", "Acrobatics, Perception", "Acrobatics, Survival", "Acrobatics, Deception", "Acrobatics, Intimidation", "Acrobatics, Performance", "Acrobatics, Persuasion", "Sleight of Hand, Athletics", "Sleight of Hand, Acrobatics", "Sleight of Hand, Stealth", "Sleight of Hand, Arcana", "Sleight of Hand, History", "Sleight of Hand, Investigation", "Sleight of Hand, Nature", "Sleight of Hand, Religion", "Sleight of Hand, Animal Handling", "Sleight of Hand, Insight", "Sleight of Hand, Medicine", "Sleight of Hand, Perception", "Sleight of Hand, Survival", "Sleight of Hand, Deception", "Sleight of Hand, Intimidation", "Sleight of Hand, Performance", "Sleight of Hand, Persuasion", "Stealth, Athletics", "Stealth, Acrobatics", "Stealth, Sleight of Hand", "Stealth, Arcana", "Stealth, History", "Stealth, Investigation", "Stealth, Nature", "Stealth, Religion", "Stealth, Animal Handling", "Stealth, Insight", "Stealth, Medicine", "Stealth, Perception", "Stealth, Survival", "Stealth, Deception", "Stealth, Intimidation", "Stealth, Performance", "Stealth, Persuasion", "Arcana, Athletics", "Arcana, Acrobatics", "Arcana, Sleight of Hand", "Arcana, Stealth", "Arcana, History", "Arcana, Investigation", "Arcana, Nature", "Arcana, Religion", "Arcana, Animal Handling", "Arcana, Insight", "Arcana, Medicine", "Arcana, Perception", "Arcana, Survival", "Arcana, Deception", "Arcana, Intimidation", "Arcana, Performance", "Arcana, Persuasion", "History, Athletics", "History, Acrobatics", "History, Sleight of Hand", "History, Stealth", "History, Arcana", "History, Investigation", "History, Nature", "History, Religion", "History, Animal Handling", "History, Insight", "History, Medicine", "History, Perception", "History, Survival", "History, Deception", "History, Intimidation", "History, Performance", "History, Persuasion", "Investigation, Athletics", "Investigation, Acrobatics", "Investigation, Sleight of Hand", "Investigation, Stealth", "Investigation, Arcana", "Investigation, History", "Investigation, Nature", "Investigation, Religion", "Investigation, Animal Handling", "Investigation, Insight", "Investigation, Medicine", "Investigation, Perception", "Investigation, Survival", "Investigation, Deception", "Investigation, Intimidation", "Investigation, Performance", "Investigation, Persuasion", "Nature, Athletics", "Nature, Acrobatics", "Nature, Sleight of Hand", "Nature, Stealth", "Nature, Arcana", "Nature, History", "Nature, Investigation", "Nature, Religion", "Nature, Animal Handling", "Nature, Insight", "Nature, Medicine", "Nature, Perception", "Nature, Survival", "Nature, Deception", "Nature, Intimidation", "Nature, Performance", "Nature, Persuasion", "Religion, Athletics", "Religion, Acrobatics", "Religion, Sleight of Hand", "Religion, Stealth", "Religion, Arcana", "Religion, History", "Religion, Investigation", "Religion, Nature", "Religion, Animal Handling", "Religion, Insight", "Religion, Medicine", "Religion, Perception", "Religion, Survival", "Religion, Deception", "Religion, Intimidation", "Religion, Performance", "Religion, Persuasion", "Animal Handling, Athletics", "Animal Handling, Acrobatics", "Animal Handling, Sleight of Hand", "Animal Handling, Stealth", "Animal Handling, Arcana", "Animal Handling, History", "Animal Handling, Investigation", "Animal Handling, Nature", "Animal Handling, Religion", "Animal Handling, Insight", "Animal Handling, Medicine", "Animal Handling, Perception", "Animal Handling, Survival", "Animal Handling, Deception", "Animal Handling, Intimidation", "Animal Handling, Performance", "Animal Handling, Persuasion", "Insight, Athletics", "Insight, Acrobatics", "Insight, Sleight of Hand", "Insight, Stealth", "Insight, Arcana", "Insight, History", "Insight, Investigation", "Insight, Nature", "Insight, Religion", "Insight, Animal Handling", "Insight, Medicine", "Insight, Perception", "Insight, Survival", "Insight, Deception", "Insight, Intimidation", "Insight, Performance", "Insight, Persuasion", "Medicine, Athletics", "Medicine, Acrobatics", "Medicine, Sleight of Hand", "Medicine, Stealth", "Medicine, Arcana", "Medicine, History", "Medicine, Investigation", "Medicine, Nature", "Medicine, Religion", "Medicine, Animal Handling", "Medicine, Insight", "Medicine, Perception", "Medicine, Survival", "Medicine, Deception", "Medicine, Intimidation", "Medicine, Performance", "Medicine, Persuasion", "Perception, Athletics", "Perception, Acrobatics", "Perception, Sleight of Hand", "Perception, Stealth", "Perception, Arcana", "Perception, History", "Perception, Investigation", "Perception, Nature", "Perception, Religion", "Perception, Animal Handling", "Perception, Insight", "Perception, Medicine", "Perception, Survival", "Perception, Deception", "Perception, Intimidation", "Perception, Performance", "Perception, Persuasion", "Survival, Athletics", "Survival, Acrobatics", "Survival, Sleight of Hand", "Survival, Stealth", "Survival, Arcana", "Survival, History", "Survival, Investigation", "Survival, Nature", "Survival, Religion", "Survival, Animal Handling", "Survival, Insight", "Survival, Medicine", "Survival, Perception", "Survival, Deception", "Survival, Intimidation", "Survival, Performance", "Survival, Persuasion", "Deception, Athletics", "Deception, Acrobatics", "Deception, Sleight of Hand", "Deception, Stealth", "Deception, Arcana", "Deception, History", "Deception, Investigation", "Deception, Nature", "Deception, Religion", "Deception, Animal Handling", "Deception, Insight", "Deception, Medicine", "Deception, Perception", "Deception, Survival", "Deception, Intimidation", "Deception, Performance", "Deception, Persuasion", "Intimidation, Athletics", "Intimidation, Acrobatics", "Intimidation, Sleight of Hand", "Intimidation, Stealth", "Intimidation, Arcana", "Intimidation, History", "Intimidation, Investigation", "Intimidation, Nature", "Intimidation, Religion", "Intimidation, Animal Handling", "Intimidation, Insight", "Intimidation, Medicine", "Intimidation, Perception", "Intimidation, Survival", "Intimidation, Deception", "Intimidation, Performance", "Intimidation, Persuasion", "Performance, Athletics", "Performance, Acrobatics", "Performance, Sleight of Hand", "Performance, Stealth", "Performance, Arcana", "Performance, History", "Performance, Investigation", "Performance, Nature", "Performance, Religion", "Performance, Animal Handling", "Performance, Insight", "Performance, Medicine", "Performance, Perception", "Performance, Survival", "Performance, Deception", "Performance, Intimidation", "Performance, Persuasion", "Persuasion, Athletics", "Persuasion, Acrobatics", "Persuasion, Sleight of Hand", "Persuasion, Stealth", "Persuasion, Arcana", "Persuasion, History", "Persuasion, Investigation", "Persuasion, Nature", "Persuasion, Religion", "Persuasion, Animal Handling", "Persuasion, Insight", "Persuasion, Medicine", "Persuasion, Perception", "Persuasion, Survival", "Persuasion, Deception", "Persuasion, Intimidation", "Persuasion, Performance"]
+            [2, "Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"]
         ],
         "languages": [
-            ["Common"],
-            ["Elvish"],
-            ["Dwarvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
+            "Common",
+            "Elvish",
+            [1, "Dwarvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
         ],
         "age": [20, 180],
         "base_height": 57,
         "height_modifier": "2d8",
         "base_weight": 110,
         "weight_modifier": "2d4",
-        "trait": [
-            ["Strength +1, Dexterity +1", "Strength +1, Constitution +1", "Strength +1, Intelligence +1", "Strength +1, Wisdom +1", "Strength +1, Charisma +1", "Dexterity +1, Strength +1", "Dexterity +1, Constitution +1", "Dexterity +1, Intelligence +1", "Dexterity +1, Wisdom +1", "Dexterity +1, Charisma +1", "Constitution +1, Strength +1", "Constitution +1, Dexterity +1", "Constitution +1, Intelligence +1", "Constitution +1, Wisdom +1", "Constitution +1, Charisma +1", "Intelligence +1, Strength +1", "Intelligence +1, Dexterity +1", "Intelligence +1, Constitution +1", "Intelligence +1, Wisdom +1", "Intelligence +1, Charisma +1", "Wisdom +1, Strength +1", "Wisdom +1, Dexterity +1", "Wisdom +1, Constitution +1", "Wisdom +1, Intelligence +1", "Wisdom +1, Charisma +1", "Charisma +1, Strength +1", "Charisma +1, Dexterity +1", "Charisma +1, Constitution +1", "Charisma +1, Intelligence +1", "Charisma +1, Wisdom +1"]
-        ]
+        "trait": null
     },
     {
         "name": "Half-Orc",
@@ -314,11 +312,11 @@
         "tool_proficiencies": null,
         "saving_throw_proficiencies": null,
         "skill_proficiencies": [
-            ["Intimidation"]
+            "Intimidation"
         ],
         "languages": [
-            ["Common"],
-            ["Orc"]
+            "Common",
+            "Orc"
         ],
         "age": [14, 75],
         "base_height": 58,
@@ -345,8 +343,8 @@
         ],
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Halfling"]
+            "Common",
+            "Halfling"
         ],
         "age": [20, 150],
         "base_height": 31,
@@ -374,8 +372,8 @@
         ],
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Halfling"]
+            "Common",
+            "Halfling"
         ],
         "age": [20, 150],
         "base_height": 31,
@@ -400,8 +398,8 @@
         "saving_throw_proficiencies": null,
         "skill_proficiencies": null,
         "languages": [
-            ["Common"],
-            ["Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
+            "Common",
+            [1, "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
         ],
         "age": [18, 80],
         "base_height": 56,

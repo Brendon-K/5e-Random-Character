@@ -99,6 +99,33 @@ function random_race() {
   character.ability_scores.int += race.ability_scores.int;
   character.ability_scores.wis += race.ability_scores.wis;
   character.ability_scores.cha += race.ability_scores.cha;
+  // Half-Elf gets two random ability scores +1
+  if (race.name == "Half-Elf") {
+    var ability_idxs = get_items_in_array([0, 1, 2, 3, 4, 5], 2);
+    for (var i in ability_idxs) {
+      switch (ability_idxs[i]) {
+        case 0:
+          ++character.ability_scores.str;
+          break;
+        case 1:
+          ++character.ability_scores.dex;
+          break;
+        case 2:
+          ++character.ability_scores.con;
+          break;
+        case 3:
+          ++character.ability_scores.int;
+          break;
+        case 4:
+          ++character.ability_scores.wis;
+          break;
+        case 5:
+          ++character.ability_scores.cha;
+          break;
+      }
+    }
+  }
+
 
   // apply physical attributes
   character.age = random_range(race.age[0], race.age[1]);
@@ -118,36 +145,95 @@ function random_race() {
   // apply proficiencies
   if (race.armor_proficiencies !== null) {
     for (var i in race.armor_proficiencies) {
-      if (!character.armor_proficiencies.includes(race.armor_proficiencies[i])) {
-        character.armor_proficiencies.push(race.armor_proficiencies[i]);
+      if (typeof race.armor_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(race.armor_proficiencies[i].slice(1), race.armor_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.armor_proficiencies.includes(items[j])) {
+            character.armor_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.armor_proficiencies.includes(race.armor_proficiencies[i])) {
+          character.armor_proficiencies.push(race.armor_proficiencies[i]);
+        }
       }
     }
   }
+
   if (race.weapon_proficiencies !== null) {
     for (var i in race.weapon_proficiencies) {
-      if (!character.weapon_proficiencies.includes(race.weapon_proficiencies[i])) {
-        character.weapon_proficiencies.push(race.weapon_proficiencies[i]);
+      if (typeof race.weapon_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(race.weapon_proficiencies[i].slice(1), race.weapon_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.weapon_proficiencies.includes(items[j])) {
+            character.weapon_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.weapon_proficiencies.includes(race.weapon_proficiencies[i])) {
+          character.weapon_proficiencies.push(race.weapon_proficiencies[i]);
+        }
       }
     }
   }
+
   if (race.tool_proficiencies !== null) {
     for (var i in race.tool_proficiencies) {
-      if (!character.tool_proficiencies.includes(race.tool_proficiencies[i])) {
-        character.tool_proficiencies.push(race.tool_proficiencies[i]);
+      if (typeof race.tool_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(race.tool_proficiencies[i].slice(1), race.tool_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.tool_proficiencies.includes(items[j])) {
+            character.tool_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.tool_proficiencies.includes(race.tool_proficiencies[i])) {
+          character.tool_proficiencies.push(race.tool_proficiencies[i]);
+        }
       }
     }
   }
+
   if (race.saving_throw_proficiencies !== null) {
     for (var i in race.saving_throw_proficiencies) {
-      if (!character.saving_throw_proficiencies.includes(race.saving_throw_proficiencies[i])) {
-        character.saving_throw_proficiencies.push(race.saving_throw_proficiencies[i]);
+      if (typeof race.saving_throw_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(race.saving_throw_proficiencies[i].slice(1), race.saving_throw_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.saving_throw_proficiencies.includes(items[j])) {
+            character.saving_throw_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.saving_throw_proficiencies.includes(race.saving_throw_proficiencies[i])) {
+          character.saving_throw_proficiencies.push(race.saving_throw_proficiencies[i]);
+        }
       }
     }
   }
+
   if (race.skill_proficiencies !== null) {
     for (var i in race.skill_proficiencies) {
-      if (!character.skill_proficiencies.includes(race.skill_proficiencies[i])) {
-        character.skill_proficiencies.push(race.skill_proficiencies[i]);
+      if (typeof race.skill_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(race.skill_proficiencies[i].slice(1), race.skill_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.skill_proficiencies.includes(items[j])) {
+            character.skill_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.skill_proficiencies.includes(race.skill_proficiencies[i])) {
+          character.skill_proficiencies.push(race.skill_proficiencies[i]);
+        }
       }
     }
   }
@@ -171,64 +257,103 @@ function random_base_class() {
   // apply proficiencies
   if (base_class.armor_proficiencies !== null) {
     for (var i in base_class.armor_proficiencies) {
-      if (!character.armor_proficiencies.includes(base_class.armor_proficiencies[i])) {
-        character.armor_proficiencies.push(base_class.armor_proficiencies[i]);
+      if (typeof base_class.armor_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(base_class.armor_proficiencies[i].slice(1), base_class.armor_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.armor_proficiencies.includes(items[j])) {
+            character.armor_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.armor_proficiencies.includes(race.armor_proficiencies[i])) {
+          character.armor_proficiencies.push(race.armor_proficiencies[i]);
+        }
       }
     }
   }
+
   if (base_class.weapon_proficiencies !== null) {
     for (var i in base_class.weapon_proficiencies) {
-      if (!character.weapon_proficiencies.includes(base_class.weapon_proficiencies[i])) {
-        character.weapon_proficiencies.push(base_class.weapon_proficiencies[i]);
+      if (typeof base_class.weapon_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(base_class.weapon_proficiencies[i].slice(1), base_class.weapon_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.weapon_proficiencies.includes(items[j])) {
+            character.weapon_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.weapon_proficiencies.includes(race.weapon_proficiencies[i])) {
+          character.weapon_proficiencies.push(race.weapon_proficiencies[i]);
+        }
       }
     }
   }
+
   if (base_class.tool_proficiencies !== null) {
-    // if the first item in the list is a number, that means you have to randomly select that many items
-    if (typeof base_class.tool_proficiencies[0] == "number") {
-      var items = get_items_in_array(base_class.tool_proficiencies.slice(1), base_class.tool_proficiencies[0]);
-      for (var i in items) {
-        if (!character.tool_proficiencies.includes(items[i])) {
-          character.tool_proficiencies.push(items[i]);
+    for (var i in base_class.tool_proficiencies) {
+      if (typeof base_class.tool_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(base_class.tool_proficiencies[i].slice(1), base_class.tool_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.tool_proficiencies.includes(items[j])) {
+            character.tool_proficiencies.push(items[j])
+          }
         }
-      }
-    } else {
-      for (var i in base_class.tool_proficiencies) {
-        if (!character.tool_proficiencies.includes(base_class.tool_proficiencies[i])) {
-          character.tool_proficiencies.push(base_class.tool_proficiencies[i]);
+      } else {
+        // append to list
+        if (!character.tool_proficiencies.includes(race.tool_proficiencies[i])) {
+          character.tool_proficiencies.push(race.tool_proficiencies[i]);
         }
       }
     }
   }
+
   if (base_class.saving_throw_proficiencies !== null) {
     for (var i in base_class.saving_throw_proficiencies) {
-      if (!character.saving_throw_proficiencies.includes(base_class.saving_throw_proficiencies[i])) {
-        character.saving_throw_proficiencies.push(base_class.saving_throw_proficiencies[i]);
+      if (typeof base_class.saving_throw_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(base_class.saving_throw_proficiencies[i].slice(1), base_class.saving_throw_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.saving_throw_proficiencies.includes(items[j])) {
+            character.saving_throw_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.saving_throw_proficiencies.includes(race.saving_throw_proficiencies[i])) {
+          character.saving_throw_proficiencies.push(race.saving_throw_proficiencies[i]);
+        }
       }
     }
   }
+
   if (base_class.skill_proficiencies !== null) {
-    // if the first item in the list is a number, that means you have to randomly select that many items
-    if (typeof base_class.skill_proficiencies[0] == "number") {
-      var items = get_items_in_array(base_class.skill_proficiencies.slice(1), base_class.skill_proficiencies[0]);
-      for (var i in items) {
-        if (!character.skill_proficiencies.includes(items[i])) {
-          character.skill_proficiencies.push(items[i]);
+    for (var i in base_class.skill_proficiencies) {
+      if (typeof base_class.skill_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(base_class.skill_proficiencies[i].slice(1), base_class.skill_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.skill_proficiencies.includes(items[j])) {
+            character.skill_proficiencies.push(items[j])
+          }
         }
-      }
-    } else {
-      for (var i in base_class.skill_proficiencies) {
-        if (!character.skill_proficiencies.includes(base_class.skill_proficiencies[i])) {
-          character.skill_proficiencies.push(base_class.skill_proficiencies[i]);
+      } else {
+        // append to list
+        if (!character.skill_proficiencies.includes(race.skill_proficiencies[i])) {
+          character.skill_proficiencies.push(race.skill_proficiencies[i]);
         }
       }
     }
   }
 
   // sort out equipment
-  for (var i in base_class.equipment) {
-    character.equipment.push(get_items_in_array(base_class.equipment[i], 1));
-  }
+  //for (var i in base_class.equipment) {
+  //  character.equipment.push(get_items_in_array(base_class.equipment[i], 1));
+  //}
 }
 
 /* Adds the character information to the HTML */
@@ -249,7 +374,7 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   random_race();
 
   // random class for each level
-  character.level = $("#level").val();
+  character.level = $("#level").val()*1;
   for (var i = 0; i < character.level; ++i) {
     random_base_class();
   }
