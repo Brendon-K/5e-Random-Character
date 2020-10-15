@@ -157,7 +157,7 @@ function random_race() {
 function random_base_class() {
   var num_classes = base_classes.length;
 
-  var base_class = base_classes[random_range(0, base_classes)];
+  var base_class = base_classes[random_range(0, base_classes.length)];
   // apply class name
   character.class.push(base_class.name);
 
