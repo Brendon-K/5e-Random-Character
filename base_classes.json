@@ -1,6 +1,5 @@
-[
-  {
-    "name": "Barbarian", 
+[{
+    "name": "Barbarian",
     "hit_die": 12,
     "armor_proficiencies": [
       "light armor",
@@ -35,10 +34,10 @@
     ]
   },
   {
-    "name": "Bard", 
+    "name": "Bard",
     "hit_die": 8,
     "armor_proficiencies": [
-      "light armor",
+      "light armor"
     ],
     "weapon_proficiencies": [
       "simple weapons",
@@ -94,7 +93,7 @@
     ]
   },
   {
-    "name": "Cleric", 
+    "name": "Cleric",
     "hit_die": 8,
     "armor_proficiencies": [
       "light armor",
@@ -123,13 +122,13 @@
       ["Mace", "Warhammer"],
       ["Scale Mail", "Leather Armor", "Chain Mail"],
       ["Light Crossbow and 20 bolts", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
-      ["Priest's Pack","Explorer's Pack"],
+      ["Priest's Pack", "Explorer's Pack"],
       ["Shield"],
       ["Holy Symbol"]
     ]
   },
   {
-    "name": "Druid", 
+    "name": "Druid",
     "hit_die": 8,
     "armor_proficiencies": [
       "light armor",
@@ -137,15 +136,15 @@
       "shields"
     ],
     "weapon_proficiencies": [
-      "clubs", 
-      "daggers", 
-      "darts", 
-      "javelins", 
-      "maces", 
-      "quarterstaffs", 
-      "scimitars", 
-      "sickles", 
-      "slings", 
+      "clubs",
+      "daggers",
+      "darts",
+      "javelins",
+      "maces",
+      "quarterstaffs",
+      "scimitars",
+      "sickles",
+      "slings",
       "spears"
     ],
     "tool_proficiencies": [
@@ -157,13 +156,13 @@
     ],
     "skill_proficiencies": [
       2,
-      "Arcana", 
-      "Animal Handling", 
-      "Insight", 
-      "Medicine", 
-      "Nature", 
-      "Perception", 
-      "Religion", 
+      "Arcana",
+      "Animal Handling",
+      "Insight",
+      "Medicine",
+      "Nature",
+      "Perception",
+      "Religion",
       "Survival"
     ],
     "equipment": [
@@ -175,12 +174,12 @@
     ]
   },
   {
-    "name": "Fighter", 
+    "name": "Fighter",
     "hit_die": 10,
     "armor_proficiencies": [
       "light armor",
       "medium armor",
-      "heavy armor"
+      "heavy armor",
       "shields"
     ],
     "weapon_proficiencies": [
@@ -196,13 +195,13 @@
     ],
     "skill_proficiencies": [
       2,
-      "Acrobatics", 
-      "Animal Handling", 
-      "Athletics", 
-      "History", 
-      "Insight", 
-      "Intimidation", 
-      "Perception", 
+      "Acrobatics",
+      "Animal Handling",
+      "Athletics",
+      "History",
+      "Insight",
+      "Intimidation",
+      "Perception",
       "Survival"
     ],
     "equipment": [
@@ -214,7 +213,7 @@
     ]
   },
   {
-    "name": "Monk", 
+    "name": "Monk",
     "hit_die": 8,
     "armor_proficiencies": [
       null
@@ -232,26 +231,26 @@
     ],
     "skill_proficiencies": [
       2,
-      "Acrobatics", 
-      "Athletics", 
-      "History", 
-      "Insight", 
-      "Religion", 
+      "Acrobatics",
+      "Athletics",
+      "History",
+      "Insight",
+      "Religion",
       "Stealth"
     ],
     "equipment": [
       ["Shortsword", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
-      ["Dungeoneer's Pack","Explorer's Pack"],
+      ["Dungeoneer's Pack", "Explorer's Pack"],
       ["10x darts"]
     ]
   },
   {
-    "name": "Paladin", 
+    "name": "Paladin",
     "hit_die": 10,
     "armor_proficiencies": [
       "light armor",
       "medium armor",
-      "heavy armor"
+      "heavy armor",
       "shields"
     ],
     "weapon_proficiencies": [
@@ -267,11 +266,11 @@
     ],
     "skill_proficiencies": [
       2,
-      "Athletics", 
-      "Insight", 
-      "Intimidation", 
-      "Medicine", 
-      "Persuasion", 
+      "Athletics",
+      "Insight",
+      "Intimidation",
+      "Medicine",
+      "Persuasion",
       "Religion"
     ],
     "equipment": [
@@ -284,7 +283,7 @@
     ]
   },
   {
-    "name": "Ranger", 
+    "name": "Ranger",
     "hit_die": 10,
     "armor_proficiencies": [
       "light armor",
@@ -304,13 +303,13 @@
     ],
     "skill_proficiencies": [
       3,
-      "Animal Handling", 
-      "Athletics", 
-      "Insight", 
-      "Investigation", 
-      "Nature", 
-      "Perception", 
-      "Stealth", 
+      "Animal Handling",
+      "Athletics",
+      "Insight",
+      "Investigation",
+      "Nature",
+      "Perception",
+      "Stealth",
       "Survival"
     ],
     "equipment": [
@@ -321,16 +320,16 @@
     ]
   },
   {
-    "name": "Rogue", 
+    "name": "Rogue",
     "hit_die": 8,
     "armor_proficiencies": [
       "light armor"
     ],
     "weapon_proficiencies": [
-      "Simple Weapons", 
-      "hand crossbows", 
-      "longswords", 
-      "rapiers", 
+      "Simple Weapons",
+      "hand crossbows",
+      "longswords",
+      "rapiers",
       "shortswords"
     ],
     "tool_proficiencies": [
@@ -342,38 +341,38 @@
     ],
     "skill_proficiencies": [
       4,
-      "Acrobatics", 
-      "Athletics", 
-      "Deception", 
-      "Insight", 
-      "Intimidation", 
-      "Investigation", 
-      "Perception", 
-      "Performance", 
-      "Persuasion", 
-      "Sleight of Hand", 
+      "Acrobatics",
+      "Athletics",
+      "Deception",
+      "Insight",
+      "Intimidation",
+      "Investigation",
+      "Perception",
+      "Performance",
+      "Persuasion",
+      "Sleight of Hand",
       "Stealth"
     ],
     "equipment": [
       ["Rapier", "Shortsword"],
       ["Shortbow and Quiver of 20 Arrows", "Shortsword"],
       ["Burglar's Pack", "Dungeoneer's Pack", "Explorer's Pack"],
-      ["Leather Armor"], 
-      ["2x daggers"], 
+      ["Leather Armor"],
+      ["2x daggers"],
       ["Thieves' Tools"]
     ]
   },
   {
-    "name": "Sorcerer", 
+    "name": "Sorcerer",
     "hit_die": 6,
     "armor_proficiencies": [
       null
     ],
     "weapon_proficiencies": [
-      "daggers", 
-      "darts", 
-      "slings", 
-      "quarterstaffs", 
+      "daggers",
+      "darts",
+      "slings",
+      "quarterstaffs",
       "light crossbows"
     ],
     "tool_proficiencies": [
@@ -385,11 +384,11 @@
     ],
     "skill_proficiencies": [
       2,
-      "Arcana", 
-      "Deception", 
-      "Insight", 
-      "Intimidation", 
-      "Persuasion", 
+      "Arcana",
+      "Deception",
+      "Insight",
+      "Intimidation",
+      "Persuasion",
       "Religion"
     ],
     "equipment": [
@@ -400,7 +399,7 @@
     ]
   },
   {
-    "name": "Warlock", 
+    "name": "Warlock",
     "hit_die": 8,
     "armor_proficiencies": [
       "light armor"
@@ -417,12 +416,12 @@
     ],
     "skill_proficiencies": [
       2,
-      "Arcana", 
-      "Deception", 
-      "History", 
-      "Intimidation", 
-      "Investigation", 
-      "Nature", 
+      "Arcana",
+      "Deception",
+      "History",
+      "Intimidation",
+      "Investigation",
+      "Nature",
       "Religion"
     ],
     "equipment": [
@@ -435,16 +434,16 @@
     ]
   },
   {
-    "name": "Wizard", 
+    "name": "Wizard",
     "hit_die": 6,
     "armor_proficiencies": [
       null
     ],
     "weapon_proficiencies": [
-      "daggers", 
-      "darts", 
-      "slings", 
-      "quarterstaffs", 
+      "daggers",
+      "darts",
+      "slings",
+      "quarterstaffs",
       "light crossbows"
     ],
     "tool_proficiencies": [
@@ -456,11 +455,11 @@
     ],
     "skill_proficiencies": [
       2,
-      "Arcana", 
-      "History", 
-      "Insight", 
-      "Investigation", 
-      "Medicine", 
+      "Arcana",
+      "History",
+      "Insight",
+      "Investigation",
+      "Medicine",
       "Religion"
     ],
     "equipment": [
