@@ -1,6 +1,6 @@
 [{
     "name": "Barbarian",
-    "hit_die": 12,
+    "hit_die": "1d12",
     "armor_proficiencies": [
       "light armor",
       "medium armor",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Bard",
-    "hit_die": 8,
+    "hit_die": "1d8",
     "armor_proficiencies": [
       "light armor"
     ],
@@ -92,7 +92,7 @@
   },
   {
     "name": "Cleric",
-    "hit_die": 8,
+    "hit_die": "1d8",
     "armor_proficiencies": [
       "light armor",
       "medium armor",
@@ -125,7 +125,7 @@
   },
   {
     "name": "Druid",
-    "hit_die": 8,
+    "hit_die": "1d8",
     "armor_proficiencies": [
       "light armor",
       "medium armor",
@@ -171,7 +171,7 @@
   },
   {
     "name": "Fighter",
-    "hit_die": 10,
+    "hit_die": "1d10",
     "armor_proficiencies": [
       "light armor",
       "medium armor",
@@ -208,7 +208,7 @@
   },
   {
     "name": "Monk",
-    "hit_die": 8,
+    "hit_die": "1d8",
     "armor_proficiencies": null,
     "weapon_proficiencies": [
       "simple weapons",
@@ -236,7 +236,7 @@
   },
   {
     "name": "Paladin",
-    "hit_die": 10,
+    "hit_die": "1d10",
     "armor_proficiencies": [
       "light armor",
       "medium armor",
@@ -272,7 +272,7 @@
   },
   {
     "name": "Ranger",
-    "hit_die": 10,
+    "hit_die": "1d10",
     "armor_proficiencies": [
       "light armor",
       "medium armor",
@@ -307,7 +307,7 @@
   },
   {
     "name": "Rogue",
-    "hit_die": 8,
+    "hit_die": "1d8",
     "armor_proficiencies": [
       "light armor"
     ],
@@ -350,7 +350,7 @@
   },
   {
     "name": "Sorcerer",
-    "hit_die": 6,
+    "hit_die": "1d6",
     "armor_proficiencies": null,
     "weapon_proficiencies": [
       "daggers",
@@ -382,7 +382,7 @@
   },
   {
     "name": "Warlock",
-    "hit_die": 8,
+    "hit_die": "1d8",
     "armor_proficiencies": [
       "light armor"
     ],
@@ -415,7 +415,7 @@
   },
   {
     "name": "Wizard",
-    "hit_die": 6,
+    "hit_die": "1d6",
     "armor_proficiencies": null,
     "weapon_proficiencies": [
       "daggers",
