@@ -31,6 +31,7 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
 
   // random race
 
+
   // random class for each level
 
   // random background
@@ -64,7 +65,6 @@ function roll_dice(dice_string, drop_lowest=false) {
 
   for (var i = 0; i < num_rolls; ++i) {
     var roll = random_range(1, num_faces);
-    console.log(roll);
     total += roll;
     if (drop_lowest) {
       if (lowest > roll) {
