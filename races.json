@@ -218,12 +218,12 @@
         "saving_throw_proficiencies": [
             "Intelligence vs Magic",
             "Wisdom vs Magic",
-            "Charisma vs Magic",
+            "Charisma vs Magic"
         ],
         "skill_proficiencies": null,
         "languages": [
             ["Common"],
-            ["Gnomish"],
+            ["Gnomish"]
         ],
         "age": [40, 500],
         "base_height": 35,
@@ -250,12 +250,12 @@
         "saving_throw_proficiencies": [
             "Intelligence vs Magic",
             "Wisdom vs Magic",
-            "Charisma vs Magic",
+            "Charisma vs Magic"
         ],
         "skill_proficiencies": null,
         "languages": [
             ["Common"],
-            ["Gnomish"],
+            ["Gnomish"]
         ],
         "age": [40, 500],
         "base_height": 35,
@@ -294,7 +294,7 @@
         "base_weight": 110,
         "weight_modifier": "2d4",
         "trait": [
-            ["Strength +1, Dexterity +1", "Strength +1, Constitution +1", "Strength +1, Intelligence +1", "Strength +1, Wisdom +1", "Strength +1, Charisma +1", "Dexterity +1, Strength +1", "Dexterity +1, Constitution +1", "Dexterity +1, Intelligence +1", "Dexterity +1, Wisdom +1", "Dexterity +1, Charisma +1", "Constitution +1, Strength +1", "Constitution +1, Dexterity +1", "Constitution +1, Intelligence +1", "Constitution +1, Wisdom +1", "Constitution +1, Charisma +1", "Intelligence +1, Strength +1", "Intelligence +1, Dexterity +1", "Intelligence +1, Constitution +1", "Intelligence +1, Wisdom +1", "Intelligence +1, Charisma +1", "Wisdom +1, Strength +1", "Wisdom +1, Dexterity +1", "Wisdom +1, Constitution +1", "Wisdom +1, Intelligence +1", "Wisdom +1, Charisma +1", "Charisma +1, Strength +1", "Charisma +1, Dexterity +1", "Charisma +1, Constitution +1", "Charisma +1, Intelligence +1", "Charisma +1, Wisdom +1"],
+            ["Strength +1, Dexterity +1", "Strength +1, Constitution +1", "Strength +1, Intelligence +1", "Strength +1, Wisdom +1", "Strength +1, Charisma +1", "Dexterity +1, Strength +1", "Dexterity +1, Constitution +1", "Dexterity +1, Intelligence +1", "Dexterity +1, Wisdom +1", "Dexterity +1, Charisma +1", "Constitution +1, Strength +1", "Constitution +1, Dexterity +1", "Constitution +1, Intelligence +1", "Constitution +1, Wisdom +1", "Constitution +1, Charisma +1", "Intelligence +1, Strength +1", "Intelligence +1, Dexterity +1", "Intelligence +1, Constitution +1", "Intelligence +1, Wisdom +1", "Intelligence +1, Charisma +1", "Wisdom +1, Strength +1", "Wisdom +1, Dexterity +1", "Wisdom +1, Constitution +1", "Wisdom +1, Intelligence +1", "Wisdom +1, Charisma +1", "Charisma +1, Strength +1", "Charisma +1, Dexterity +1", "Charisma +1, Constitution +1", "Charisma +1, Intelligence +1", "Charisma +1, Wisdom +1"]
         ]
     },
     {
