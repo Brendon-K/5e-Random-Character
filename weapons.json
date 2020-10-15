@@ -18,8 +18,8 @@
     "damage_type": "piercing",
     "weight": 1,
     "properties": [
-      "finesse", 
-      "light", 
+      "finesse",
+      "light",
       "thrown (range 20/60)"
     ]
   },
@@ -42,7 +42,7 @@
     "damage_type": "slashing",
     "weight": 2,
     "properties": [
-      "light", 
+      "light",
       "thrown (range 20/60)"
     ]
   },
@@ -65,7 +65,7 @@
     "damage_type": "bludgeoning",
     "weight": 2,
     "properties": [
-      "light", 
+      "light",
       "thrown (range 20/60)"
     ]
   },
@@ -110,20 +110,20 @@
     "damage_type": "piercing",
     "weight": 3,
     "properties": [
-      "thrown (range 20/60)", 
+      "thrown (range 20/60)",
       "versatile (1d8)"
     ]
   },
   {
-    "name": "Crossbow, light",
+    "name": "Light Crossbow",
     "type": "simple ranged",
     "cost": 2500,
     "damage": "1d8",
     "damage_type": "piercing",
     "weight": 5,
     "properties": [
-      "ammunition (range 80/320)", 
-      "loading", 
+      "ammunition (range 80/320)",
+      "loading",
       "two-handed"
     ]
   },
@@ -135,7 +135,7 @@
     "damage_type": "piercing",
     "weight": 0.25,
     "properties": [
-      "finesse", 
+      "finesse",
       "thrown (range 20/60)"
     ]
   },
@@ -147,7 +147,7 @@
     "damage_type": "piercing",
     "weight": 2,
     "properties": [
-      "ammunition (range 80/320)", 
+      "ammunition (range 80/320)",
       "two-handed"
     ]
   },
@@ -192,8 +192,8 @@
     "damage_type": "slashing",
     "weight": 6,
     "properties": [
-      "heavy", 
-      "reach", 
+      "heavy",
+      "reach",
       "two-handed"
     ]
   },
@@ -205,7 +205,7 @@
     "damage_type": "slashing",
     "weight": 7,
     "properties": [
-      "heavy", 
+      "heavy",
       "two-handed"
     ]
   },
@@ -217,7 +217,7 @@
     "damage_type": "slashing",
     "weight": 6,
     "properties": [
-      "heavy", 
+      "heavy",
       "two-handed"
     ]
   },
@@ -229,8 +229,8 @@
     "damage_type": "slashing",
     "weight": 6,
     "properties": [
-      "heavy", 
-      "reach", 
+      "heavy",
+      "reach",
       "two-handed"
     ]
   },
@@ -242,7 +242,7 @@
     "damage_type": "pircing",
     "weight": 6,
     "properties": [
-      "reach", 
+      "reach",
       "special"
     ]
   },
@@ -265,7 +265,7 @@
     "damage_type": "bludgeoning",
     "weight": 10,
     "properties": [
-      "heavy", 
+      "heavy",
       "two-handed"
     ]
   },
@@ -288,8 +288,8 @@
     "damage_type": "piercing",
     "weight": 18,
     "properties": [
-      "heavy", 
-      "reach", 
+      "heavy",
+      "reach",
       "two-handed"
     ]
   },
@@ -312,7 +312,7 @@
     "damage_type": "slashing",
     "weight": 3,
     "properties": [
-      "finesse", 
+      "finesse",
       "light"
     ]
   },
@@ -324,7 +324,7 @@
     "damage_type": "piercing",
     "weight": 2,
     "properties": [
-      "finesse", 
+      "finesse",
       "light"
     ]
   },
@@ -336,7 +336,7 @@
     "damage_type": "piercing",
     "weight": 4,
     "properties": [
-      "thrown (range 20/60)", 
+      "thrown (range 20/60)",
       "versatile (1d8)"
     ]
   },
@@ -370,7 +370,7 @@
     "damage_type": "slashing",
     "weight": 3,
     "properties": [
-      "finesse", 
+      "finesse",
       "reach"
     ]
   },
@@ -382,34 +382,34 @@
     "damage_type": "piercing",
     "weight": 1,
     "properties": [
-      "ammunition (range 25/100)", 
+      "ammunition (range 25/100)",
       "loading"
     ]
   },
   {
-    "name": "Crossbow, hand",
+    "name": "Hand Crossbow",
     "type": "martial ranged",
     "cost": 7500,
     "damage": "1d6",
     "damage_type": "piercing",
     "weight": 3,
     "properties": [
-      "ammunition (range 30/120)", 
-      "light", 
+      "ammunition (range 30/120)",
+      "light",
       "loading"
     ]
   },
   {
-    "name": "Crossbow, heavy",
+    "name": "Heavy Crossbow",
     "type": "martial ranged",
     "cost": 5000,
     "damage": "1d10",
     "damage_type": "piercing",
     "weight": 18,
     "properties": [
-      "ammunition (range 100/400)", 
-      "heavy", 
-      "loading", 
+      "ammunition (range 100/400)",
+      "heavy",
+      "loading",
       "two-handed"
     ]
   },
@@ -421,8 +421,8 @@
     "damage_type": "piercing",
     "weight": 2,
     "properties": [
-      "ammunition (range 150/600)", 
-      "heavy", 
+      "ammunition (range 150/600)",
+      "heavy",
       "two-handed"
     ]
   },
@@ -434,7 +434,7 @@
     "damage_type": null,
     "weight": 3,
     "properties": [
-      "special", 
+      "special",
       "thrown (range 5/15)"
     ]
   }

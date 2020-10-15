@@ -17,7 +17,7 @@
   {
     "type": "simple ranged",
     "list": [
-      "Crossbow, light",
+      "Light Crossbow",
       "Dart",
       "Shortbow",
       "Sling"
@@ -50,8 +50,8 @@
     "type": "martial ranged",
     "list": [
       "Blowgun",
-      "Crossbow, hand",
-      "Crossbow, heavy",
+      "Hand Crossbow",
+      "Heavy Crossbow",
       "Longbow",
       "Net"
     ]
