@@ -70,6 +70,7 @@ function random_race() {
   var race = races[random_range(0, num_races)];
   // apply name
   character.race = race.name;
+  $("#race").text(race.name);
 
   // apply ability scores
   character.ability_scores.str += race.ability_scores.str;
