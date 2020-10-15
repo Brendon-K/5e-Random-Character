@@ -134,7 +134,7 @@ function random_race() {
 
 /* Adds the character information to the HTML */
 function fill_page() {
-  $("#race").text(race.name);
+  $("#race").text(character.race);
 }
 
 $.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
