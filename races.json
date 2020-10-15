@@ -10,7 +10,7 @@
         },
         "age": [15, 80],
         "base_height": 66,
-        "height modifier": "2d8",
+        "height_modifier": "2d8",
         "base_weight": 175,
         "weight_modifier": "2d6",
         "trait": [
@@ -29,7 +29,7 @@
         },
         "age": [50, 350],
         "base_height": 44,
-        "height modifier": "2d4",
+        "height_modifier": "2d4",
         "base_weight": 115,
         "weight_modifier": "2d6",
         "trait": [
@@ -48,7 +48,7 @@
         },
         "age": [50, 350],
         "base_height": 48,
-        "height modifier": "2d4",
+        "height_modifier": "2d4",
         "base_weight": 130,
         "weight_modifier": "2d6",
         "trait": [
@@ -67,7 +67,7 @@
         },
         "age": [100, 750],
         "base_height": 54,
-        "height modifier": "2d10",
+        "height_modifier": "2d10",
         "base_weight": 90,
         "weight_modifier": "1d4",
         "trait": [
@@ -87,7 +87,7 @@
         },
         "age": [100, 750],
         "base_height": 54,
-        "height modifier": "2d10",
+        "height_modifier": "2d10",
         "base_weight": 100,
         "weight_modifier": "1d4",
         "trait": [null]
@@ -104,7 +104,7 @@
         },
         "age": [100, 750],
         "base_height": 54,
-        "height modifier": "2d6",
+        "height_modifier": "2d6",
         "base_weight": 75,
         "weight_modifier": "1d6",
         "trait": [null]
@@ -121,7 +121,7 @@
         },
         "age": [40, 500],
         "base_height": 35,
-        "height modifier": "2d4",
+        "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
         "trait": [null]
@@ -138,7 +138,7 @@
         },
         "age": [40, 500],
         "base_height": 35,
-        "height modifier": "2d4",
+        "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
         "trait": [
@@ -157,7 +157,7 @@
         },
         "age": [20, 180],
         "base_height": 57,
-        "height modifier": "2d8",
+        "height_modifier": "2d8",
         "base_weight": 110,
         "weight_modifier": "2d4",
         "trait": [
@@ -178,7 +178,7 @@
         },
         "age": [14, 75],
         "base_height": 58,
-        "height modifier": "2d10",
+        "height_modifier": "2d10",
         "base_weight": 140,
         "weight_modifier": "2d6",
         "trait": [
@@ -197,7 +197,7 @@
         },
         "age": [20, 150],
         "base_height": 31,
-        "height modifier": "2d4",
+        "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
         "trait": [
@@ -216,7 +216,7 @@
         },
         "age": [20, 150],
         "base_height": 31,
-        "height modifier": "2d4",
+        "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
         "trait": [
@@ -235,7 +235,7 @@
         },
         "age": [18, 80],
         "base_height": 56,
-        "height modifier": "2d10",
+        "height_modifier": "2d10",
         "base_weight": 110,
         "weight_modifier": "2d4",
         "trait": [
@@ -254,7 +254,7 @@
         },
         "age": [18, 90],
         "base_height": 57,
-        "height modifier": "2d8",
+        "height_modifier": "2d8",
         "base_weight": 110,
         "weight_modifier": "2d4",
         "trait": [
