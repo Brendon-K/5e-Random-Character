@@ -63,7 +63,28 @@ function roll_dice(dice_string, drop_lowest=false) {
   return total;
 }
 
-/* Applies a random race the the character */
+/* Returns the ability modifier for the ability value you put in there */
+function get_ability_mod(ability_value) {
+  return Math.floor((ability_value - 10)/2);
+}
+
+// Source: https://stackoverflow.com/a/19270021
+/* Gets n items from an array without any duplicates */
+function get_items_in_array(arr, n) {
+    var result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+    if (n > len)
+        throw new RangeError("getRandom: more elements taken than available");
+    while (n--) {
+        var x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len in taken ? taken[len] : len;
+    }
+    return result;
+}
+
+/* Applies a random race to the character */
 function random_race() {
   var num_races = races.length;
 
@@ -132,6 +153,84 @@ function random_race() {
   }
 }
 
+/* Applies a random base class to the character */
+function random_base_class() {
+  var num_classes = base_classes.length;
+
+  var base_class = base_classes[random_range(0, base_classes)];
+  // apply class name
+  character.class.push(base_class.name);
+
+  // add hit points
+  character.hit_points += roll_dice(base_class.hit_die) + get_ability_mod(character.ability_scores.con);
+  // if character is a Hill Dwarf, they get an extra hit point per level
+  if (character.race == "Hill Dwarf") {
+    ++character.hit_points;
+  }
+
+  // apply proficiencies
+  if (base_class.armor_proficiencies !== null) {
+    for (var i in base_class.armor_proficiencies) {
+      if (!character.armor_proficiencies.includes(base_class.armor_proficiencies[i])) {
+        character.armor_proficiencies.push(base_class.armor_proficiencies[i]);
+      }
+    }
+  }
+  if (base_class.weapon_proficiencies !== null) {
+    for (var i in base_class.weapon_proficiencies) {
+      if (!character.weapon_proficiencies.includes(base_class.weapon_proficiencies[i])) {
+        character.weapon_proficiencies.push(base_class.weapon_proficiencies[i]);
+      }
+    }
+  }
+  if (base_class.tool_proficiencies !== null) {
+    // if the first item in the list is a number, that means you have to randomly select that many items
+    if (typeof base_class.tool_proficiencies[0] == "number") {
+      var items = get_items_in_array(base_class.tool_proficiencies.slice(1), base_class.tool_proficiencies[0]);
+      for (var i in items) {
+        if (!character.tool_proficiencies.includes(items[i])) {
+          character.tool_proficiencies.push(items[i]);
+        }
+      }
+    } else {
+      for (var i in base_class.tool_proficiencies) {
+        if (!character.tool_proficiencies.includes(base_class.tool_proficiencies[i])) {
+          character.tool_proficiencies.push(base_class.tool_proficiencies[i]);
+        }
+      }
+    }
+  }
+  if (base_class.saving_throw_proficiencies !== null) {
+    for (var i in base_class.saving_throw_proficiencies) {
+      if (!character.saving_throw_proficiencies.includes(base_class.saving_throw_proficiencies[i])) {
+        character.saving_throw_proficiencies.push(base_class.saving_throw_proficiencies[i]);
+      }
+    }
+  }
+  if (base_class.skill_proficiencies !== null) {
+    // if the first item in the list is a number, that means you have to randomly select that many items
+    if (typeof base_class.skill_proficiencies[0] == "number") {
+      var items = get_items_in_array(base_class.skill_proficiencies.slice(1), base_class.skill_proficiencies[0]);
+      for (var i in items) {
+        if (!character.skill_proficiencies.includes(items[i])) {
+          character.skill_proficiencies.push(items[i]);
+        }
+      }
+    } else {
+      for (var i in base_class.skill_proficiencies) {
+        if (!character.skill_proficiencies.includes(base_class.skill_proficiencies[i])) {
+          character.skill_proficiencies.push(base_class.skill_proficiencies[i]);
+        }
+      }
+    }
+  }
+
+  // sort out equipment
+  for (var i in base_class.equipment) {
+    character.equipment.push(get_items_in_array(base_class.equipment[i], 1));
+  }
+}
+
 /* Adds the character information to the HTML */
 function fill_page() {
   $("#race").text(character.race);
@@ -151,6 +250,9 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
 
   // random class for each level
   var level_input = $("#level").val();
+  for (var i = 0; i < level_input; ++i) {
+    random_base_class();
+  }
 
   // random background
 
