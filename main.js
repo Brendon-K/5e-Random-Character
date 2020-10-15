@@ -20,23 +20,6 @@ var backgrounds_promise = $.getJSON("backgrounds.json", function(data) {
   backgrounds = data;
 });
 
-$.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
-  // random ability scores
-  character.ability_scores.str = roll_dice("4d6", true);
-  character.ability_scores.dex = roll_dice("4d6", true);
-  character.ability_scores.con = roll_dice("4d6", true);
-  character.ability_scores.int = roll_dice("4d6", true);
-  character.ability_scores.wis = roll_dice("4d6", true);
-  character.ability_scores.cha = roll_dice("4d6", true);
-
-  // random race
-  random_race();
-
-  // random class for each level
-
-  // random background
-});
-
 /* returns a random number between the min and max values (inclusive) */
 function random_range(min, max) {
   return Math.floor(min + Math.random() * max);
@@ -105,9 +88,26 @@ function random_race() {
   if (race.trait !== null) {
     character.racial_trait = [];
     // push a random trait from each choice the race has
-    for (i in race.trait) {
+    for (var i in race.trait) {
       var num_traits = race.trait[i].length
       character.racial_trait.push(race.trait[i][random_range(0, num_traits)]);
     }
   }
 }
+
+$.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
+  // random ability scores
+  character.ability_scores.str = roll_dice("4d6", true);
+  character.ability_scores.dex = roll_dice("4d6", true);
+  character.ability_scores.con = roll_dice("4d6", true);
+  character.ability_scores.int = roll_dice("4d6", true);
+  character.ability_scores.wis = roll_dice("4d6", true);
+  character.ability_scores.cha = roll_dice("4d6", true);
+
+  // random race
+  random_race();
+
+  // random class for each level
+
+  // random background
+});
