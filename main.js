@@ -4,19 +4,19 @@ var base_classes = null;
 var backgrounds = null;
 
 // load all the json
-var character_promise = $.getJSON("character.json", function(data) {
+var character_promise = $.getJSON("https://raw.githubusercontent.com/Brendon-K/5e-Random-Character/main/character.json?token=AFSYUS5MT6RYLPD7TB3SEEK7RCCVQ", function(data) {
   character = data;
 });
 
-var races_promise = $.getJSON("races.json", function(data) {
+var races_promise = $.getJSON("https://raw.githubusercontent.com/Brendon-K/5e-Random-Character/main/races.json?token=AFSYUS23ZUM5BVSF7WGA4D27RCCWE", function(data) {
   races = data;
 });
 
-var base_classes_promise = $.getJSON("base_classes.json", function(data) {
+var base_classes_promise = $.getJSON("https://raw.githubusercontent.com/Brendon-K/5e-Random-Character/main/base_classes.json?token=AFSYUSYAXM5XL5BGOTTPFYS7RCCU4", function(data) {
   base_classes = data;
 });
 
-var backgrounds_promise = $.getJSON("backgrounds.json", function(data) {
+var backgrounds_promise = $.getJSON("https://raw.githubusercontent.com/Brendon-K/5e-Random-Character/main/backgrounds.json?token=AFSYUS5ZGDXJ3FVLKVLERWC7RCCP2", function(data) {
   backgrounds = data;
 });
 
