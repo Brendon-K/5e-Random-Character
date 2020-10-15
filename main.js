@@ -249,7 +249,7 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   random_race();
 
   // random class for each level
-  var character.level = $("#level").val();
+  character.level = $("#level").val();
   for (var i = 0; i < character.level; ++i) {
     random_base_class();
   }
