@@ -5,18 +5,9 @@
       "Insight",
       "Religion"
     ],
-    "tools": [
-      null
-    ],
+    "tools": null,
     "languages": [
-      "Common", 
-      "Dwarvish", 
-      "Elvish", 
-      "Giant", 
-      "Gnomish", 
-      "Goblin", 
-      "Halfling", 
-      "Orc"
+      ["Common, Dwarvish", "Common, Elvish", "Common, Giant", "Common, Gnomish", "Common, Goblin", "Common, Halfling", "Common, Orc", "Dwarvish, Common", "Dwarvish, Elvish", "Dwarvish, Giant", "Dwarvish, Gnomish", "Dwarvish, Goblin", "Dwarvish, Halfling", "Dwarvish, Orc", "Elvish, Common", "Elvish, Dwarvish", "Elvish, Giant", "Elvish, Gnomish", "Elvish, Goblin", "Elvish, Halfling", "Elvish, Orc", "Giant, Common", "Giant, Dwarvish", "Giant, Elvish", "Giant, Gnomish", "Giant, Goblin", "Giant, Halfling", "Giant, Orc", "Gnomish, Common", "Gnomish, Dwarvish", "Gnomish, Elvish", "Gnomish, Giant", "Gnomish, Goblin", "Gnomish, Halfling", "Gnomish, Orc", "Goblin, Common", "Goblin, Dwarvish", "Goblin, Elvish", "Goblin, Giant", "Goblin, Gnomish", "Goblin, Halfling", "Goblin, Orc", "Halfling, Common", "Halfling, Dwarvish", "Halfling, Elvish", "Halfling, Giant", "Halfling, Gnomish", "Halfling, Goblin", "Halfling, Orc", "Orc, Common", "Orc, Dwarvish", "Orc, Elvish", "Orc, Giant", "Orc, Gnomish", "Orc, Goblin", "Orc, Halfling"]
     ],
     "equipment": [
       ["Holy Symbol"],
@@ -27,18 +18,10 @@
     ],
     "money": 1500,
     "extra": null,
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Charlatan",
@@ -50,9 +33,7 @@
       ["Disguise Kit"],
       ["Forgery Kit"]
     ],
-    "languages": [
-      null
-    ],
+    "languages": null,
     "equipment": [
       ["Fine Clothes"],
       ["Disguise Kit"],
@@ -70,18 +51,10 @@
         "I convince people that worthless junk is worth their hard earned money"
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Criminal",
@@ -93,9 +66,7 @@
       ["Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
       ["Thieves' Tools"]
     ],
-    "languages": [
-      null
-    ],
+    "languages": null,
     "equipment": [
       ["Crowbar"],
       ["Dark Common Clothes with hood"]
@@ -113,18 +84,10 @@
         "Smuggler"
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Entertainer",
@@ -136,9 +99,7 @@
       ["Disguise Kit"],
       ["Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"]
     ],
-    "languages": [
-      null
-    ],
+    "languages": null,
     "equipment": [
       ["Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"],
       ["A love letter from an admirer", "A lock of hair from an admirer", "A trinket from an admirer"],
@@ -159,18 +120,10 @@
         "Tumbler"
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Folk Hero",
@@ -182,9 +135,7 @@
       ["Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
       ["Vehicles (land)"]
     ],
-    "languages": [
-      null
-    ],
+    "languages": null,
     "equipment": [
       ["Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
       ["Shovel"],
@@ -206,18 +157,10 @@
         "Recruited into a lord's army, I rose to leadership and was commended for my heroism."
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Guild Artisan",
@@ -261,18 +204,10 @@
         "Woodcarvers, coopers, and bowyers"
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Hermit",
@@ -305,18 +240,10 @@
         "I was a pilgrim in search of a person, place, or relic of spiritual significance."
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Noble",
@@ -337,18 +264,10 @@
     ],
     "money": 2500,
     "extra": null,
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Outlander",
@@ -383,18 +302,10 @@
         "Tribal marauder"
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Sage",
@@ -402,9 +313,7 @@
       "Arcana",
       "History"
     ],
-    "tools": [
-      null
-    ],
+    "tools": null,
     "languages": [
       ["Common, Dwarvish", "Common, Elvish", "Common, Giant", "Common, Gnomish", "Common, Goblin", "Common, Halfling", "Common, Orc", "Dwarvish, Common", "Dwarvish, Elvish", "Dwarvish, Giant", "Dwarvish, Gnomish", "Dwarvish, Goblin", "Dwarvish, Halfling", "Dwarvish, Orc", "Elvish, Common", "Elvish, Dwarvish", "Elvish, Giant", "Elvish, Gnomish", "Elvish, Goblin", "Elvish, Halfling", "Elvish, Orc", "Giant, Common", "Giant, Dwarvish", "Giant, Elvish", "Giant, Gnomish", "Giant, Goblin", "Giant, Halfling", "Giant, Orc", "Gnomish, Common", "Gnomish, Dwarvish", "Gnomish, Elvish", "Gnomish, Giant", "Gnomish, Goblin", "Gnomish, Halfling", "Gnomish, Orc", "Goblin, Common", "Goblin, Dwarvish", "Goblin, Elvish", "Goblin, Giant", "Goblin, Gnomish", "Goblin, Halfling", "Goblin, Orc", "Halfling, Common", "Halfling, Dwarvish", "Halfling, Elvish", "Halfling, Giant", "Halfling, Gnomish", "Halfling, Goblin", "Halfling, Orc", "Orc, Common", "Orc, Dwarvish", "Orc, Elvish", "Orc, Giant", "Orc, Gnomish", "Orc, Goblin", "Orc, Halfling"]
     ],
@@ -428,18 +337,10 @@
         "Scribe"
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Sailor",
@@ -451,9 +352,7 @@
       ["Navigator's tools"],
       ["Vehicles (water)"]
     ],
-    "languages": [
-      null
-    ],
+    "languages": null,
     "equipment": [
       ["belaying pin (club)"],
       ["50 feet of silk rope"],
@@ -462,18 +361,10 @@
     ],
     "money": 1000,
     "extra": null,
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Soldier",
@@ -485,9 +376,7 @@
       ["Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
       ["Vehicles (land)"]
     ],
-    "languages": [
-      null
-    ],
+    "languages": null,
     "equipment": [
       ["An insignia of rank"],
       ["A trophy taken from a fallen enemy"],
@@ -507,18 +396,10 @@
         "Support staff"
       ]
     ],
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   },
   {
     "name": "Urchin",
@@ -530,9 +411,7 @@
       ["Disguise kit"],
       ["Thieves' tools"]
     ],
-    "languages": [
-      null
-    ],
+    "languages": null,
     "equipment": [
       ["small knife"],
       ["map of the city you grew up in"],
@@ -542,17 +421,9 @@
     ],
     "money": 1000,
     "extra": null,
-    "personality": [
-      null
-    ],
-    "ideal": [
-      null
-    ],
-    "bond": [
-      null
-    ],
-    "flaw": [
-      null
-    ]
+    "personality": null,
+    "ideal": null,
+    "bond": null,
+    "flaw": null
   }
 ]
