@@ -10,9 +10,7 @@
       "simple weapons",
       "martial weapons"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "strength",
       "constitution"
@@ -103,9 +101,7 @@
     "weapon_proficiencies": [
       "simple weapons"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "wisdom",
       "charisma"
@@ -186,9 +182,7 @@
       "simple weapons",
       "martial weapons"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "strength",
       "constitution"
@@ -215,16 +209,12 @@
   {
     "name": "Monk",
     "hit_die": 8,
-    "armor_proficiencies": [
-      null
-    ],
+    "armor_proficiencies": null,
     "weapon_proficiencies": [
       "simple weapons",
       "shortswords"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "strength",
       "dexterity"
@@ -257,9 +247,7 @@
       "simple weapons",
       "martial weapons"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "wisdom",
       "charisma"
@@ -294,9 +282,7 @@
       "simple weapons",
       "martial weapons"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "strength",
       "dexterity"
@@ -365,9 +351,7 @@
   {
     "name": "Sorcerer",
     "hit_die": 6,
-    "armor_proficiencies": [
-      null
-    ],
+    "armor_proficiencies": null,
     "weapon_proficiencies": [
       "daggers",
       "darts",
@@ -375,9 +359,7 @@
       "quarterstaffs",
       "light crossbows"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "constitution",
       "charisma"
@@ -407,9 +389,7 @@
     "weapon_proficiencies": [
       "simple weapons"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "wisdom",
       "charisma"
@@ -436,9 +416,7 @@
   {
     "name": "Wizard",
     "hit_die": 6,
-    "armor_proficiencies": [
-      null
-    ],
+    "armor_proficiencies": null,
     "weapon_proficiencies": [
       "daggers",
       "darts",
@@ -446,9 +424,7 @@
       "quarterstaffs",
       "light crossbows"
     ],
-    "tool_proficiencies": [
-      null
-    ],
+    "tool_proficiencies": null,
     "saving_throw_proficiencies": [
       "intelligence",
       "wisdom"
