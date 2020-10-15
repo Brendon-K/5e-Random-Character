@@ -1,0 +1,59 @@
+[
+  {
+    "type": "simple melee",
+    "list": [
+      "Club",
+      "Dagger",
+      "Greatclub",
+      "Handaxe",
+      "Javelin",
+      "Light Hammer",
+      "Mace",
+      "Quarterstaff",
+      "Sickle",
+      "Spear"
+    ]
+  },
+  {
+    "type": "simple ranged",
+    "list": [
+      "Crossbow, light",
+      "Dart",
+      "Shortbow",
+      "Sling"
+    ]
+  },
+  {
+    "type": "martial melee",
+    "list": [
+      "Battleaxe",
+      "Flail",
+      "Glaive",
+      "Greataxe",
+      "Greatsword",
+      "Halberd",
+      "Lance",
+      "Longsword",
+      "Maul",
+      "Morningstar",
+      "Pike",
+      "Rapier",
+      "Scimitar",
+      "Shortsword",
+      "Trident",
+      "War Pick",
+      "Warhammer",
+      "Whip"
+    ]
+  },
+  {
+    "type": "martial ranged",
+    "list": [
+      "Blowgun",
+      "Crossbow, hand",
+      "Crossbow, heavy",
+      "Longbow",
+      "Net"
+    ]
+  }
+]

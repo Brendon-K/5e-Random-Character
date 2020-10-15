@@ -1,0 +1,58 @@
+{
+	"race": null,
+  "height": 0,
+  "weight": 0,
+  "age": 0,
+  "level": 0,
+  "class": [],
+  "background": null,
+  "hit_points": 0,
+  "ability_scores": {
+    "str": 0,
+    "dex": 0,
+    "con": 0,
+    "int": 0,
+    "wis": 0,
+    "cha": 0
+  },
+  "saving_throws": {
+    "str": 0,
+    "dex": 0,
+    "con": 0,
+    "int": 0,
+    "wis": 0,
+    "cha": 0
+  },
+  "skill_proficiencies": {
+    "athletics": 0,
+    "acrobatics": 0,
+    "sleight_of_hand": 0,
+    "stealth": 0,
+    "arcana": 0,
+    "history": 0,
+    "investigation": 0,
+    "nature": 0,
+    "religion": 0,
+    "animal_handling": 0,
+    "insight": 0,
+    "medicine": 0,
+    "perception": 0,
+    "survival": 0,
+    "deception": 0,
+    "intimidation": 0,
+    "performance": 0,
+    "persuasion": 0
+  },
+  "languages": {
+    "common": 0,
+    "dwarvish": 0,
+    "elvish": 0,
+    "giant": 0,
+    "gnomish": 0,
+    "goblin": 0,
+    "halfling" : 0,
+    "orc": 0
+  },
+  "equipment": [],
+  "money": 0
+}

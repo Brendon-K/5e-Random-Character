@@ -1,0 +1,473 @@
+[
+  {
+    "name": "Barbarian", 
+    "hit_die": 12,
+    "armor_proficiencies": [
+      "light armor",
+      "medium armor",
+      "shields"
+    ],
+    "weapon_proficiencies": [
+      "simple weapons",
+      "martial weapons"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "strength",
+      "constitution"
+    ],
+    "skill_proficiencies": [
+      2,
+      "animal handling",
+      "athletics",
+      "intimidation",
+      "nature",
+      "perception",
+      "survival"
+    ],
+    "equipment": [
+      ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War", "Warhammer", "Whip"],
+      ["2x Handaxe", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear"],
+      ["Explorer's Pack"],
+      ["4x Javelin"]
+    ]
+  },
+  {
+    "name": "Bard", 
+    "hit_die": 8,
+    "armor_proficiencies": [
+      "light armor",
+    ],
+    "weapon_proficiencies": [
+      "simple weapons",
+      "Crossbow, hand",
+      "Longsword",
+      "Rapier",
+      "Shortsword"
+    ],
+    "tool_proficiencies": [
+      3,
+      "Bagpipes",
+      "Drum",
+      "Dulcimer",
+      "Flute",
+      "Lute",
+      "Lyre",
+      "Horn",
+      "Pan",
+      "Shawm",
+      "Viol"
+    ],
+    "saving_throw_proficiencies": [
+      "dexterity",
+      "charisma"
+    ],
+    "skill_proficiencies": [
+      3,
+      "Athletics",
+      "Acrobatics",
+      "Sleight of Hand",
+      "Stealth",
+      "Arcana",
+      "History",
+      "Investigation",
+      "Nature",
+      "Religion",
+      "Animal Handling",
+      "Insight",
+      "Medicine",
+      "Perception",
+      "Survival",
+      "Deception",
+      "Intimidation",
+      "Performance",
+      "Persuasion"
+    ],
+    "equipment": [
+      ["Rapier", "Longsword", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear"],
+      ["Diplomat's Pack", "Entertainer's Pack"],
+      ["Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"],
+      ["Leather Armor"],
+      ["Dagger"]
+    ]
+  },
+  {
+    "name": "Cleric", 
+    "hit_die": 8,
+    "armor_proficiencies": [
+      "light armor",
+      "medium armor",
+      "shields"
+    ],
+    "weapon_proficiencies": [
+      "simple weapons"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "wisdom",
+      "charisma"
+    ],
+    "skill_proficiencies": [
+      2,
+      "History",
+      "Insight",
+      "Medicine",
+      "Persuasion",
+      "Religion"
+    ],
+    "equipment": [
+      ["Mace", "Warhammer"],
+      ["Scale Mail", "Leather Armor", "Chain Mail"],
+      ["Light Crossbow and 20 bolts", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
+      ["Priest's Pack","Explorer's Pack"],
+      ["Shield"],
+      ["Holy Symbol"]
+    ]
+  },
+  {
+    "name": "Druid", 
+    "hit_die": 8,
+    "armor_proficiencies": [
+      "light armor",
+      "medium armor",
+      "shields"
+    ],
+    "weapon_proficiencies": [
+      "clubs", 
+      "daggers", 
+      "darts", 
+      "javelins", 
+      "maces", 
+      "quarterstaffs", 
+      "scimitars", 
+      "sickles", 
+      "slings", 
+      "spears"
+    ],
+    "tool_proficiencies": [
+      "Herbalism Kit"
+    ],
+    "saving_throw_proficiencies": [
+      "intelligence",
+      "wisdom"
+    ],
+    "skill_proficiencies": [
+      2,
+      "Arcana", 
+      "Animal Handling", 
+      "Insight", 
+      "Medicine", 
+      "Nature", 
+      "Perception", 
+      "Religion", 
+      "Survival"
+    ],
+    "equipment": [
+      ["Wooden Shield", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
+      ["Scimitar", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear"],
+      ["Leather Armor"],
+      ["Explorer's Pack"],
+      ["Druidic Focus"]
+    ]
+  },
+  {
+    "name": "Fighter", 
+    "hit_die": 10,
+    "armor_proficiencies": [
+      "light armor",
+      "medium armor",
+      "heavy armor"
+      "shields"
+    ],
+    "weapon_proficiencies": [
+      "simple weapons",
+      "martial weapons"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "strength",
+      "constitution"
+    ],
+    "skill_proficiencies": [
+      2,
+      "Acrobatics", 
+      "Animal Handling", 
+      "Athletics", 
+      "History", 
+      "Insight", 
+      "Intimidation", 
+      "Perception", 
+      "Survival"
+    ],
+    "equipment": [
+      ["Chain Mail", "Leather Armor, Longbow, and 20 Arrows"],
+      ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War", "Warhammer", "Whip", "Martial", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Net"],
+      ["Shield", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War", "Warhammer", "Whip", "Martial", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Net"],
+      ["Light Crossbow and 20 bolts", "2x handaxes"],
+      ["Dungeoneer's Pack", "Explorer's Pack"]
+    ]
+  },
+  {
+    "name": "Monk", 
+    "hit_die": 8,
+    "armor_proficiencies": [
+      null
+    ],
+    "weapon_proficiencies": [
+      "simple weapons",
+      "shortswords"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "strength",
+      "dexterity"
+    ],
+    "skill_proficiencies": [
+      2,
+      "Acrobatics", 
+      "Athletics", 
+      "History", 
+      "Insight", 
+      "Religion", 
+      "Stealth"
+    ],
+    "equipment": [
+      ["Shortsword", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
+      ["Dungeoneer's Pack","Explorer's Pack"],
+      ["10x darts"]
+    ]
+  },
+  {
+    "name": "Paladin", 
+    "hit_die": 10,
+    "armor_proficiencies": [
+      "light armor",
+      "medium armor",
+      "heavy armor"
+      "shields"
+    ],
+    "weapon_proficiencies": [
+      "simple weapons",
+      "martial weapons"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "wisdom",
+      "charisma"
+    ],
+    "skill_proficiencies": [
+      2,
+      "Athletics", 
+      "Insight", 
+      "Intimidation", 
+      "Medicine", 
+      "Persuasion", 
+      "Religion"
+    ],
+    "equipment": [
+      ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War", "Warhammer", "Whip", "Martial", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Net"],
+      ["Shield", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War", "Warhammer", "Whip", "Martial", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Net"],
+      ["5x Javelin", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear"],
+      ["Priest's Pack", "Explorer's Pack"],
+      ["Chain Mail"],
+      ["Holy Symbol"]
+    ]
+  },
+  {
+    "name": "Ranger", 
+    "hit_die": 10,
+    "armor_proficiencies": [
+      "light armor",
+      "medium armor",
+      "shields"
+    ],
+    "weapon_proficiencies": [
+      "simple weapons",
+      "martial weapons"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "strength",
+      "dexterity"
+    ],
+    "skill_proficiencies": [
+      3,
+      "Animal Handling", 
+      "Athletics", 
+      "Insight", 
+      "Investigation", 
+      "Nature", 
+      "Perception", 
+      "Stealth", 
+      "Survival"
+    ],
+    "equipment": [
+      ["Scale Mail", "Leather Armor"],
+      ["2x Shortsword", "2x Club", "Club, Dagger", "Club, Greatclub", "Club, Handaxe", "Club, Javelin", "Club, Light", "Club, Mace", "Club, Quarterstaff", "Club, Sickle", "Club, Spear", "Dagger, Club", "2x Dagger", "Dagger, Greatclub", "Dagger, Handaxe", "Dagger, Javelin", "Dagger, Light", "Dagger, Mace", "Dagger, Quarterstaff", "Dagger, Sickle", "Dagger, Spear", "Greatclub, Club", "Greatclub, Dagger", "2x Greatclub", "Greatclub, Handaxe", "Greatclub, Javelin", "Greatclub, Light", "Greatclub, Mace", "Greatclub, Quarterstaff", "Greatclub, Sickle", "Greatclub, Spear", "Handaxe, Club", "Handaxe, Dagger", "Handaxe, Greatclub", "2x Handaxe", "Handaxe, Javelin", "Handaxe, Light", "Handaxe, Mace", "Handaxe, Quarterstaff", "Handaxe, Sickle", "Handaxe, Spear", "Javelin, Club", "Javelin, Dagger", "Javelin, Greatclub", "Javelin, Handaxe", "2x Javelin", "Javelin, Light", "Javelin, Mace", "Javelin, Quarterstaff", "Javelin, Sickle", "Javelin, Spear", "Light, Club", "Light, Dagger", "Light, Greatclub", "Light, Handaxe", "Light, Javelin", "2x Light", "Light, Mace", "Light, Quarterstaff", "Light, Sickle", "Light, Spear", "Mace, Club", "Mace, Dagger", "Mace, Greatclub", "Mace, Handaxe", "Mace, Javelin", "Mace, Light", "2x Mace", "Mace, Quarterstaff", "Mace, Sickle", "Mace, Spear", "Quarterstaff, Club", "Quarterstaff, Dagger", "Quarterstaff, Greatclub", "Quarterstaff, Handaxe", "Quarterstaff, Javelin", "Quarterstaff, Light", "Quarterstaff, Mace", "2x Quarterstaff", "Quarterstaff, Sickle", "Quarterstaff, Spear", "Sickle, Club", "Sickle, Dagger", "Sickle, Greatclub", "Sickle, Handaxe", "Sickle, Javelin", "Sickle, Light", "Sickle, Mace", "Sickle, Quarterstaff", "2x Sickle", "Sickle, Spear", "Spear, Club", "Spear, Dagger", "Spear, Greatclub", "Spear, Handaxe", "Spear, Javelin", "Spear, Light", "Spear, Mace", "Spear, Quarterstaff", "Spear, Sickle", "2x Spear"],
+      ["Dungeoneer's Pack", "Explorer's Pack"],
+      ["Longbow and a Quiver of 20 Arrows"]
+    ]
+  },
+  {
+    "name": "Rogue", 
+    "hit_die": 8,
+    "armor_proficiencies": [
+      "light armor"
+    ],
+    "weapon_proficiencies": [
+      "Simple Weapons", 
+      "hand crossbows", 
+      "longswords", 
+      "rapiers", 
+      "shortswords"
+    ],
+    "tool_proficiencies": [
+      "Thieves' Tools"
+    ],
+    "saving_throw_proficiencies": [
+      "dexterity",
+      "intelligence"
+    ],
+    "skill_proficiencies": [
+      4,
+      "Acrobatics", 
+      "Athletics", 
+      "Deception", 
+      "Insight", 
+      "Intimidation", 
+      "Investigation", 
+      "Perception", 
+      "Performance", 
+      "Persuasion", 
+      "Sleight of Hand", 
+      "Stealth"
+    ],
+    "equipment": [
+      ["Rapier", "Shortsword"],
+      ["Shortbow and Quiver of 20 Arrows", "Shortsword"],
+      ["Burglar's Pack", "Dungeoneer's Pack", "Explorer's Pack"],
+      ["Leather Armor"], 
+      ["2x daggers"], 
+      ["Thieves' Tools"]
+    ]
+  },
+  {
+    "name": "Sorcerer", 
+    "hit_die": 6,
+    "armor_proficiencies": [
+      null
+    ],
+    "weapon_proficiencies": [
+      "daggers", 
+      "darts", 
+      "slings", 
+      "quarterstaffs", 
+      "light crossbows"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "constitution",
+      "charisma"
+    ],
+    "skill_proficiencies": [
+      2,
+      "Arcana", 
+      "Deception", 
+      "Insight", 
+      "Intimidation", 
+      "Persuasion", 
+      "Religion"
+    ],
+    "equipment": [
+      ["Light Crossbow and 20 bolts", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
+      ["Component pouch", "arcane focus"],
+      ["Dungeoneer's Pack", "Explorer's Pack"],
+      ["2x Dagger"]
+    ]
+  },
+  {
+    "name": "Warlock", 
+    "hit_die": 8,
+    "armor_proficiencies": [
+      "light armor"
+    ],
+    "weapon_proficiencies": [
+      "simple weapons"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "wisdom",
+      "charisma"
+    ],
+    "skill_proficiencies": [
+      2,
+      "Arcana", 
+      "Deception", 
+      "History", 
+      "Intimidation", 
+      "Investigation", 
+      "Nature", 
+      "Religion"
+    ],
+    "equipment": [
+      ["Light Crossbow and 20 bolts", "Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
+      ["Component pouch", "arcane focus"],
+      ["Scholar's Pack", "Dungeoneer's Pack"],
+      ["Leather Armor"],
+      ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling"],
+      ["2x Dagger"]
+    ]
+  },
+  {
+    "name": "Wizard", 
+    "hit_die": 6,
+    "armor_proficiencies": [
+      null
+    ],
+    "weapon_proficiencies": [
+      "daggers", 
+      "darts", 
+      "slings", 
+      "quarterstaffs", 
+      "light crossbows"
+    ],
+    "tool_proficiencies": [
+      null
+    ],
+    "saving_throw_proficiencies": [
+      "intelligence",
+      "wisdom"
+    ],
+    "skill_proficiencies": [
+      2,
+      "Arcana", 
+      "History", 
+      "Insight", 
+      "Investigation", 
+      "Medicine", 
+      "Religion"
+    ],
+    "equipment": [
+      ["Quarterstaff", "Dagger"],
+      ["Component pouch", "arcane focus"],
+      ["Scholar's Pack", "Explorer's Pack"],
+      ["Spellbook"]
+    ]
+  }
+]

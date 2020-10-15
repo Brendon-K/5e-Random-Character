@@ -1,0 +1,61 @@
+.stats {
+
+}
+
+.statLabel {
+	border: 0.1em solid black;
+	margin: 0.1em;
+	width: 3.5em;
+	text-align: center;
+}
+
+.statNumber {
+	border: 0.1em solid black;
+	width: 3.5em;
+	text-align: center;
+}
+
+.statDetailed {
+	border: 0.1em solid black;
+	width: 3.5em;
+	text-align: center;
+}
+
+.label {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.class  {
+	border: 0.1em solid black;
+	padding: 1em;
+}
+
+.skills {
+	border: 0.1em solid black;
+}
+
+.skills td {
+	padding: 0em 1em 0em 0.1em;
+}
+
+.skillLabel {
+	font-weight: bold;
+}
+
+td {
+	vertical-align: center;
+}
+
+#longStat {
+	font-size: .66em;
+}
+
+#race {
+	text-decoration: underline;
+}
+
+input {
+	width: 2em;
+}
+

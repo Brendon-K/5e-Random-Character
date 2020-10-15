@@ -1,0 +1,441 @@
+[
+  {
+    "name": "Club",
+    "type": "simple melee",
+    "cost": 10,
+    "damage": "1d4",
+    "damage_type": "bludgeoning",
+    "weight": 2,
+    "properties": [
+      "light"
+    ]
+  },
+  {
+    "name": "Dagger",
+    "type": "simple melee",
+    "cost": 200,
+    "damage": "1d4",
+    "damage_type": "piercing",
+    "weight": 1,
+    "properties": [
+      "finesse", 
+      "light", 
+      "thrown (range 20/60)"
+    ]
+  },
+  {
+    "name": "Greatclub",
+    "type": "simple melee",
+    "cost": 20,
+    "damage": "1d8",
+    "damage_type": "bludgeoning",
+    "weight": 10,
+    "properties": [
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Handaxe",
+    "type": "simple melee",
+    "cost": 500,
+    "damage": "1d6",
+    "damage_type": "slashing",
+    "weight": 2,
+    "properties": [
+      "light", 
+      "thrown (range 20/60)"
+    ]
+  },
+  {
+    "name": "Javelin",
+    "type": "simple melee",
+    "cost": 50,
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "weight": 2,
+    "properties": [
+      "thrown (range 30/120)"
+    ]
+  },
+  {
+    "name": "Light Hammer",
+    "type": "simple melee",
+    "cost": 200,
+    "damage": "1d4",
+    "damage_type": "bludgeoning",
+    "weight": 2,
+    "properties": [
+      "light", 
+      "thrown (range 20/60)"
+    ]
+  },
+  {
+    "name": "Mace",
+    "type": "simple melee",
+    "cost": 500,
+    "damage": "1d6",
+    "damage_type": "bludgeoning",
+    "weight": 4,
+    "properties": [
+      "—"
+    ]
+  },
+  {
+    "name": "Quarterstaff",
+    "type": "simple melee",
+    "cost": 20,
+    "damage": "1d6",
+    "damage_type": "bludgeoning",
+    "weight": 4,
+    "properties": [
+      "versatile (1d8)"
+    ]
+  },
+  {
+    "name": "Sickle",
+    "type": "simple melee",
+    "cost": 100,
+    "damage": "1d4",
+    "damage_type": "slashing",
+    "weight": 2,
+    "properties": [
+      "light"
+    ]
+  },
+  {
+    "name": "Spear",
+    "type": "simple melee",
+    "cost": 100,
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "weight": 3,
+    "properties": [
+      "thrown (range 20/60)", 
+      "versatile (1d8)"
+    ]
+  },
+  {
+    "name": "Crossbow, light",
+    "type": "simple ranged",
+    "cost": 2500,
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "weight": 5,
+    "properties": [
+      "ammunition (range 80/320)", 
+      "loading", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Dart",
+    "type": "simple ranged",
+    "cost": 5,
+    "damage": "1d4",
+    "damage_type": "piercing",
+    "weight": 0.25,
+    "properties": [
+      "finesse", 
+      "thrown (range 20/60)"
+    ]
+  },
+  {
+    "name": "Shortbow",
+    "type": "simple ranged",
+    "cost": 2500,
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "weight": 2,
+    "properties": [
+      "ammunition (range 80/320)", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Sling",
+    "type": "simple ranged",
+    "cost": 10,
+    "damage": "1d4",
+    "damage_type": "bludgeoning",
+    "weight": 0,
+    "properties": [
+      "ammunition (range 30/120)"
+    ]
+  },
+  {
+    "name": "Battleaxe",
+    "type": "martial melee",
+    "cost": 1000,
+    "damage": "1d8",
+    "damage_type": "slashing",
+    "weight": 4,
+    "properties": [
+      "versatile (1d10)"
+    ]
+  },
+  {
+    "name": "Flail",
+    "type": "martial melee",
+    "cost": 1000,
+    "damage": "1d8",
+    "damage_type": "bludgeoning",
+    "weight": 2,
+    "properties": [
+      "—"
+    ]
+  },
+  {
+    "name": "Glaive",
+    "type": "martial melee",
+    "cost": 2000,
+    "damage": "1d10",
+    "damage_type": "slashing",
+    "weight": 6,
+    "properties": [
+      "heavy", 
+      "reach", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Greataxe",
+    "type": "martial melee",
+    "cost": 3000,
+    "damage": "1d12",
+    "damage_type": "slashing",
+    "weight": 7,
+    "properties": [
+      "heavy", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Greatsword",
+    "type": "martial melee",
+    "cost": 5000,
+    "damage": "2d6",
+    "damage_type": "slashing",
+    "weight": 6,
+    "properties": [
+      "heavy", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Halberd",
+    "type": "martial melee",
+    "cost": 2000,
+    "damage": "1d10",
+    "damage_type": "slashing",
+    "weight": 6,
+    "properties": [
+      "heavy", 
+      "reach", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Lance",
+    "type": "martial melee",
+    "cost": 1000,
+    "damage": "1d12",
+    "damage_type": "pircing",
+    "weight": 6,
+    "properties": [
+      "reach", 
+      "special"
+    ]
+  },
+  {
+    "name": "Longsword",
+    "type": "martial melee",
+    "cost": 1500,
+    "damage": "1d8",
+    "damage_type": "slashing",
+    "weight": 3,
+    "properties": [
+      "versatile (1d10)"
+    ]
+  },
+  {
+    "name": "Maul",
+    "type": "martial melee",
+    "cost": 1000,
+    "damage": "2d6",
+    "damage_type": "bludgeoning",
+    "weight": 10,
+    "properties": [
+      "heavy", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Morningstar",
+    "type": "martial melee",
+    "cost": 1500,
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "weight": 4,
+    "properties": [
+      "—"
+    ]
+  },
+  {
+    "name": "Pike",
+    "type": "martial melee",
+    "cost": 500,
+    "damage": "1d10",
+    "damage_type": "piercing",
+    "weight": 18,
+    "properties": [
+      "heavy", 
+      "reach", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Rapier",
+    "type": "martial melee",
+    "cost": 2500,
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "weight": 2,
+    "properties": [
+      "finesse"
+    ]
+  },
+  {
+    "name": "Scimitar",
+    "type": "martial melee",
+    "cost": 2500,
+    "damage": "1d6",
+    "damage_type": "slashing",
+    "weight": 3,
+    "properties": [
+      "finesse", 
+      "light"
+    ]
+  },
+  {
+    "name": "Shortsword",
+    "type": "martial melee",
+    "cost": 1000,
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "weight": 2,
+    "properties": [
+      "finesse", 
+      "light"
+    ]
+  },
+  {
+    "name": "Trident",
+    "type": "martial melee",
+    "cost": 500,
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "weight": 4,
+    "properties": [
+      "thrown (range 20/60)", 
+      "versatile (1d8)"
+    ]
+  },
+  {
+    "name": "War Pick",
+    "type": "martial melee",
+    "cost": 500,
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "weight": 2,
+    "properties": [
+      "—"
+    ]
+  },
+  {
+    "name": "Warhammer",
+    "type": "martial melee",
+    "cost": 1500,
+    "damage": "1d8",
+    "damage_type": "bludgeoning",
+    "weight": 2,
+    "properties": [
+      "versatile (1d10)"
+    ]
+  },
+  {
+    "name": "Whip",
+    "type": "martial melee",
+    "cost": 200,
+    "damage": "1d4",
+    "damage_type": "slashing",
+    "weight": 3,
+    "properties": [
+      "finesse", 
+      "reach"
+    ]
+  },
+  {
+    "name": "Blowgun",
+    "type": "martial ranged",
+    "cost": 1000,
+    "damage": "1d1",
+    "damage_type": "piercing",
+    "weight": 1,
+    "properties": [
+      "ammunition (range 25/100)", 
+      "loading"
+    ]
+  },
+  {
+    "name": "Crossbow, hand",
+    "type": "martial ranged",
+    "cost": 7500,
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "weight": 3,
+    "properties": [
+      "ammunition (range 30/120)", 
+      "light", 
+      "loading"
+    ]
+  },
+  {
+    "name": "Crossbow, heavy",
+    "type": "martial ranged",
+    "cost": 5000,
+    "damage": "1d10",
+    "damage_type": "piercing",
+    "weight": 18,
+    "properties": [
+      "ammunition (range 100/400)", 
+      "heavy", 
+      "loading", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Longbow",
+    "type": "martial ranged",
+    "cost": 5000,
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "weight": 2,
+    "properties": [
+      "ammunition (range 150/600)", 
+      "heavy", 
+      "two-handed"
+    ]
+  },
+  {
+    "name": "Net",
+    "type": "martial ranged",
+    "cost": 100,
+    "damage": null,
+    "damage_type": null,
+    "weight": 3,
+    "properties": [
+      "special", 
+      "thrown (range 5/15)"
+    ]
+  }
+]
