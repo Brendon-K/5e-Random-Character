@@ -70,7 +70,6 @@ function random_race() {
   var race = races[random_range(0, num_races)];
   // apply name
   character.race = race.name;
-  $("#race").text(race.name);
 
   // apply ability scores
   character.ability_scores.str += race.ability_scores.str;
@@ -133,6 +132,11 @@ function random_race() {
   }
 }
 
+/* Adds the character information to the HTML */
+function fill_page() {
+  $("#race").text(race.name);
+}
+
 $.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
   // random ability scores
   character.ability_scores.str = roll_dice("4d6", true);
@@ -149,4 +153,6 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   var level_input = $("#level").val();
 
   // random background
+
+  fill_page();
 });
