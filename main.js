@@ -93,6 +93,43 @@ function random_race() {
       character.racial_trait.push(race.trait[i][random_range(0, num_traits)]);
     }
   }
+
+  // apply proficiencies
+  if (race.armor_proficiencies !== null) {
+    for (var i in race.armor_proficiencies) {
+      if (!character.armor_proficiencies.includes(race.armor_proficiencies[i])) {
+        character.armor_proficiencies.push(race.armor_proficiencies[i]);
+      }
+    }
+  }
+  if (race.weapon_proficiencies !== null) {
+    for (var i in race.weapon_proficiencies) {
+      if (!character.weapon_proficiencies.includes(race.weapon_proficiencies[i])) {
+        character.weapon_proficiencies.push(race.weapon_proficiencies[i]);
+      }
+    }
+  }
+  if (race.tool_proficiencies !== null) {
+    for (var i in race.tool_proficiencies) {
+      if (!character.tool_proficiencies.includes(race.tool_proficiencies[i])) {
+        character.tool_proficiencies.push(race.tool_proficiencies[i]);
+      }
+    }
+  }
+  if (race.saving_throw_proficiencies !== null) {
+    for (var i in race.saving_throw_proficiencies) {
+      if (!character.saving_throw_proficiencies.includes(race.saving_throw_proficiencies[i])) {
+        character.saving_throw_proficiencies.push(race.saving_throw_proficiencies[i]);
+      }
+    }
+  }
+  if (race.skill_proficiencies !== null) {
+    for (var i in race.skill_proficiencies) {
+      if (!character.skill_proficiencies.includes(race.skill_proficiencies[i])) {
+        character.skill_proficiencies.push(race.skill_proficiencies[i]);
+      }
+    }
+  }
 }
 
 $.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
@@ -108,6 +145,7 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   random_race();
 
   // random class for each level
+  var level_input = $("#level").val();
 
   // random background
 });
