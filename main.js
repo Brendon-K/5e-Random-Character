@@ -30,7 +30,7 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   character.ability_scores.cha = roll_dice("4d6", true);
 
   // random race
-
+  random_race();
 
   // random class for each level
 
@@ -78,4 +78,36 @@ function roll_dice(dice_string, drop_lowest=false) {
   }
 
   return total;
+}
+
+/* Applies a random race the the character */
+function random_race() {
+  var num_races = races.length;
+
+  var race = races[random_range(0, num_races)];
+  // apply name
+  character.race = race.name;
+
+  // apply ability scores
+  character.ability_scores.str += race.ability_scores.str;
+  character.ability_scores.dex += race.ability_scores.dex;
+  character.ability_scores.con += race.ability_scores.con;
+  character.ability_scores.int += race.ability_scores.int;
+  character.ability_scores.wis += race.ability_scores.wis;
+  character.ability_scores.cha += race.ability_scores.cha;
+
+  // apply physical attributes
+  character.age = random_range(race.age[0], race.age[1]);
+  character.height = race.base_height + roll_dice(race.height_modifier);
+  character.weight = race.base_weight * roll_dice(race.weight_modifier);
+
+  // apply racial trait(s), if any exist
+  if (race.trait !== null) {
+    character.racial_trait = [];
+    // push a random trait from each choice the race has
+    for (i in race.trait) {
+      var num_traits = race.trait[i].length
+      character.racial_trait.push(race.trait[i][random_range(0, num_traits)]);
+    }
+  }
 }
