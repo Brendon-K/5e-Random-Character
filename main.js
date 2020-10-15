@@ -22,7 +22,12 @@ var backgrounds_promise = $.getJSON("backgrounds.json", function(data) {
 
 $.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
   // random ability scores
-  
+  character.ability_scores.str = roll_dice("4d6", true);
+  character.ability_scores.dex = roll_dice("4d6", true);
+  character.ability_scores.con = roll_dice("4d6", true);
+  character.ability_scores.int = roll_dice("4d6", true);
+  character.ability_scores.wis = roll_dice("4d6", true);
+  character.ability_scores.cha = roll_dice("4d6", true);
 
   // random race
 
