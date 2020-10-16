@@ -390,12 +390,13 @@ function random_base_class() {
   }
 }
 
+/* Applies a random background to the character */
 function random_background() {
   var num_backgrounds = backgrounds.length;
 
   var background = backgrounds[random_range(0, backgrounds.length)];
   // apply background name
-  character.background.push(background.name);
+  character.background = background.name;
 
   // apply proficiencies
   if (background.skill_proficiencies !== null) {
