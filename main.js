@@ -714,6 +714,11 @@ function fill_page() {
   for (var i in saving_throw_copy) {
     $(".saving_throws tr:last").after("<tr><td></td><td class=\"throw_label\">● " + saving_throw_copy[i] + "</td></tr>");
   }
+
+  // add languages
+  for (var i in character.languages) {
+    $(".languages tr:last").after("<tr><td class=\"language_label\">● " + character.languages[i] + "</td></tr>");
+  }
 }
 
 $.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {

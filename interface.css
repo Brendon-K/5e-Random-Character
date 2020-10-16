@@ -72,6 +72,20 @@
   color: #adadad;
 }
 
+.languages {
+  border: 0.1em solid black;
+  width: 14em;
+  vertical-align: top;
+}
+
+.language_label {
+  font-weight: bold;
+}
+
+.languages td {
+  padding: 0em 0em 0em 1em;
+}
+
 td {
   vertical-align: top;
 }
