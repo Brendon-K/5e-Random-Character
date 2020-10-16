@@ -237,6 +237,25 @@ function random_race() {
       }
     }
   }
+
+  if (race.languages !== null) {
+    for (var i in race.languages) {
+      if (typeof race.languages[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(race.languages[i].slice(1), race.languages[i][0]);
+        for (var j in items) {
+          if (!character.languages.includes(items[j])) {
+            character.languages.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.languages.includes(race.languages[i])) {
+          character.languages.push(race.languages[i]);
+        }
+      }
+    }
+  }
 }
 
 /* Applies a random base class to the character */
