@@ -105,3 +105,21 @@ input {
   width: 2em;
 }
 
+#other_proficiencies {
+  border: 0.1em solid black;
+  width: 42em;
+}
+
+.inner_prof {
+  border: 0.1em solid black;
+}
+
+#armor_proficiencies, #weapon_proficiencies, #tool_proficiencies {
+  width: 14em;
+  float:left;  
+}
+
+#equipment {
+  border: 0.1em solid black;
+  clear: both;
+}

@@ -712,12 +712,33 @@ function fill_page() {
     }
   });
   for (var i in saving_throw_copy) {
-    $(".saving_throws tr:last").after("<tr><td></td><td class=\"throw_label\">● " + saving_throw_copy[i] + "</td></tr>");
+    $("#saving_throws tr:last").after("<tr><td></td><td class=\"throw_label\">● " + saving_throw_copy[i] + "</td></tr>");
   }
 
   // add languages
   for (var i in character.languages) {
-    $(".languages tr:last").after("<tr><td class=\"language_label\">● " + character.languages[i] + "</td></tr>");
+    $("#languages tr:last").after("<tr><td class=\"language_label\">● " + character.languages[i] + "</td></tr>");
+  }
+
+  // add other proficiencies
+  // armor proficiencies
+  for (var i in character.armor_proficiencies) {
+    $("#armor_proficiencies tr:last").after("<tr><td>" + character.armor_proficiencies[i] + "</td></tr>");
+  }
+
+  // weapon proficiencies
+  for (var i in character.weapon_proficiencies) {
+    $("#weapon_proficiencies tr:last").after("<tr><td>" + character.weapon_proficiencies[i] + "</td></tr>");
+  }
+
+  // tool proficiencies
+  for (var i in character.tool_proficiencies) {
+    $("#tool_proficiencies tr:last").after("<tr><td>" + character.tool_proficiencies[i] + "</td></tr>");
+  }
+
+  // add equipment
+  for (var i in character.equipment) {
+    $("#equipment tr:last").after("<tr><td>" + character.tool_proficiencies[i] + "</td></tr>");
   }
 }
 
