@@ -272,6 +272,9 @@ function random_base_class() {
   if (character.race == "Hill Dwarf") {
     ++character.hit_points;
   }
+  if (character.hit_points < 1) {
+    character.hit_points = 1;
+  }
 
   // apply proficiencies
   if (base_class.armor_proficiencies !== null) {
