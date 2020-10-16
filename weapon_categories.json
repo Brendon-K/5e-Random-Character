@@ -1,59 +1,43 @@
-[
-  {
-    "type": "simple melee",
-    "list": [
-      "Club",
-      "Dagger",
-      "Greatclub",
-      "Handaxe",
-      "Javelin",
-      "Light Hammer",
-      "Mace",
-      "Quarterstaff",
-      "Sickle",
-      "Spear"
-    ]
-  },
-  {
-    "type": "simple ranged",
-    "list": [
-      "Light Crossbow",
-      "Dart",
-      "Shortbow",
-      "Sling"
-    ]
-  },
-  {
-    "type": "martial melee",
-    "list": [
-      "Battleaxe",
-      "Flail",
-      "Glaive",
-      "Greataxe",
-      "Greatsword",
-      "Halberd",
-      "Lance",
-      "Longsword",
-      "Maul",
-      "Morningstar",
-      "Pike",
-      "Rapier",
-      "Scimitar",
-      "Shortsword",
-      "Trident",
-      "War Pick",
-      "Warhammer",
-      "Whip"
-    ]
-  },
-  {
-    "type": "martial ranged",
-    "list": [
-      "Blowgun",
-      "Hand Crossbow",
-      "Heavy Crossbow",
-      "Longbow",
-      "Net"
-    ]
-  }
-]
+{
+  "Simple Weapons": [
+    "Club",
+    "Dagger",
+    "Greatclub",
+    "Handaxe",
+    "Javelin",
+    "Light Hammer",
+    "Mace",
+    "Quarterstaff",
+    "Sickle",
+    "Spear",
+    "Light Crossbow",
+    "Dart",
+    "Shortbow",
+    "Sling"
+  ],
+  "Martial Weapons": [
+    "Battleaxe",
+    "Flail",
+    "Glaive",
+    "Greataxe",
+    "Greatsword",
+    "Halberd",
+    "Lance",
+    "Longsword",
+    "Maul",
+    "Morningstar",
+    "Pike",
+    "Rapier",
+    "Scimitar",
+    "Shortsword",
+    "Trident",
+    "War Pick",
+    "Warhammer",
+    "Whip",
+    "Blowgun",
+    "Hand Crossbow",
+    "Heavy Crossbow",
+    "Longbow",
+    "Net"
+  ]
+}
