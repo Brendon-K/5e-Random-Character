@@ -48,6 +48,10 @@
 	font-weight: bold;
 }
 
+.skill_value {
+    text-align: right;
+}
+
 .ability_hint {
 	font-size: 0.7em;
 	color: #adadad;
