@@ -20,6 +20,10 @@ var backgrounds_promise = $.getJSON("backgrounds.json", function(data) {
   backgrounds = data;
 });
 
+var weapon_categories_promise = $.getJSON("weapon_categories.json", function(data) {
+  weapon_categories = data;
+});
+
 /* returns a random number between the min and max values (inclusive) */
 function random_range(min, max) {
   return Math.floor(min + Math.random() * max);
@@ -96,6 +100,28 @@ function get_race_data(race_name) {
   }
   console.log("ERROR: Couldn't find " + race_name);
   return null;
+}
+
+/* Removes "duplicates" in weapon proficiencies. 
+ * For example, if already proficient in "Martial Weapons", and "Shortsword",
+ * then "Shortsword" will be removed, as well as any other martial weapons.
+*/
+function neaten_weapon_proficiencies() {
+  var temp_weapon_proficiencies = character.weapon_proficiencies.slice();
+  if (temp_weapon_proficiencies.includes("Simple Weapons")) {
+    for (var i in temp_weapon_proficiencies) {
+      if (weapon_categories.simple_weapons.includes(temp_weapon_proficiencies[i])) {
+        character.weapon_proficiencies = character.weapon_proficiencies.filter(entry => entry !== temp_weapon_proficiencies[i]);
+      }
+    }
+  }
+  if (temp_weapon_proficiencies.includes("Martial Weapons")) {
+    for (var i in temp_weapon_proficiencies) {
+      if (weapon_categories.martial_weapons.includes(temp_weapon_proficiencies[i])) {
+        character.weapon_proficiencies = character.weapon_proficiencies.filter(entry => entry !== temp_weapon_proficiencies[i]);
+      }
+    }
+  }
 }
 
 /* Applies a random race to the character */
@@ -742,7 +768,7 @@ function fill_page() {
   }
 }
 
-$.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
+$.when(character_promise, races_promise, base_classes_promise, backgrounds_promise, weapon_categories_promise).done(function() {
   // random ability scores
   character.ability_scores.str = roll_dice("4d6", true);
   character.ability_scores.dex = roll_dice("4d6", true);
@@ -761,5 +787,6 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   random_background()
 
   // put the information on the page
+  neaten_weapon_proficiencies();
   fill_page();
 });
