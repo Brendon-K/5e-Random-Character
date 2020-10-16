@@ -2,20 +2,20 @@
 
 }
 
-.statLabel {
+.stat_label {
 	border: 0.1em solid black;
 	margin: 0.1em;
 	width: 3.5em;
 	text-align: center;
 }
 
-.statNumber {
+.stat_number {
 	border: 0.1em solid black;
 	width: 3.5em;
 	text-align: center;
 }
 
-.statDetailed {
+.stat_detailed {
 	border: 0.1em solid black;
 	width: 3.5em;
 	text-align: center;
@@ -39,7 +39,7 @@
 	padding: 0em 1em 0em 0.1em;
 }
 
-.skillLabel {
+.skill_label {
 	font-weight: bold;
 }
 
@@ -47,7 +47,7 @@ td {
 	vertical-align: center;
 }
 
-#longStat {
+#long_stat {
 	font-size: .66em;
 }
 
