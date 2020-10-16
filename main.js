@@ -738,7 +738,7 @@ function fill_page() {
 
   // add equipment
   for (var i in character.equipment) {
-    $("#equipment tr:last").after("<tr><td>" + character.tool_proficiencies[i] + "</td></tr>");
+    $("#equipment tr:last").after("<tr><td>" + character.equipment[i] + "</td></tr>");
   }
 }
 
