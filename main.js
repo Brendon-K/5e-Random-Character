@@ -501,17 +501,17 @@ function fill_page() {
   $("#background").text(character.background);
 
   // draw ability scores
-  $("#str").text(character.ability_scores.str + "<br />" + get_ability_mod(character.ability_scores.str));
+  $("#str").text(character.ability_scores.str + "\n" + get_ability_mod(character.ability_scores.str));
   $("#str_detailed").text("(" + (character.ability_scores.str - race.ability_scores.str) + " + " + (race.ability_scores.str) + ")");
-  $("#dex").text(character.ability_scores.dex + "<br />" + get_ability_mod(character.ability_scores.dex));
+  $("#dex").text(character.ability_scores.dex + "\n" + get_ability_mod(character.ability_scores.dex));
   $("#dex_detailed").text("(" + (character.ability_scores.dex - race.ability_scores.dex) + " + " + (race.ability_scores.dex) + ")");
-  $("#con").text(character.ability_scores.con + "<br />" + get_ability_mod(character.ability_scores.con));
+  $("#con").text(character.ability_scores.con + "\n" + get_ability_mod(character.ability_scores.con));
   $("#con_detailed").text("(" + (character.ability_scores.con - race.ability_scores.con) + " + " + (race.ability_scores.con) + ")");
-  $("#int").text(character.ability_scores.int + "<br />" + get_ability_mod(character.ability_scores.int));
+  $("#int").text(character.ability_scores.int + "\n" + get_ability_mod(character.ability_scores.int));
   $("#int_detailed").text("(" + (character.ability_scores.int - race.ability_scores.int) + " + " + (race.ability_scores.int) + ")");
-  $("#wis").text(character.ability_scores.wis + "<br />" + get_ability_mod(character.ability_scores.wis));
+  $("#wis").text(character.ability_scores.wis + "\n" + get_ability_mod(character.ability_scores.wis));
   $("#wis_detailed").text("(" + (character.ability_scores.wis - race.ability_scores.wis) + " + " + (race.ability_scores.wis) + ")");
-  $("#cha").text(character.ability_scores.cha + "<br />" + get_ability_mod(character.ability_scores.cha));
+  $("#cha").text(character.ability_scores.cha + "\n" + get_ability_mod(character.ability_scores.cha));
   $("#cha_detailed").text("(" + (character.ability_scores.cha - race.ability_scores.cha) + " + " + (race.ability_scores.cha) + ")");
 
   // draw base class
@@ -528,14 +528,14 @@ function fill_page() {
   } else {
     $("#acrobatics_proficient").text("○");
   }
-  $("#animal_handling").text(get_ability_mod(character.ability_scores.dex));
+  $("#acrobatics").text(get_ability_mod(character.ability_scores.dex));
 
   if (character.skill_proficiencies.includes("Animal Handling")) {
     $("#animal_handling_proficient").text("●");
   } else {
     $("#animal_handling_proficient").text("○");
   }
-  $("#acrobatics").text(get_ability_mod(character.ability_scores.wis));
+  $("#animal_handling").text(get_ability_mod(character.ability_scores.wis));
 
   if (character.skill_proficiencies.includes("Arcana")) {
     $("#arcana_proficient").text("●");
