@@ -1,11 +1,11 @@
 [
   {
     "name": "Acolyte",
-    "skills": [
+    "skill_proficiencies": [
       "Insight",
       "Religion"
     ],
-    "tools": null,
+    "tool_proficiencies": null,
     "languages": [
       [2, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
@@ -25,11 +25,11 @@
   },
   {
     "name": "Charlatan",
-    "skills": [
+    "skill_proficiencies": [
       "Deception",
       "Sleight of Hand"
     ],
-    "tools": [
+    "tool_proficiencies": [
       "Disguise Kit",
       "Forgery Kit"
     ],
@@ -58,11 +58,11 @@
   },
   {
     "name": "Criminal",
-    "skills": [
+    "skill_proficiencies": [
       "Deception",
       "Stealth"
     ],
-    "tools": [
+    "tool_proficiencies": [
       [1, "Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
       "Thieves' Tools"
     ],
@@ -91,11 +91,11 @@
   },
   {
     "name": "Entertainer",
-    "skills": [
+    "skill_proficiencies": [
       "Acrobatics",
       "Performance"
     ],
-    "tools": [
+    "tool_proficiencies": [
       "Disguise Kit",
       [1, "Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"]
     ],
@@ -127,11 +127,11 @@
   },
   {
     "name": "Folk Hero",
-    "skills": [
+    "skill_proficiencies": [
       "Animal Handling",
       "Survival"
     ],
-    "tools": [
+    "tool_proficiencies": [
       [1, "Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"],
       "Vehicles (land)"
     ],
@@ -164,11 +164,11 @@
   },
   {
     "name": "Guild Artisan",
-    "skills": [
+    "skill_proficiencies": [
       "Insight",
       "Persuasion"
     ],
-    "tools": [
+    "tool_proficiencies": [
       [1, "Alchemist’s supplies", "Tinker’s tools", "Glassblower’s tools", "Jeweler’s tools", "Brewer’s supplies", "Smith’s tools", "Cartographer’s tools", "Mason’s tools", "Calligrapher's Supplies", "Painter’s supplies", "Potter’s tools", "Carpenter’s tools", "Cobbler’s tools", "Leatherworker’s tools", "Cook’s utensils", "Weaver’s tools", "Woodcarver’s tools"]
     ],
     "languages": [
@@ -211,11 +211,11 @@
   },
   {
     "name": "Hermit",
-    "skills": [
+    "skill_proficiencies": [
       "Medicine",
       "Religion"
     ],
-    "tools": [
+    "tool_proficiencies": [
       "Herbalism Kit"
     ],
     "languages": [
@@ -247,11 +247,11 @@
   },
   {
     "name": "Noble",
-    "skills": [
+    "skill_proficiencies": [
       "History",
       "Persuasion"
     ],
-    "tools": [
+    "tool_proficiencies": [
       [1, "Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"]
     ],
     "languages": [
@@ -271,11 +271,11 @@
   },
   {
     "name": "Outlander",
-    "skills": [
+    "skill_proficiencies": [
       "Athletics",
       "Survival"
     ],
-    "tools": [
+    "tool_proficiencies": [
       [1, "Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan", "Shawm", "Viol"]
     ],
     "languages": [
@@ -309,11 +309,11 @@
   },
   {
     "name": "Sage",
-    "skills": [
+    "skill_proficiencies": [
       "Arcana",
       "History"
     ],
-    "tools": null,
+    "tool_proficiencies": null,
     "languages": [
       [2, "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc"]
     ],
@@ -344,11 +344,11 @@
   },
   {
     "name": "Sailor",
-    "skills": [
+    "skill_proficiencies": [
       "Athletics",
       "Perception"
     ],
-    "tools": [
+    "tool_proficiencies": [
       "Navigator's tools",
       "Vehicles (water)"
     ],
@@ -368,11 +368,11 @@
   },
   {
     "name": "Soldier",
-    "skills": [
+    "skill_proficiencies": [
       "Athletics",
       "Intimidation"
     ],
-    "tools": [
+    "tool_proficiencies": [
       [1, "Dice Set", "Dragonchess Set", "Playing Card Set", "Three-Dragon Ante Set"],
       "Vehicles (land)"
     ],
@@ -403,11 +403,11 @@
   },
   {
     "name": "Urchin",
-    "skills": [
+    "skill_proficiencies": [
       "Sleight of Hand",
       "Stealth"
     ],
-    "tools": [
+    "tool_proficiencies": [
       "Disguise kit",
       "Thieves' tools"
     ],
