@@ -267,8 +267,8 @@ function random_base_class() {
         }
       } else {
         // append to list
-        if (!character.armor_proficiencies.includes(race.armor_proficiencies[i])) {
-          character.armor_proficiencies.push(race.armor_proficiencies[i]);
+        if (!character.armor_proficiencies.includes(base_class.armor_proficiencies[i])) {
+          character.armor_proficiencies.push(base_class.armor_proficiencies[i]);
         }
       }
     }
@@ -286,8 +286,8 @@ function random_base_class() {
         }
       } else {
         // append to list
-        if (!character.weapon_proficiencies.includes(race.weapon_proficiencies[i])) {
-          character.weapon_proficiencies.push(race.weapon_proficiencies[i]);
+        if (!character.weapon_proficiencies.includes(base_class.weapon_proficiencies[i])) {
+          character.weapon_proficiencies.push(base_class.weapon_proficiencies[i]);
         }
       }
     }
@@ -305,8 +305,8 @@ function random_base_class() {
         }
       } else {
         // append to list
-        if (!character.tool_proficiencies.includes(race.tool_proficiencies[i])) {
-          character.tool_proficiencies.push(race.tool_proficiencies[i]);
+        if (!character.tool_proficiencies.includes(base_class.tool_proficiencies[i])) {
+          character.tool_proficiencies.push(base_class.tool_proficiencies[i]);
         }
       }
     }
@@ -324,8 +324,8 @@ function random_base_class() {
         }
       } else {
         // append to list
-        if (!character.saving_throw_proficiencies.includes(race.saving_throw_proficiencies[i])) {
-          character.saving_throw_proficiencies.push(race.saving_throw_proficiencies[i]);
+        if (!character.saving_throw_proficiencies.includes(base_class.saving_throw_proficiencies[i])) {
+          character.saving_throw_proficiencies.push(base_class.saving_throw_proficiencies[i]);
         }
       }
     }
@@ -343,8 +343,8 @@ function random_base_class() {
         }
       } else {
         // append to list
-        if (!character.skill_proficiencies.includes(race.skill_proficiencies[i])) {
-          character.skill_proficiencies.push(race.skill_proficiencies[i]);
+        if (!character.skill_proficiencies.includes(base_class.skill_proficiencies[i])) {
+          character.skill_proficiencies.push(base_class.skill_proficiencies[i]);
         }
       }
     }
