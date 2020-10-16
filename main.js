@@ -268,14 +268,14 @@ function random_base_class() {
 
   // add hit points
   var new_hit_points = roll_dice(base_class.hit_die) + get_ability_mod(character.ability_scores.con);
+  // if character is a Hill Dwarf, they get an extra hit point per level
+  if (character.race == "Hill Dwarf") {
+    ++new_hit_points;
+  }
   if (new_hit_points > 1) {
     new_hit_points = 1;
   }
   character.hit_points += new_hit_points;
-  // if character is a Hill Dwarf, they get an extra hit point per level
-  if (character.race == "Hill Dwarf") {
-    ++character.hit_points;
-  }
 
   // apply proficiencies
   if (base_class.armor_proficiencies !== null) {
