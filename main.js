@@ -122,6 +122,133 @@ function neaten_weapon_proficiencies() {
       }
     }
   }
+
+  // sort the proficiencies
+  function get_value(weapon_name) {
+    switch (weapon_name) {
+      case "Simple Weapons":
+        return 0;
+        break;
+      case "Martial Weapons":
+        return 1;
+        break;
+      case "Club":
+        return 2;
+        break;
+      case "Dagger":
+        return 3;
+        break;
+      case "Greatclub":
+        return 4;
+        break;
+      case "Handaxe":
+        return 5;
+        break;
+      case "Javelin":
+        return 6;
+        break;
+      case "Light Hammer":
+        return 7;
+        break;
+      case "Mace":
+        return 8;
+        break;
+      case "Quarterstaff":
+        return 9;
+        break;
+      case "Sickle":
+        return 10;
+        break;
+      case "Spear":
+        return 11;
+        break;
+      case "Light Crossbow":
+        return 12;
+        break;
+      case "Dart":
+        return 13;
+        break;
+      case "Shortbow":
+        return 14;
+        break;
+      case "Sling":
+        return 15;
+        break;
+      case "Battleaxe":
+        return 16;
+        break;
+      case "Flail":
+        return 17;
+        break;
+      case "Glaive":
+        return 18;
+        break;
+      case "Greataxe":
+        return 19;
+        break;
+      case "Greatsword":
+        return 20;
+        break;
+      case "Halberd":
+        return 21;
+        break;
+      case "Lance":
+        return 22;
+        break;
+      case "Longsword":
+        return 23;
+        break;
+      case "Maul":
+        return 24;
+        break;
+      case "Morningstar":
+        return 25;
+        break;
+      case "Pike":
+        return 26;
+        break;
+      case "Rapier":
+        return 27;
+        break;
+      case "Scimitar":
+        return 28;
+        break;
+      case "Shortsword":
+        return 29;
+        break;
+      case "Trident":
+        return 30;
+        break;
+      case "War Pick":
+        return 31;
+        break;
+      case "Warhammer":
+        return 32;
+        break;
+      case "Whip":
+        return 33;
+        break;
+      case "Blowgun":
+        return 34;
+        break;
+      case "Hand Crossbow":
+        return 35;
+        break;
+      case "Heavy Crossbow":
+        return 36;
+        break;
+      case "Longbow":
+        return 37;
+        break;
+      case "Net":
+        return 38;
+        break;
+    };
+  }
+
+  character.weapon_proficiencies.sort(function(a, b) {
+    return get_value(a) - get_value(b);
+  });
 }
 
 /* Applies a random race to the character */
