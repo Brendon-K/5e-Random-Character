@@ -10,53 +10,12 @@
   <table>
   <tr>
     <td>
-      <table class="class">
-        <tr>
-          <td>
-            <span id="class"></span>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <div>
-        %Chance to change class: <br />
-        (1-100) <input type="text" id="percent_class" value="100">%
-      </div>
-      <table>
-        <tr>
-          <td>
-            Level: <select id="level">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-            </select>
-            <button type="button" class="random_button">random!</button>
-          </td>
-        </tr>
-      </table>
-      
-      <div class="race">
+      <div class="character_info">
         <span class="label">Background: </span><span id="background"></span>
         <br />
         <span class="label">Race: </span><span id="race"></span>
+        <br />
+        <span class="label">Class: </span><span id="class"></span>
         <br />
         <span class="label">HP: </span><span id="hp"></span>
       </div>
@@ -302,6 +261,71 @@
           </td>
         </tr>
         </tr>
+      </table>
+    </td>
+    <td>
+      <table class="saving_throws">
+        <tr>
+          <th colspan="2" class="label">Saving Throws</th>
+        </tr>
+        <tr>
+          <td class="throw_value">
+            <span id="str_throw">0</span>
+          </td>
+          <td class="throw_label">
+            <span id="str_throw_proficient"></span> Strength
+          </td>
+        </tr>
+        <tr>
+          <td class="throw_value">
+            <span id="dex_throw">0</span>
+          </td>
+          <td class="throw_label">
+            <span id="dex_throw_proficient"></span> Dexterity
+          </td>
+        </tr>
+        <tr>
+          <td class="throw_value">
+            <span id="con_throw">0</span>
+          </td>
+          <td class="throw_label">
+            <span id="con_throw_proficient"></span> Constitution
+          </td>
+        </tr>
+        <tr>
+          <td class="throw_value">
+            <span id="int_throw">0</span>
+          </td>
+          <td class="throw_label">
+            <span id="int_throw_proficient"></span> Intelligence
+          </td>
+        </tr>
+        <tr>
+          <td class="throw_value">
+            <span id="wis_throw">0</span>
+          </td>
+          <td class="throw_label">
+            <span id="wis_throw_proficient"></span> Wisdom
+          </td>
+        </tr>
+        <tr>
+          <td class="throw_value">
+            <span id="cha_throw">0</span>
+          </td>
+          <td class="throw_label">
+            <span id="cha_throw_proficient"></span> Charisma
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><!-- This is empty on purpose, to be a spacer --></td>
+    <td>
+      <table class="not_sure_yet">
+        <th>
+          Not sure yet
+        </th>
       </table>
     </td>
   </tr>

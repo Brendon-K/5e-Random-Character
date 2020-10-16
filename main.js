@@ -654,6 +654,66 @@ function fill_page() {
     $("#survival_proficient").text("○");
   }
   $("#survival").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
+
+  // draw saving throws
+  // main ability throws
+  if (character.saving_throw_proficiencies.includes("Strength")) {
+    $("#str_throw_proficient").text("●");
+  } else {
+    $("#str_throw_proficient").text("○");
+  }
+  $("#str_throw").text((get_ability_mod(character.ability_scores.str) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.str));
+
+  if (character.saving_throw_proficiencies.includes("Dexterity")) {
+    $("#dex_throw_proficient").text("●");
+  } else {
+    $("#dex_throw_proficient").text("○");
+  }
+  $("#dex_throw").text((get_ability_mod(character.ability_scores.dex) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.dex));
+
+  if (character.saving_throw_proficiencies.includes("Constitution")) {
+    $("#con_throw_proficient").text("●");
+  } else {
+    $("#con_throw_proficient").text("○");
+  }
+  $("#con_throw").text((get_ability_mod(character.ability_scores.con) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.con));
+
+  if (character.saving_throw_proficiencies.includes("Intelligence")) {
+    $("#int_throw_proficient").text("●");
+  } else {
+    $("#int_throw_proficient").text("○");
+  }
+  $("#int_throw").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
+
+  if (character.saving_throw_proficiencies.includes("Wisdom")) {
+    $("#wis_throw_proficient").text("●");
+  } else {
+    $("#wis_throw_proficient").text("○");
+  }
+  $("#wis_throw").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
+
+  if (character.saving_throw_proficiencies.includes("Charisma")) {
+    $("#cha_throw_proficient").text("●");
+  } else {
+    $("#cha_throw_proficient").text("○");
+  }
+  $("#cha_throw").text((get_ability_mod(character.ability_scores.cha) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.cha));
+
+  // extra saving throws
+  // make copy of saving throws without the base ones
+  var saving_throw_copy = character.saving_throw_proficiencies.slice().filter(function(entry) {
+    if (entry !== "Strength" && 
+        entry !== "Dexterity" && 
+        entry !== "Constitution" && 
+        entry !== "Intelligence" && 
+        entry !== "Wisdom" && 
+        entry !== "Charisma") {
+      return entry;
+    }
+  });
+  for (var i in saving_throw_copy) {
+    $(".saving_throws tr:last").after("<tr><td></td><td></td>● " + saving_throw_copy[i] + "</tr>");
+  }
 }
 
 $.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {
@@ -669,10 +729,7 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   random_race();
 
   // random class for each level
-  character.level = $("#level").val()*1;
-  for (var i = 0; i < character.level; ++i) {
-    random_base_class();
-  }
+  random_base_class();
 
   // random background
   random_background()

@@ -1,75 +1,98 @@
-.stats {
-
-}
-
 .stat_label {
-	border: 0.1em solid black;
-	margin: 0.1em;
-	width: 3.5em;
-	text-align: center;
+  border: 0.1em solid black;
+  margin: 0.1em;
+  width: 3.5em;
+  text-align: center;
 }
 
 .stat_number {
-	border: 0.1em solid black;
-	width: 3.5em;
-	text-align: center;
+  border: 0.1em solid black;
+  width: 3.5em;
+  text-align: center;
 }
 
 .stat_mod {
-	font-size: 0.9em;
-	color: #6e6e6e;
+  font-size: 0.9em;
+  color: #6e6e6e;
 }
 
 .stat_detailed {
-	border: 0.1em solid black;
-	width: 3.5em;
-	text-align: center;
+  border: 0.1em solid black;
+  width: 3.5em;
+  text-align: center;
 }
 
 .label {
-	font-weight: bold;
-	font-size: 1.1em;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 .class  {
-	border: 0.1em solid black;
-	padding: 1em;
+  border: 0.1em solid black;
+  padding: 1em;
 }
 
 .skills {
-	border: 0.1em solid black;
+  border: 0.1em solid black;
+  width: 12.6em;
 }
 
 .skills td {
-	padding: 0em 1em 0em 0.1em;
+  padding: 0em 1em 0em 0.1em;
 }
 
 .skill_label {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .skill_value {
-    text-align: right;
+  text-align: right;
+}
+
+.saving_throws {
+  border: 0.1em solid black;
+  width: 9em;
+  vertical-align: top;
+}
+
+.saving_throws td {
+  padding: 0em 1em 0em 0.1em;
+}
+
+.throw_label {
+  font-weight: bold;
+}
+
+.throw_value {
+  text-align: right;
 }
 
 .ability_hint {
-	font-size: 0.7em;
-	color: #adadad;
+  font-size: 0.7em;
+  color: #adadad;
 }
 
 td {
-	vertical-align: center;
+  vertical-align: top;
 }
 
 #long_stat {
-	font-size: .66em;
+  font-size: .66em;
 }
 
 #race {
-	text-decoration: underline;
+  text-decoration: underline;
+}
+
+#background {
+  text-decoration: underline;
+}
+
+#class {
+  text-decoration: underline;
 }
 
 input {
-	width: 2em;
+  width: 2em;
 }
 
