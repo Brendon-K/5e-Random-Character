@@ -1,5 +1,5 @@
 {
-  "Simple Weapons": [
+  "simple_weapons": [
     "Club",
     "Dagger",
     "Greatclub",
@@ -15,7 +15,7 @@
     "Shortbow",
     "Sling"
   ],
-  "Martial Weapons": [
+  "martial_weapons": [
     "Battleaxe",
     "Flail",
     "Glaive",
