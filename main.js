@@ -351,9 +351,24 @@ function random_base_class() {
   }
 
   // sort out equipment
-  //for (var i in base_class.equipment) {
-  //  character.equipment.push(get_items_in_array(base_class.equipment[i], 1));
-  //}
+  if (base_class.equipment !== null) {
+    for (var i in base_class.equipment) {
+      if (typeof base_class.equipment[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(base_class.equipment[i].slice(1), base_class.equipment[i][0]);
+        for (var j in items) {
+          if (!character.equipment.includes(items[j])) {
+            character.equipment.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.equipment.includes(base_class.equipment[i])) {
+          character.equipment.push(base_class.equipment[i]);
+        }
+      }
+    }
+  }
 }
 
 /* Adds the character information to the HTML */
