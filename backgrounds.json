@@ -11,7 +11,7 @@
     ],
     "equipment": [
       "Holy Symbol",
-      ["Prayer Book", "Prayer Wheel"],
+      [1, "Prayer Book", "Prayer Wheel"],
       "5x Stick of Incense",
       "Vestments",
       "Common Clothes"
