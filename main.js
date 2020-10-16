@@ -2,6 +2,7 @@ var character = null;
 var races = null;
 var base_classes = null;
 var backgrounds = null;
+var spells = null;
 
 // load all the json
 var character_promise = $.getJSON("character.json", function(data) {
