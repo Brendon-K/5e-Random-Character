@@ -5,19 +5,13 @@ https://brendon-k.github.io/5e-Random-Character/
 
 ## WHERE I LEFT OFF
   
-  Need to figure out what to do with spells
+  The code is really bad, so I'd like to clean it up before adding any more features
 
-## NOTES FOR SPECIFIC RACES
+## NOTES FOR SPECIFIC RACES IF I ADD LEVELING UP
 
-1. High Elf
-  * +1 Wizard Cantrip
-2. Dark Elf (Drow)
-  * +Dancing Lights Cantrip @level 1
+1. Dark Elf (Drow)
   * +Faerie Fire spell @level 3
   * +Darkness spell @level 5
-3. Forest Gnome
-  * +Minor Illusion Cantrip
-4. Tiefling
-  * +Thaumaturgy Cantrip @level 1
+2. Tiefling
   * +Hellish Rebuke spell @level 3
   * +Darkness Spell @level 5
