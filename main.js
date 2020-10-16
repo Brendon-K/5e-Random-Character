@@ -748,6 +748,14 @@ function fill_page() {
   // draw background
   $("#background").text(character.background);
 
+  // draw physical attributes
+  $("#age_value").text(character.age + " yrs");
+  $("#weight_value").text(character.weight + " lbs");
+  // convert to feet and inches
+  var feet = Math.floor(character.height / 12);
+  var inches = character.height % 12;
+  $("#height_value").text(feet + "' " + inches + "\"");
+
   // draw ability scores
   $("#str").text(character.ability_scores.str);
   $("#str_mod").text((get_ability_mod(character.ability_scores.str) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.str));

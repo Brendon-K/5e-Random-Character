@@ -142,3 +142,17 @@ input {
   width: 8em;
   float:left;  
 }
+
+#physical_info {
+  width: 100%
+}
+
+#physical_info td {
+  border: 0.1em solid black;
+  text-align: center;
+  width: 33%;
+}
+
+#age, #height, #weight {
+  font-size: 1em;
+}
