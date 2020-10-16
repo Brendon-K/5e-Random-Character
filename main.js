@@ -675,6 +675,8 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
   }
 
   // random background
+  random_background()
 
+  // put the information on the page
   fill_page();
 });
