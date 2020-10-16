@@ -5,7 +5,7 @@ https://brendon-k.github.io/5e-Random-Character/
 
 ## WHERE I LEFT OFF
   
-  add equipment from base class
+  Need to figure out what to do with spells
 
 ## NOTES FOR SPECIFIC RACES
 
