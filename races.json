@@ -423,7 +423,10 @@
         "tool_proficiencies": null,
         "saving_throw_proficiencies": null,
         "skill_proficiencies": null,
-        "languages": null,
+        "languages": [
+            "Common",
+            "Infernal"
+        ],
         "age": [18, 90],
         "base_height": 57,
         "height_modifier": "2d8",
