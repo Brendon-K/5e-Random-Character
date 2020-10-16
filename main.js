@@ -691,37 +691,37 @@ function random_spells() {
   var new_first_level_spells = [];
 
   switch (character.class[0]) {
-    case "bard":
+    case "Bard":
       // 2 cantrips
       new_cantrips = get_items_in_array(spells.bard.cantrips, 2);
       // 2 first level spells
       new_first_level_spells = get_items_in_array(spells.bard.first_level, 2);
       break;
-    case "cleric":
+    case "Cleric":
       // 3 cantrips
       new_cantrips = get_items_in_array(spells.cleric.cantrips, 3);
       // 2 spells
       new_first_level_spells = get_items_in_array(spells.cleric.first_level, 2);
       break;
-    case "druid":
+    case "Druid":
       // 2 cantrips
       new_cantrips = get_items_in_array(spells.druid.cantrips, 2);
       // 2 first level spells
       new_first_level_spells = get_items_in_array(spells.druid.first_level, 2);
       break;
-    case "sorcerer":
+    case "Sorcerer":
       // 4 cantrips
       new_cantrips = get_items_in_array(spells.sorcerer.cantrips, 4);
       // 2 first level spells
       new_first_level_spells = get_items_in_array(spells.sorcerer.first_level, 2);
       break;
-    case "warlock":
+    case "Warlock":
       // 2 cantrips
       new_cantrips = get_items_in_array(spells.warlock.cantrips, 2);
       // 2 first level spells
       new_first_level_spells = get_items_in_array(spells.warlock.first_level, 2);
       break;
-    case "wizard":
+    case "Wizard":
       // 3 cantrips
       new_cantrips = get_items_in_array(spells.wizard.cantrips, 3);
       // 2 spells
