@@ -24,6 +24,10 @@ var weapon_categories_promise = $.getJSON("weapon_categories.json", function(dat
   weapon_categories = data;
 });
 
+var spells_promise = $.getJSON("spells.json", function(data) {
+  spells = data;
+});
+
 /* returns a random number between the min and max values (inclusive) */
 function random_range(min, max) {
   return Math.floor(min + Math.random() * max);
@@ -643,6 +647,96 @@ function random_background() {
   character.money += background.money;
 }
 
+/* Gives the character random spells that are appropriate for them */
+function random_spells() {
+  // deal with weird race things first
+  if (character.level == 1) {
+    switch (character.race) {
+      case "High Elf":
+        // High Elves get a Wizard cantrip
+        var new_spell = get_items_in_array(spells.wizard.cantrips, 1);
+        character.spells.cantrips.push(new_spell);
+        // remove the cantrip so it's not possible to get duplicates
+        spells.wizard.cantrips = spells.wizard.cantrips.filter(entry => entry !== new_spell);
+        break;
+      case "Dark Elf (Drow)":
+        // Drow get Dancing Lights cantrip at level 1
+        character.spells.cantrips.push("Dancing Lights");
+        // remove dancing lights from the spell list so no duplicates
+        spells.bard.cantrips = spells.bard.cantrips.filter(entry => entry !== "Dancing Lights");
+        spells.sorcerer.cantrips = spells.sorcerer.cantrips.filter(entry => entry !== "Dancing Lights");
+        spells.wizard.cantrips = spells.wizard.cantrips.filter(entry => entry !== "Dancing Lights");
+        break;
+      case "Forest Gnome":
+        // Forest Gnomes get Minor Illusion cantrip
+        character.spells.cantrips.push("Minor Illusion");
+        // remove minor illusion from the spell list so no duplicates
+        spells.bard.cantrips = spells.bard.cantrips.filter(entry => entry !== "Minor Illusion");
+        spells.sorcerer.cantrips = spells.sorcerer.cantrips.filter(entry => entry !== "Minor Illusion");
+        spells.warlock.cantrips = spells.warlock.cantrips.filter(entry => entry !== "Minor Illusion");
+        spells.wizard.cantrips = spells.wizard.cantrips.filter(entry => entry !== "Minor Illusion");
+        break;
+      case "Tiefling":
+        // Tieflings get Thaumaturgy cantrip at level 1
+        character.spells.cantrips.push("Thaumaturgy");
+        // remove minor illusion from the spell list so no duplicates
+        spells.cleric.cantrips = spells.cleric.cantrips.filter(entry => entry !== "Thaumaturgy");
+        break;
+    }
+  }
+
+  // now do class spells
+  var new_cantrips = [];
+  var new_first_level_spells = [];
+
+  switch (character.class[0]) {
+    case "bard":
+      // 2 cantrips
+      new_cantrips = get_items_in_array(spells.bard.cantrips, 2);
+      // 2 first level spells
+      new_first_level_spells = get_items_in_array(spells.bard.first_level, 2);
+      break;
+    case "cleric":
+      // 3 cantrips
+      new_cantrips = get_items_in_array(spells.cleric.cantrips, 3);
+      // 2 spells
+      new_first_level_spells = get_items_in_array(spells.cleric.first_level, 2);
+      break;
+    case "druid":
+      // 2 cantrips
+      new_cantrips = get_items_in_array(spells.druid.cantrips, 2);
+      // 2 first level spells
+      new_first_level_spells = get_items_in_array(spells.druid.first_level, 2);
+      break;
+    case "sorcerer":
+      // 4 cantrips
+      new_cantrips = get_items_in_array(spells.sorcerer.cantrips, 4);
+      // 2 first level spells
+      new_first_level_spells = get_items_in_array(spells.sorcerer.first_level, 2);
+      break;
+    case "warlock":
+      // 2 cantrips
+      new_cantrips = get_items_in_array(spells.warlock.cantrips, 2);
+      // 2 first level spells
+      new_first_level_spells = get_items_in_array(spells.warlock.first_level, 2);
+      break;
+    case "wizard":
+      // 3 cantrips
+      new_cantrips = get_items_in_array(spells.wizard.cantrips, 3);
+      // 2 spells
+      new_first_level_spells = get_items_in_array(spells.wizard.first_level, 2);
+      break;
+  }
+  
+  for (var i in new_cantrips) {
+    player.spells.cantrips.push(new_cantrips[i]);
+  }
+  for (var i in new_first_level_spells) {
+    player.spells.first_level.push(new_first_level_spells[i]);
+  }
+}
+
+
 /* Adds the character information to the HTML */
 function fill_page() {
   var race = get_race_data(character.race);
@@ -893,9 +987,31 @@ function fill_page() {
   for (var i in character.equipment) {
     $("#equipment tr:last").after("<tr><td>" + character.equipment[i] + "</td></tr>");
   }
+
+  // add spells
+  for (var i in character.spells) {
+    var table_name;
+    switch (i) {
+      case 0:
+        table_name = "cantrips";
+        break;
+      case 1:
+        table_name = "first_level";
+        break;
+    }
+    for (var j in character.spells[i]) {
+      $("#"+table_name+" tr:last").after("<tr><td>" + character.spells[i][j] + "</td></tr>");
+    }
+  }
 }
 
-$.when(character_promise, races_promise, base_classes_promise, backgrounds_promise, weapon_categories_promise).done(function() {
+$.when(character_promise, 
+       races_promise, 
+       base_classes_promise, 
+       backgrounds_promise, 
+       weapon_categories_promise, 
+       spells_promise)
+       .done(function() {
   // random ability scores
   character.ability_scores.str = roll_dice("4d6", true);
   character.ability_scores.dex = roll_dice("4d6", true);
@@ -912,6 +1028,9 @@ $.when(character_promise, races_promise, base_classes_promise, backgrounds_promi
 
   // random background
   random_background()
+
+  // random spells
+  random_spells();
 
   // put the information on the page
   neaten_weapon_proficiencies();

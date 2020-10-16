@@ -118,12 +118,25 @@ input {
   border: 0.1em solid black;
 }
 
-#armor_proficiencies, #weapon_proficiencies, #tool_proficiencies {
+#armor_proficiencies, #weapon_proficiencies, #tool_proficiencies, #cantrips, #first_level {
   width: 14em;
   float:left;  
 }
 
 #equipment {
   border: 0.1em solid black;
-  clear: both;
+}
+
+#spells {
+  border: 0.1em solid black;
+  float: left;
+}
+
+.inner_spells {
+  border: 0.1em solid black;
+}
+
+#cantrips, #first_level {
+  width: 8em;
+  float:left;  
 }

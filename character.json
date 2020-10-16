@@ -23,5 +23,9 @@
   "skill_proficiencies": [],
   "languages": [],
   "equipment": [],
-  "money": 0
+  "money": 0,
+  "spells": {
+    "cantrips": [],
+    "1stlevel": []
+  }
 }
