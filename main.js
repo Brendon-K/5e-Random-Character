@@ -102,7 +102,7 @@ function get_race_data(race_name) {
 function random_race() {
   var num_races = races.length;
 
-  var race = races[8];//races[random_range(0, num_races)];
+  var race = races[random_range(0, num_races)];
   // apply name
   character.race = race.name;
 
