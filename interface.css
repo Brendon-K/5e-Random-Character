@@ -16,6 +16,10 @@
   color: #6e6e6e;
 }
 
+.short_stat {
+  font-size: 0.8em;
+}
+
 .stat_detailed {
   border: 0.1em solid black;
   width: 3.5em;
