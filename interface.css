@@ -15,6 +15,11 @@
 	text-align: center;
 }
 
+.stat_mod {
+	font-size: 0.9em;
+	color: #6e6e6e;
+}
+
 .stat_detailed {
 	border: 0.1em solid black;
 	width: 3.5em;
