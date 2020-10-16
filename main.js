@@ -84,6 +84,20 @@ function get_items_in_array(arr, n) {
     return result;
 }
 
+/* Returns the data for the race in the races variable corresponding to the input name
+ *   This is pretty much just for being able to draw extra data on the screen
+ *   that's not being stored in the character
+ */
+function get_race_data(race_name) {
+  for (var i in races) {
+    if (races[i].name == race_name) {
+        return races[i];
+    }
+  }
+  console.log("ERROR: Couldn't find " + race_name);
+  return null;
+}
+
 /* Applies a random race to the character */
 function random_race() {
   var num_races = races.length;
@@ -478,7 +492,162 @@ function random_background() {
 
 /* Adds the character information to the HTML */
 function fill_page() {
+  var race = get_race_data(character.race);
+
+  // draw race
   $("#race").text(character.race);
+
+  // draw background
+  $("#background").text(character.background);
+
+  // draw ability scores
+  $("#str").text(character.ability_scores.str + "<br />" + get_ability_mod(character.ability_scores.str));
+  $("#str_detailed").text("(" + (character.ability_scores.str - race.ability_scores.str) + " + " + (race.ability_scores.str) + ")");
+  $("#dex").text(character.ability_scores.dex + "<br />" + get_ability_mod(character.ability_scores.dex));
+  $("#dex_detailed").text("(" + (character.ability_scores.dex - race.ability_scores.dex) + " + " + (race.ability_scores.dex) + ")");
+  $("#con").text(character.ability_scores.con + "<br />" + get_ability_mod(character.ability_scores.con));
+  $("#con_detailed").text("(" + (character.ability_scores.con - race.ability_scores.con) + " + " + (race.ability_scores.con) + ")");
+  $("#int").text(character.ability_scores.int + "<br />" + get_ability_mod(character.ability_scores.int));
+  $("#int_detailed").text("(" + (character.ability_scores.int - race.ability_scores.int) + " + " + (race.ability_scores.int) + ")");
+  $("#wis").text(character.ability_scores.wis + "<br />" + get_ability_mod(character.ability_scores.wis));
+  $("#wis_detailed").text("(" + (character.ability_scores.wis - race.ability_scores.wis) + " + " + (race.ability_scores.wis) + ")");
+  $("#cha").text(character.ability_scores.cha + "<br />" + get_ability_mod(character.ability_scores.cha));
+  $("#cha_detailed").text("(" + (character.ability_scores.cha - race.ability_scores.cha) + " + " + (race.ability_scores.cha) + ")");
+
+  // draw base class
+  for (var i in character.class) {
+    $("#class").text(character.class[i]);
+  }
+
+  // draw HP
+  $("#hp").text(character.hit_points);
+
+  // draw skills
+  if (character.skill_proficiencies.includes("Acrobatics")) {
+    $("#acrobatics_proficient").text("●");
+  } else {
+    $("#acrobatics_proficient").text("○");
+  }
+  $("#animal_handling").text(get_ability_mod(character.ability_scores.dex));
+
+  if (character.skill_proficiencies.includes("Animal Handling")) {
+    $("#animal_handling_proficient").text("●");
+  } else {
+    $("#animal_handling_proficient").text("○");
+  }
+  $("#acrobatics").text(get_ability_mod(character.ability_scores.wis));
+
+  if (character.skill_proficiencies.includes("Arcana")) {
+    $("#arcana_proficient").text("●");
+  } else {
+    $("#arcana_proficient").text("○");
+  }
+  $("#arcana").text(get_ability_mod(character.ability_scores.int));
+
+  if (character.skill_proficiencies.includes("Athletics")) {
+    $("#athletics_proficient").text("●");
+  } else {
+    $("#athletics_proficient").text("○");
+  }
+  $("#athletics").text(get_ability_mod(character.ability_scores.str));
+
+  if (character.skill_proficiencies.includes("Deception")) {
+    $("#deception_proficient").text("●");
+  } else {
+    $("#deception_proficient").text("○");
+  }
+  $("#deception").text(get_ability_mod(character.ability_scores.cha));
+
+  if (character.skill_proficiencies.includes("History")) {
+    $("#history_proficient").text("●");
+  } else {
+    $("#history_proficient").text("○");
+  }
+  $("#history").text(get_ability_mod(character.ability_scores.int));
+
+  if (character.skill_proficiencies.includes("Insight")) {
+    $("#insight_proficient").text("●");
+  } else {
+    $("#insight_proficient").text("○");
+  }
+  $("#insight").text(get_ability_mod(character.ability_scores.wis));
+
+  if (character.skill_proficiencies.includes("Intimidation")) {
+    $("#intimidation_proficient").text("●");
+  } else {
+    $("#intimidation_proficient").text("○");
+  }
+  $("#intimidation").text(get_ability_mod(character.ability_scores.cha));
+
+  if (character.skill_proficiencies.includes("Investigation")) {
+    $("#investigation_proficient").text("●");
+  } else {
+    $("#investigation_proficient").text("○");
+  }
+  $("#investigation").text(get_ability_mod(character.ability_scores.int));
+
+  if (character.skill_proficiencies.includes("Medicine")) {
+    $("#medicine_proficient").text("●");
+  } else {
+    $("#medicine_proficient").text("○");
+  }
+  $("#medicine").text(get_ability_mod(character.ability_scores.wis));
+
+  if (character.skill_proficiencies.includes("Nature")) {
+    $("#nature_proficient").text("●");
+  } else {
+    $("#nature_proficient").text("○");
+  }
+  $("#nature").text(get_ability_mod(character.ability_scores.int));
+
+  if (character.skill_proficiencies.includes("Perception")) {
+    $("#perception_proficient").text("●");
+  } else {
+    $("#perception_proficient").text("○");
+  }
+  $("#perception").text(get_ability_mod(character.ability_scores.wis));
+
+  if (character.skill_proficiencies.includes("Performance")) {
+    $("#performance_proficient").text("●");
+  } else {
+    $("#performance_proficient").text("○");
+  }
+  $("#performance").text(get_ability_mod(character.ability_scores.cha));
+
+  if (character.skill_proficiencies.includes("Persuasion")) {
+    $("#persuasion_proficient").text("●");
+  } else {
+    $("#persuasion_proficient").text("○");
+  }
+  $("#persuasion").text(get_ability_mod(character.ability_scores.cha));
+
+  if (character.skill_proficiencies.includes("Religion")) {
+    $("#religion_proficient").text("●");
+  } else {
+    $("#religion_proficient").text("○");
+  }
+  $("#religion").text(get_ability_mod(character.ability_scores.int));
+
+  if (character.skill_proficiencies.includes("Sleight of Hand")) {
+    $("#sleight_of_hand_proficient").text("●");
+  } else {
+    $("#sleight_of_hand_proficient").text("○");
+  }
+  $("#sleight_of_hand").text(get_ability_mod(character.ability_scores.dex));
+
+  if (character.skill_proficiencies.includes("Stealth")) {
+    $("#stealth_proficient").text("●");
+  } else {
+    $("#stealth_proficient").text("○");
+  }
+  $("#stealth").text(get_ability_mod(character.ability_scores.dex));
+
+  if (character.skill_proficiencies.includes("Survival")) {
+    $("#survival_proficient").text("●");
+  } else {
+    $("#survival_proficient").text("○");
+  }
+  $("#survival").text(get_ability_mod(character.ability_scores.wis));
 }
 
 $.when(character_promise, races_promise, base_classes_promise, backgrounds_promise).done(function() {

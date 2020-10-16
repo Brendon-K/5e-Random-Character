@@ -1,454 +1,298 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Random 5e</title>
-		<link href="interface.css" type="text/css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="main.js" type="text/javascript" ></script>
-	</head>
-	<body>
-	<table>
-	<tr>
-		<td>
-			<table class="class">
-				<tr>
-					<td>
-						<span id="class"></span>
-					</td>
-				</tr>
-			</table>
-		</td>
-		<td>
-			<div>
-				%Chance to change class: <br />
-				(1-100) <input type="text" id="percent_class" value="100">%
-			</div>
-			<table>
-				<tr>
-					<td>
-						Level: <select id="level">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-							<option value="13">13</option>
-							<option value="14">14</option>
-							<option value="15">15</option>
-							<option value="16">16</option>
-							<option value="17">17</option>
-							<option value="18">18</option>
-							<option value="19">19</option>
-							<option value="20">20</option>
-						</select>
-						<button type="button" class="random_button">random!</button>
-					</td>
-				</tr>
-			</table>
-			
-			<div class="race">
-				<span class="label">Race: </span><span id="race"></span>
-				<br />
-				<span class="label">HP: </span><span id="hp"></span>
-			</div>
-			<table class="stats">
-				<tr>
-					<td class = "stat_label">
-						<span>Strength</span>
-						<br />
-						<span>STR</span>
-					</td>
-					<td class="stat_number">
-						<span id="str"></span>
-					</td>
-					<td class="stat_detailed">
-						<span id="str_detailed"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="stat_label">
-						<span>Dexterity</span>
-						<br />
-						<span>DEX</span>
-					</td>
-					<td class="stat_number">
-						<span id="dex"></span>
-					</td>
-					<td class="stat_detailed">
-						<span id="dex_detailed"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="stat_label">
-						<span>Constitution</span>
-						<br />
-						<span>CON</span>
-					</td>
-					<td class="stat_number">
-						<span id="con"></span>
-					</td>
-					<td class="stat_detailed">
-						<span id="con_detailed"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="stat_label">
-						<span>Intelligence</span>
-						<br />
-						<span>INT</span>
-					</td>
-					<td class="stat_number">
-						<span id="int"></span>
-					</td>
-					<td class="stat_detailed">
-						<span id="int_detailed"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="stat_label">
-						<span>Wisdom</span>
-						<br />
-						<span>WIS</span>
-					</td>
-					<td class="stat_number">
-						<span id="wis"></span>
-					</td>
-					<td class="stat_detailed">
-						<span id="wis_detailed"></span>
-					</td>
-				</tr>
-				<tr>
-					<td class="stat_label">
-						<span>Charisma</span>
-						<br />
-						<span>CHA</span>
-					</td>
-					<td class="stat_number">
-						<span id="cha"></span>
-					</td>
-					<td class="stat_detailed">
-						<span id="cha_detailed"></span>
-					</td>
-				</tr>
-			</table>
-		</td>
-		<!--
-		<td>
-			<table class="skills">
-				<tr>
-					<th colspan="3" class="label">Skills</th>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Appraise
-					</td>
-					<td class="skillValue">
-						<span id="appraise">0</span>
-					</td>
-					<td class="skillLabel">
-						Hide
-					</td>
-					<td class="skillValue">
-						<span id="hide">0</span>
-					</td>
-					<td class="skillLabel">
-						Open Lock
-					</td>
-					<td class="skillValue">
-						<span id="openLock">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Balance
-					</td>
-					<td class="skillValue">
-						<span id="balance">0</span>
-					</td>
-					<td class="skillLabel">
-						Intimidate
-					</td>
-					<td class="skillValue">
-						<span id="intimidate">0</span>
-					</td>
-					<td class="skillLabel">
-						Perform
-					</td>
-					<td class="skillValue">
-						<span id="perform">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Bluff
-					</td>
-					<td class="skillValue">
-						<span id="bluff">0</span>
-					</td>
-					<td class="skillLabel">
-						Jump
-					</td>
-					<td class="skillValue">
-						<span id="jump">0</span>
-					</td>
-					<td class="skillLabel">
-						Profession
-					</td>
-					<td class="skillValue">
-						<span id="profession">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Climb
-					</td>
-					<td class="skillValue">
-						<span id="climb">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Arcana
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeArcana">0</span>
-					</td>
-					<td class="skillLabel">
-						Ride
-					</td>
-					<td class="skillValue">
-						<span id="ride">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Concentration
-					</td>
-					<td class="skillValue">
-						<span id="concentration">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Architecture
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeArchitecture">0</span>
-					</td>
-					<td class="skillLabel">
-						Search
-					</td>
-					<td class="skillValue">
-						<span id="search">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Craft
-					</td>
-					<td class="skillValue">
-						<span id="craft">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Dungeoneering
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeDungeoneering">0</span>
-					</td>
-					<td class="skillLabel">
-						Sense Motive
-					</td>
-					<td class="skillValue">
-						<span id="senseMotive">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Decipher Script
-					</td>
-					<td class="skillValue">
-						<span id="decipherScript">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Geography
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeGeography">0</span>
-					</td>
-					<td class="skillLabel">
-						Sleight Of Hand
-					</td>
-					<td class="skillValue">
-						<span id="sleightOfHand">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Diplomacy
-					</td>
-					<td class="skillValue">
-						<span id="diplomacy">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge History
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeHistory">0</span>
-					</td>
-					<td class="skillLabel">
-						Speak Language
-					</td>
-					<td class="skillValue">
-						<span id="speakLanguage">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Disable Device
-					</td>
-					<td class="skillValue">
-						<span id="disableDevice">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Local
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeLocal">0</span>
-					</td>
-					<td class="skillLabel">
-						Spellcraft
-					</td>
-					<td class="skillValue">
-						<span id="spellcraft">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Disguise
-					</td>
-					<td class="skillValue">
-						<span id="disguise">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Nature
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeNature">0</span>
-					</td>
-					<td class="skillLabel">
-						Spot
-					</td>
-					<td class="skillValue">
-						<span id="spot">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Escape Artist
-					</td>
-					<td class="skillValue">
-						<span id="escapeArtist">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Nobility
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeNobility">0</span>
-					</td>
-					<td class="skillLabel">
-						Survival
-					</td>
-					<td class="skillValue">
-						<span id="survival">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Forgery
-					</td>
-					<td class="skillValue">
-						<span id="forgery">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Religion
-					</td>
-					<td class="skillValue">
-						<span id="knowledgeReligion">0</span>
-					</td>
-					<td class="skillLabel">
-						Swim
-					</td>
-					<td class="skillValue">
-						<span id="swim">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Gather Information
-					</td>
-					<td class="skillValue">
-						<span id="gatherInformation">0</span>
-					</td>
-					<td class="skillLabel">
-						Knowledge Planes
-					</td>
-					<td class="skillValue">
-						<span id="knowledgePlanes">0</span>
-					</td>
-					<td class="skillLabel">
-						Tumble
-					</td>
-					<td class="skillValue">
-						<span id="tumble">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Handle Animal
-					</td>
-					<td class="skillValue">
-						<span id="handleAnimal">0</span>
-					</td>
-					<td class="skillLabel">
-						Listen
-					</td>
-					<td class="skillValue">
-						<span id="listen">0</span>
-					</td>
-					<td class="skillLabel">
-						Use Magic Device
-					</td>
-					<td class="skillValue">
-						<span id="useMagicDevice">0</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="skillLabel">
-						Heal
-					</td>
-					<td class="skillValue">
-						<span id="heal">0</span>
-					</td>
-					<td class="skillLabel">
-						Move Silently
-					</td>
-					<td class="skillValue">
-						<span id="moveSilently">0</span>
-					</td>
-					<td class="skillLabel">
-						Use Rope
-					</td>
-					<td class="skillValue">
-						<span id="useRope">0</span>
-					</td>
-				</tr>
-			</table>
-		</td>
-		-->
-	</tr>
-	</table>
-	</body>
+  <head>
+    <title>Random 5e</title>
+    <link href="interface.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js" type="text/javascript" ></script>
+  </head>
+  <body>
+  <table>
+  <tr>
+    <td>
+      <table class="class">
+        <tr>
+          <td>
+            <span id="class"></span>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <div>
+        %Chance to change class: <br />
+        (1-100) <input type="text" id="percent_class" value="100">%
+      </div>
+      <table>
+        <tr>
+          <td>
+            Level: <select id="level">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+            </select>
+            <button type="button" class="random_button">random!</button>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="race">
+        <span class="label">Background: </span><span id="background"></span>
+        <br />
+        <span class="label">Race: </span><span id="race"></span>
+        <br />
+        <span class="label">HP: </span><span id="hp"></span>
+      </div>
+      <table class="stats">
+        <tr>
+          <td class = "stat_label">
+            <span>Strength</span>
+            <br />
+            <span>STR</span>
+          </td>
+          <td class="stat_number">
+            <span id="str"></span>
+          </td>
+          <td class="stat_detailed">
+            <span id="str_detailed"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="stat_label">
+            <span>Dexterity</span>
+            <br />
+            <span>DEX</span>
+          </td>
+          <td class="stat_number">
+            <span id="dex"></span>
+          </td>
+          <td class="stat_detailed">
+            <span id="dex_detailed"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="stat_label">
+            <span>Constitution</span>
+            <br />
+            <span>CON</span>
+          </td>
+          <td class="stat_number">
+            <span id="con"></span>
+          </td>
+          <td class="stat_detailed">
+            <span id="con_detailed"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="stat_label">
+            <span>Intelligence</span>
+            <br />
+            <span>INT</span>
+          </td>
+          <td class="stat_number">
+            <span id="int"></span>
+          </td>
+          <td class="stat_detailed">
+            <span id="int_detailed"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="stat_label">
+            <span>Wisdom</span>
+            <br />
+            <span>WIS</span>
+          </td>
+          <td class="stat_number">
+            <span id="wis"></span>
+          </td>
+          <td class="stat_detailed">
+            <span id="wis_detailed"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="stat_label">
+            <span>Charisma</span>
+            <br />
+            <span>CHA</span>
+          </td>
+          <td class="stat_number">
+            <span id="cha"></span>
+          </td>
+          <td class="stat_detailed">
+            <span id="cha_detailed"></span>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table class="skills">
+        <tr>
+          <th colspan="2" class="label">Skills</th>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="acrobatics">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="acrobatics_proficient"></span> Acrobatics <span class="ability_hint">(Dex)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="animal_handling">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="animal_handling_proficient"></span> Animal Handling <span class="ability_hint">(Wis)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="arcana">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="arcana_proficient"></span> Arcana <span class="ability_hint">(Int)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="Athletics">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="Athletics_proficient"></span> Athletics <span class="ability_hint">(Str)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="deception">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="deception_proficient"></span> Deception <span class="ability_hint">(Cha)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="history">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="history_proficient"></span> History <span class="ability_hint">(Int)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="insight">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="insight_proficient"></span> Insight <span class="ability_hint">(Wis)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="intimidation">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="intimidation_proficient"></span> Intimidation <span class="ability_hint">(Cha)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="investigation">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="investigation_proficient"></span> Investigation <span class="ability_hint">(Int)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="medicine">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="medicine_proficient"></span> Medicine <span class="ability_hint">(Wis)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="nature">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="nature_proficient"></span> Nature <span class="ability_hint">(Int)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="perception">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="perception_proficient"></span> Perception <span class="ability_hint">(Wis)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="performance">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="performance_proficient"></span> Performance <span class="ability_hint">(Cha)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="persuasion">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="persuasion_proficient"></span> Persuasion <span class="ability_hint">(Cha)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="religion">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="religion_proficient"></span> Religion <span class="ability_hint">(Int)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="sleight_of_hand">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="sleight_of_hand_proficient"></span> Sleight of Hand <span class="ability_hint">(Dex)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill_value">
+            <span id="stealth">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="stealth_proficient"></span> Stealth <span class="ability_hint">(Dex)</span>
+          </td>
+        <tr>
+          <td class="skill_value">
+            <span id="survival">0</span>
+          </td>
+          <td class="skill_label">
+            <span id="survival_proficient"></span> Survival <span class="ability_hint">(Wis)</span>
+          </td>
+        </tr>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+  </body>
 </html>

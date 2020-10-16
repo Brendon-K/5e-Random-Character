@@ -43,6 +43,11 @@
 	font-weight: bold;
 }
 
+.ability_hint {
+	font-size: 0.7em;
+	color: #adadad;
+}
+
 td {
 	vertical-align: center;
 }
