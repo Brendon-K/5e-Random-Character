@@ -109,7 +109,6 @@ function random_race() {
   // Half-Elf gets two random ability scores +1
   if (race.name == "Half-Elf") {
     var ability_idxs = get_items_in_array([0, 1, 2, 3, 4, 5], 2);
-    console.log(ability_idxs);
     for (var i in ability_idxs) {
       switch (ability_idxs[i]) {
         case 0:
@@ -287,7 +286,7 @@ function random_base_class() {
   if (character.race == "Hill Dwarf") {
     ++new_hit_points;
   }
-  if (new_hit_points > 1) {
+  if (new_hit_points < 1) {
     new_hit_points = 1;
   }
   character.hit_points += new_hit_points;
