@@ -380,18 +380,99 @@ function random_base_class() {
         // choose number of items in list
         var items = get_items_in_array(base_class.equipment[i].slice(1), base_class.equipment[i][0]);
         for (var j in items) {
-          if (!character.equipment.includes(items[j])) {
-            character.equipment.push(items[j])
+          character.equipment.push(items[j]);
+        }
+      } else {
+        // append to list
+        character.equipment.push(base_class.equipment[i]);
+      }
+    }
+  }
+}
+
+function random_background() {
+  var num_backgrounds = backgrounds.length;
+
+  var background = backgrounds[random_range(0, backgrounds.length)];
+  // apply background name
+  character.background.push(background.name);
+
+  // apply proficiencies
+  if (background.skill_proficiencies !== null) {
+    for (var i in background.skill_proficiencies) {
+      if (typeof background.skill_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(background.skill_proficiencies[i].slice(1), background.skill_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.skill_proficiencies.includes(items[j])) {
+            character.skill_proficiencies.push(items[j])
           }
         }
       } else {
         // append to list
-        if (!character.equipment.includes(base_class.equipment[i])) {
-          character.equipment.push(base_class.equipment[i]);
+        if (!character.skill_proficiencies.includes(background.skill_proficiencies[i])) {
+          character.skill_proficiencies.push(background.skill_proficiencies[i]);
         }
       }
     }
   }
+
+  if (background.tool_proficiencies !== null) {
+    for (var i in background.tool_proficiencies) {
+      if (typeof background.tool_proficiencies[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(background.tool_proficiencies[i].slice(1), background.tool_proficiencies[i][0]);
+        for (var j in items) {
+          if (!character.tool_proficiencies.includes(items[j])) {
+            character.tool_proficiencies.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.tool_proficiencies.includes(background.tool_proficiencies[i])) {
+          character.tool_proficiencies.push(background.tool_proficiencies[i]);
+        }
+      }
+    }
+  }
+
+  if (background.languages !== null) {
+    for (var i in background.languages) {
+      if (typeof background.languages[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(background.languages[i].slice(1), background.languages[i][0]);
+        for (var j in items) {
+          if (!character.languages.includes(items[j])) {
+            character.languages.push(items[j])
+          }
+        }
+      } else {
+        // append to list
+        if (!character.languages.includes(background.languages[i])) {
+          character.languages.push(background.languages[i]);
+        }
+      }
+    }
+  }
+
+  // sort out equipment
+  if (background.equipment !== null) {
+    for (var i in background.equipment) {
+      if (typeof background.equipment[i][0] == "number") {
+        // choose number of items in list
+        var items = get_items_in_array(background.equipment[i].slice(1), background.equipment[i][0]);
+        for (var j in items) {
+          character.equipment.push(items[j]);
+        }
+      } else {
+        // append to list
+        character.equipment.push(background.equipment[i]);
+      }
+    }
+  }
+
+  // give money
+  character.money += background.money;
 }
 
 /* Adds the character information to the HTML */
