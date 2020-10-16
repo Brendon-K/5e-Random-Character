@@ -990,19 +990,12 @@ function fill_page() {
   }
 
   // add spells
-  for (var i in character.spells) {
-    var table_name;
-    switch (i) {
-      case 0:
-        table_name = "cantrips";
-        break;
-      case 1:
-        table_name = "first_level";
-        break;
-    }
-    for (var j in character.spells[i]) {
-      $("#"+table_name+" tr:last").after("<tr><td>" + character.spells[i][j] + "</td></tr>");
-    }
+  for (var i in character.spells.cantrips) {
+    $("#cantrips tr:last").after("<tr><td>" + character.spells.cantrips[i] + "</td></tr>");
+  }
+
+  for (var i in character.spells.first_level) {
+    $("#first_level tr:last").after("<tr><td>" + character.spells.first_level[i] + "</td></tr>");
   }
 }
 
