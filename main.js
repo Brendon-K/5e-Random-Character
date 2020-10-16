@@ -712,7 +712,7 @@ function fill_page() {
     }
   });
   for (var i in saving_throw_copy) {
-    $(".saving_throws tr:last").after("<tr><td></td><td></td>● " + saving_throw_copy[i] + "</tr>");
+    $(".saving_throws tr:last").after("<tr><td></td><td class=\"throw_label\">● " + saving_throw_copy[i] + "</td></tr>");
   }
 }
 
