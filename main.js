@@ -106,13 +106,6 @@ function random_race() {
   // apply name
   character.race = race.name;
 
-  // apply ability scores
-  character.ability_scores.str += race.ability_scores.str;
-  character.ability_scores.dex += race.ability_scores.dex;
-  character.ability_scores.con += race.ability_scores.con;
-  character.ability_scores.int += race.ability_scores.int;
-  character.ability_scores.wis += race.ability_scores.wis;
-  character.ability_scores.cha += race.ability_scores.cha;
   // Half-Elf gets two random ability scores +1
   if (race.name == "Half-Elf") {
     var ability_idxs = get_items_in_array([0, 1, 2, 3, 4, 5], 2);
@@ -120,26 +113,33 @@ function random_race() {
     for (var i in ability_idxs) {
       switch (ability_idxs[i]) {
         case 0:
-          ++character.ability_scores.str;
+          ++race.ability_scores.str;
           break;
         case 1:
-          ++character.ability_scores.dex;
+          ++race.ability_scores.dex;
           break;
         case 2:
-          ++character.ability_scores.con;
+          ++race.ability_scores.con;
           break;
         case 3:
-          ++character.ability_scores.int;
+          ++race.ability_scores.int;
           break;
         case 4:
-          ++character.ability_scores.wis;
+          ++race.ability_scores.wis;
           break;
         case 5:
-          ++character.ability_scores.cha;
+          ++race.ability_scores.cha;
           break;
       }
     }
   }
+  // apply ability scores
+  character.ability_scores.str += race.ability_scores.str;
+  character.ability_scores.dex += race.ability_scores.dex;
+  character.ability_scores.con += race.ability_scores.con;
+  character.ability_scores.int += race.ability_scores.int;
+  character.ability_scores.wis += race.ability_scores.wis;
+  character.ability_scores.cha += race.ability_scores.cha;
 
 
   // apply physical attributes
