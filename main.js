@@ -102,7 +102,7 @@ function get_race_data(race_name) {
 function random_race() {
   var num_races = races.length;
 
-  var race = races[random_range(0, num_races)];
+  var race = races[8];//races[random_range(0, num_races)];
   // apply name
   character.race = race.name;
 
@@ -116,6 +116,7 @@ function random_race() {
   // Half-Elf gets two random ability scores +1
   if (race.name == "Half-Elf") {
     var ability_idxs = get_items_in_array([0, 1, 2, 3, 4, 5], 2);
+    console.log(ability_idxs);
     for (var i in ability_idxs) {
       switch (ability_idxs[i]) {
         case 0:
