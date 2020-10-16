@@ -730,10 +730,10 @@ function random_spells() {
   }
   
   for (var i in new_cantrips) {
-    player.spells.cantrips.push(new_cantrips[i]);
+    character.spells.cantrips.push(new_cantrips[i]);
   }
   for (var i in new_first_level_spells) {
-    player.spells.first_level.push(new_first_level_spells[i]);
+    character.spells.first_level.push(new_first_level_spells[i]);
   }
 }
 
