@@ -5,7 +5,7 @@
   },
 
   "Animal Handling": {
-    "lower": "animal Handling",
+    "lower": "animal_handling",
     "ability": "wis"
   },
 
@@ -75,7 +75,7 @@
   },
 
   "Sleight of Hand": {
-    "lower": "sleight of Hand",
+    "lower": "sleight_of_hand",
     "ability": "dex"
   },
 
