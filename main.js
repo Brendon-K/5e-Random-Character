@@ -998,12 +998,17 @@ function fill_page() {
   }
 
   // add spells
-  for (var i in character.spells.cantrips) {
-    $("#cantrips tr:last").after("<tr><td>" + character.spells.cantrips[i] + "</td></tr>");
-  }
-
-  for (var i in character.spells.first_level) {
-    $("#first_level tr:last").after("<tr><td>" + character.spells.first_level[i] + "</td></tr>");
+  if (character.spells.cantrips.length == 0 && character.spells.first_level.length == 0) {
+    // Hide spell table if the character has no spells
+    $("#spells").hide();
+  } else {
+    for (var i in character.spells.cantrips) {
+      $("#cantrips tr:last").after("<tr><td>" + character.spells.cantrips[i] + "</td></tr>");
+    }
+  
+      for (var i in character.spells.first_level) {
+        $("#first_level tr:last").after("<tr><td>" + character.spells.first_level[i] + "</td></tr>");
+    }
   }
 }
 
