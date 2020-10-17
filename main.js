@@ -3,6 +3,7 @@ var races = null;
 var base_classes = null;
 var backgrounds = null;
 var spells = null;
+var skills = null;
 
 // load all the json
 var character_promise = $.getJSON("character.json", function(data) {
@@ -27,6 +28,10 @@ var weapon_categories_promise = $.getJSON("weapon_categories.json", function(dat
 
 var spells_promise = $.getJSON("spells.json", function(data) {
   spells = data;
+});
+
+var skills_promise = $.getJSON("skills.json", function(data) {
+  skills = data;
 });
 
 /* returns a random number between the min and max values (inclusive) */
@@ -80,17 +85,17 @@ function get_ability_mod(ability_value) {
 // Source: https://stackoverflow.com/a/19270021
 /* Gets n items from an array without any duplicates */
 function get_items_in_array(arr, n) {
-    var result = new Array(n),
-        len = arr.length,
-        taken = new Array(len);
-    if (n > len)
-        throw new RangeError("getRandom: more elements taken than available");
-    while (n--) {
-        var x = Math.floor(Math.random() * len);
-        result[n] = arr[x in taken ? taken[x] : x];
-        taken[x] = --len in taken ? taken[len] : len;
-    }
-    return result;
+  var result = new Array(n),
+    len = arr.length,
+    taken = new Array(len);
+  if (n > len)
+    throw new RangeError("get_items_in_array: more elements taken than available");
+  while (n--) {
+    var x = Math.floor(Math.random() * len);
+    result[n] = arr[x in taken ? taken[x] : x];
+    taken[x] = --len in taken ? taken[len] : len;
+  }
+  return result;
 }
 
 /* Returns the data for the race in the races variable corresponding to the input name
@@ -314,116 +319,29 @@ function random_race() {
     }
   }
 
-  // apply proficiencies
-  if (race.armor_proficiencies !== null) {
-    for (var i in race.armor_proficiencies) {
-      if (typeof race.armor_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(race.armor_proficiencies[i].slice(1), race.armor_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.armor_proficiencies.includes(items[j])) {
-            character.armor_proficiencies.push(items[j])
+  // add various racial attributes
+  var things = ["armor_proficiencies", 
+                "weapon_proficiencies", 
+                "tool_proficiencies", 
+                "saving_throw_proficiencies", 
+                "skill_proficiencies", 
+                "languages"];
+  for (var i in things) {
+    if (race[things[i]] !== null) {
+      for (var j in race[things[i]]) {
+        if (typeof race[things[i]][j][0] == "number") {
+          // choose number of items in list
+          var items = get_items_in_array(race[things[i]][j].slice(1), race[things[i]][j][0]);
+          for (var k in items) {
+            if (!character[things[i]].includes(items[k])) {
+              character[things[i]].push(items[k])
+            }
           }
-        }
-      } else {
-        // append to list
-        if (!character.armor_proficiencies.includes(race.armor_proficiencies[i])) {
-          character.armor_proficiencies.push(race.armor_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (race.weapon_proficiencies !== null) {
-    for (var i in race.weapon_proficiencies) {
-      if (typeof race.weapon_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(race.weapon_proficiencies[i].slice(1), race.weapon_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.weapon_proficiencies.includes(items[j])) {
-            character.weapon_proficiencies.push(items[j])
+        } else {
+          // append to list
+          if (!character[things[i]].includes(race[things[i]][j])) {
+            character[things[i]].push(race[things[i]][j]);
           }
-        }
-      } else {
-        // append to list
-        if (!character.weapon_proficiencies.includes(race.weapon_proficiencies[i])) {
-          character.weapon_proficiencies.push(race.weapon_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (race.tool_proficiencies !== null) {
-    for (var i in race.tool_proficiencies) {
-      if (typeof race.tool_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(race.tool_proficiencies[i].slice(1), race.tool_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.tool_proficiencies.includes(items[j])) {
-            character.tool_proficiencies.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.tool_proficiencies.includes(race.tool_proficiencies[i])) {
-          character.tool_proficiencies.push(race.tool_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (race.saving_throw_proficiencies !== null) {
-    for (var i in race.saving_throw_proficiencies) {
-      if (typeof race.saving_throw_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(race.saving_throw_proficiencies[i].slice(1), race.saving_throw_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.saving_throw_proficiencies.includes(items[j])) {
-            character.saving_throw_proficiencies.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.saving_throw_proficiencies.includes(race.saving_throw_proficiencies[i])) {
-          character.saving_throw_proficiencies.push(race.saving_throw_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (race.skill_proficiencies !== null) {
-    for (var i in race.skill_proficiencies) {
-      if (typeof race.skill_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(race.skill_proficiencies[i].slice(1), race.skill_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.skill_proficiencies.includes(items[j])) {
-            character.skill_proficiencies.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.skill_proficiencies.includes(race.skill_proficiencies[i])) {
-          character.skill_proficiencies.push(race.skill_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (race.languages !== null) {
-    for (var i in race.languages) {
-      if (typeof race.languages[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(race.languages[i].slice(1), race.languages[i][0]);
-        for (var j in items) {
-          if (!character.languages.includes(items[j])) {
-            character.languages.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.languages.includes(race.languages[i])) {
-          character.languages.push(race.languages[i]);
         }
       }
     }
@@ -444,102 +362,34 @@ function random_base_class() {
   if (character.race == "Hill Dwarf") {
     ++new_hit_points;
   }
+  // Hit points can't be less than one
   if (new_hit_points < 1) {
     new_hit_points = 1;
   }
   character.hit_points += new_hit_points;
 
-  // apply proficiencies
-  if (base_class.armor_proficiencies !== null) {
-    for (var i in base_class.armor_proficiencies) {
-      if (typeof base_class.armor_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(base_class.armor_proficiencies[i].slice(1), base_class.armor_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.armor_proficiencies.includes(items[j])) {
-            character.armor_proficiencies.push(items[j])
+  // apply various class attributes
+  var things = ["armor_proficiencies",
+                "weapon_proficiencies",
+                "tool_proficiencies",
+                "saving_throw_proficiencies",
+                "skill_proficiencies"];
+  for (var i in things) {
+    if (base_class[things[i]] !== null) {
+      for (var j in base_class[things[i]]) {
+        if (typeof base_class[things[i]][j][0] == "number") {
+          // choose number of items in list
+          var items = get_items_in_array(base_class[things[i]][j].slice(1), base_class[things[i]][j][0]);
+          for (var k in items) {
+            if (!character[things[i]].includes(items[k])) {
+              character[things[i]].push(items[k])
+            }
           }
-        }
-      } else {
-        // append to list
-        if (!character.armor_proficiencies.includes(base_class.armor_proficiencies[i])) {
-          character.armor_proficiencies.push(base_class.armor_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (base_class.weapon_proficiencies !== null) {
-    for (var i in base_class.weapon_proficiencies) {
-      if (typeof base_class.weapon_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(base_class.weapon_proficiencies[i].slice(1), base_class.weapon_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.weapon_proficiencies.includes(items[j])) {
-            character.weapon_proficiencies.push(items[j])
+        } else {
+          // append to list
+          if (!character[things[i]].includes(base_class[things[i]][j])) {
+            character[things[i]].push(base_class[things[i]][j]);
           }
-        }
-      } else {
-        // append to list
-        if (!character.weapon_proficiencies.includes(base_class.weapon_proficiencies[i])) {
-          character.weapon_proficiencies.push(base_class.weapon_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (base_class.tool_proficiencies !== null) {
-    for (var i in base_class.tool_proficiencies) {
-      if (typeof base_class.tool_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(base_class.tool_proficiencies[i].slice(1), base_class.tool_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.tool_proficiencies.includes(items[j])) {
-            character.tool_proficiencies.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.tool_proficiencies.includes(base_class.tool_proficiencies[i])) {
-          character.tool_proficiencies.push(base_class.tool_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (base_class.saving_throw_proficiencies !== null) {
-    for (var i in base_class.saving_throw_proficiencies) {
-      if (typeof base_class.saving_throw_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(base_class.saving_throw_proficiencies[i].slice(1), base_class.saving_throw_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.saving_throw_proficiencies.includes(items[j])) {
-            character.saving_throw_proficiencies.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.saving_throw_proficiencies.includes(base_class.saving_throw_proficiencies[i])) {
-          character.saving_throw_proficiencies.push(base_class.saving_throw_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (base_class.skill_proficiencies !== null) {
-    for (var i in base_class.skill_proficiencies) {
-      if (typeof base_class.skill_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(base_class.skill_proficiencies[i].slice(1), base_class.skill_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.skill_proficiencies.includes(items[j])) {
-            character.skill_proficiencies.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.skill_proficiencies.includes(base_class.skill_proficiencies[i])) {
-          character.skill_proficiencies.push(base_class.skill_proficiencies[i]);
         }
       }
     }
@@ -570,59 +420,26 @@ function random_background() {
   // apply background name
   character.background = background.name;
 
-  // apply proficiencies
-  if (background.skill_proficiencies !== null) {
-    for (var i in background.skill_proficiencies) {
-      if (typeof background.skill_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(background.skill_proficiencies[i].slice(1), background.skill_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.skill_proficiencies.includes(items[j])) {
-            character.skill_proficiencies.push(items[j])
+  // apply various attributes
+  var things = ["skill_proficiencies",
+                "tool_proficiencies",
+                "languages"];
+  for (var i in things) {
+    if (background[things[i]] !== null) {
+      for (var j in background[things[i]]) {
+        if (typeof background[things[i]][j][0] == "number") {
+          // choose number of items in list
+          var items = get_items_in_array(background[things[i]][j].slice(1), background[things[i]][j][0]);
+          for (var k in items) {
+            if (!character[things[i]].includes(items[k])) {
+              character[things[i]].push(items[k])
+            }
           }
-        }
-      } else {
-        // append to list
-        if (!character.skill_proficiencies.includes(background.skill_proficiencies[i])) {
-          character.skill_proficiencies.push(background.skill_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (background.tool_proficiencies !== null) {
-    for (var i in background.tool_proficiencies) {
-      if (typeof background.tool_proficiencies[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(background.tool_proficiencies[i].slice(1), background.tool_proficiencies[i][0]);
-        for (var j in items) {
-          if (!character.tool_proficiencies.includes(items[j])) {
-            character.tool_proficiencies.push(items[j])
+        } else {
+          // append to list
+          if (!character[things[i]].includes(background[things[i]][j])) {
+            character[things[i]].push(background[things[i]][j]);
           }
-        }
-      } else {
-        // append to list
-        if (!character.tool_proficiencies.includes(background.tool_proficiencies[i])) {
-          character.tool_proficiencies.push(background.tool_proficiencies[i]);
-        }
-      }
-    }
-  }
-
-  if (background.languages !== null) {
-    for (var i in background.languages) {
-      if (typeof background.languages[i][0] == "number") {
-        // choose number of items in list
-        var items = get_items_in_array(background.languages[i].slice(1), background.languages[i][0]);
-        for (var j in items) {
-          if (!character.languages.includes(items[j])) {
-            character.languages.push(items[j])
-          }
-        }
-      } else {
-        // append to list
-        if (!character.languages.includes(background.languages[i])) {
-          character.languages.push(background.languages[i]);
         }
       }
     }
@@ -762,24 +579,12 @@ function fill_page() {
   $("#height_value").text(feet + "' " + inches + "\"");
 
   // draw ability scores
-  $("#str").text(character.ability_scores.str);
-  $("#str_mod").text((get_ability_mod(character.ability_scores.str) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.str));
-  $("#str_detailed").text("(" + (character.ability_scores.str - race.ability_scores.str) + " + " + (race.ability_scores.str) + ")");
-  $("#dex").text(character.ability_scores.dex);
-  $("#dex_mod").text((get_ability_mod(character.ability_scores.dex) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.dex));
-  $("#dex_detailed").text("(" + (character.ability_scores.dex - race.ability_scores.dex) + " + " + (race.ability_scores.dex) + ")");
-  $("#con").text(character.ability_scores.con);
-  $("#con_mod").text((get_ability_mod(character.ability_scores.con) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.con));
-  $("#con_detailed").text("(" + (character.ability_scores.con - race.ability_scores.con) + " + " + (race.ability_scores.con) + ")");
-  $("#int").text(character.ability_scores.int);
-  $("#int_mod").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
-  $("#int_detailed").text("(" + (character.ability_scores.int - race.ability_scores.int) + " + " + (race.ability_scores.int) + ")");
-  $("#wis").text(character.ability_scores.wis);
-  $("#wis_mod").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
-  $("#wis_detailed").text("(" + (character.ability_scores.wis - race.ability_scores.wis) + " + " + (race.ability_scores.wis) + ")");
-  $("#cha").text(character.ability_scores.cha);
-  $("#cha_mod").text((get_ability_mod(character.ability_scores.cha) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.cha));
-  $("#cha_detailed").text("(" + (character.ability_scores.cha - race.ability_scores.cha) + " + " + (race.ability_scores.cha) + ")");
+  var ability_short = ["str", "dex", "con", "int", "wis", "cha"];
+  for (var i in ability_short) {
+    $("#" + ability_short[i]).text(character.ability_scores[ability_short[i]]);
+    $("#" + ability_short[i] + "_mod").text((get_ability_mod(character.ability_scores[ability_short[i]]) > 0 ? "+" : "") + get_ability_mod(character.ability_scores[ability_short[i]]));
+    $("#" + ability_short[i] + "_detailed").text("(" + (character.ability_scores[ability_short[i]] - race.ability_scores[ability_short[i]]) + " + " + (race.ability_scores[ability_short[i]]) + ")");
+  }
 
   // draw base class
   for (var i in character.class) {
@@ -790,188 +595,30 @@ function fill_page() {
   $("#hp").text(character.hit_points);
 
   // draw skills
-  if (character.skill_proficiencies.includes("Acrobatics")) {
-    $("#acrobatics_proficient").text("●");
-  } else {
-    $("#acrobatics_proficient").text("○");
+  for (var i in skills) {
+    if (character.skill_proficiencies.includes(i)) {
+      $("#" + skills[i]["lower"] + "_proficient").text("●");
+    } else {
+      $("#" + skills[i]["lower"] + "_proficient").text("○");
+    }
+    $("#" + skills[i]["lower"]).text((get_ability_mod(character.ability_scores[skills[i]["ability"]]) > 0 ? "+" : "") + get_ability_mod(character.ability_scores[skills[i]["ability"]]));
   }
-  $("#acrobatics").text((get_ability_mod(character.ability_scores.dex) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.dex));
-
-  if (character.skill_proficiencies.includes("Animal Handling")) {
-    $("#animal_handling_proficient").text("●");
-  } else {
-    $("#animal_handling_proficient").text("○");
-  }
-  $("#animal_handling").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
-
-  if (character.skill_proficiencies.includes("Arcana")) {
-    $("#arcana_proficient").text("●");
-  } else {
-    $("#arcana_proficient").text("○");
-  }
-  $("#arcana").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
-
-  if (character.skill_proficiencies.includes("Athletics")) {
-    $("#athletics_proficient").text("●");
-  } else {
-    $("#athletics_proficient").text("○");
-  }
-  $("#athletics").text((get_ability_mod(character.ability_scores.str) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.str));
-
-  if (character.skill_proficiencies.includes("Deception")) {
-    $("#deception_proficient").text("●");
-  } else {
-    $("#deception_proficient").text("○");
-  }
-  $("#deception").text((get_ability_mod(character.ability_scores.cha) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.cha));
-
-  if (character.skill_proficiencies.includes("History")) {
-    $("#history_proficient").text("●");
-  } else {
-    $("#history_proficient").text("○");
-  }
-  $("#history").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
-
-  if (character.skill_proficiencies.includes("Insight")) {
-    $("#insight_proficient").text("●");
-  } else {
-    $("#insight_proficient").text("○");
-  }
-  $("#insight").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
-
-  if (character.skill_proficiencies.includes("Intimidation")) {
-    $("#intimidation_proficient").text("●");
-  } else {
-    $("#intimidation_proficient").text("○");
-  }
-  $("#intimidation").text((get_ability_mod(character.ability_scores.cha) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.cha));
-
-  if (character.skill_proficiencies.includes("Investigation")) {
-    $("#investigation_proficient").text("●");
-  } else {
-    $("#investigation_proficient").text("○");
-  }
-  $("#investigation").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
-
-  if (character.skill_proficiencies.includes("Medicine")) {
-    $("#medicine_proficient").text("●");
-  } else {
-    $("#medicine_proficient").text("○");
-  }
-  $("#medicine").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
-
-  if (character.skill_proficiencies.includes("Nature")) {
-    $("#nature_proficient").text("●");
-  } else {
-    $("#nature_proficient").text("○");
-  }
-  $("#nature").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
-
-  if (character.skill_proficiencies.includes("Perception")) {
-    $("#perception_proficient").text("●");
-  } else {
-    $("#perception_proficient").text("○");
-  }
-  $("#perception").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
-
-  if (character.skill_proficiencies.includes("Performance")) {
-    $("#performance_proficient").text("●");
-  } else {
-    $("#performance_proficient").text("○");
-  }
-  $("#performance").text((get_ability_mod(character.ability_scores.cha) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.cha));
-
-  if (character.skill_proficiencies.includes("Persuasion")) {
-    $("#persuasion_proficient").text("●");
-  } else {
-    $("#persuasion_proficient").text("○");
-  }
-  $("#persuasion").text((get_ability_mod(character.ability_scores.cha) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.cha));
-
-  if (character.skill_proficiencies.includes("Religion")) {
-    $("#religion_proficient").text("●");
-  } else {
-    $("#religion_proficient").text("○");
-  }
-  $("#religion").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
-
-  if (character.skill_proficiencies.includes("Sleight of Hand")) {
-    $("#sleight_of_hand_proficient").text("●");
-  } else {
-    $("#sleight_of_hand_proficient").text("○");
-  }
-  $("#sleight_of_hand").text((get_ability_mod(character.ability_scores.dex) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.dex));
-
-  if (character.skill_proficiencies.includes("Stealth")) {
-    $("#stealth_proficient").text("●");
-  } else {
-    $("#stealth_proficient").text("○");
-  }
-  $("#stealth").text((get_ability_mod(character.ability_scores.dex) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.dex));
-
-  if (character.skill_proficiencies.includes("Survival")) {
-    $("#survival_proficient").text("●");
-  } else {
-    $("#survival_proficient").text("○");
-  }
-  $("#survival").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
 
   // draw saving throws
   // main ability throws
-  if (character.saving_throw_proficiencies.includes("Strength")) {
-    $("#str_throw_proficient").text("●");
-  } else {
-    $("#str_throw_proficient").text("○");
+  var ability_long = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"];
+  for (var i in ability_long) {
+      if (character.saving_throw_proficiencies.includes(ability_long[i])) {
+      $("#" + ability_short[i] + "_throw_proficient").text("●");
+    } else {
+      $("#" + ability_short[i] + "_throw_proficient").text("○");
+    }
+    $("#" + ability_short[i] + "_throw").text((get_ability_mod(character.ability_scores[ability_short[i]]) > 0 ? "+" : "") + get_ability_mod(character.ability_scores[ability_short[i]]));
   }
-  $("#str_throw").text((get_ability_mod(character.ability_scores.str) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.str));
-
-  if (character.saving_throw_proficiencies.includes("Dexterity")) {
-    $("#dex_throw_proficient").text("●");
-  } else {
-    $("#dex_throw_proficient").text("○");
-  }
-  $("#dex_throw").text((get_ability_mod(character.ability_scores.dex) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.dex));
-
-  if (character.saving_throw_proficiencies.includes("Constitution")) {
-    $("#con_throw_proficient").text("●");
-  } else {
-    $("#con_throw_proficient").text("○");
-  }
-  $("#con_throw").text((get_ability_mod(character.ability_scores.con) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.con));
-
-  if (character.saving_throw_proficiencies.includes("Intelligence")) {
-    $("#int_throw_proficient").text("●");
-  } else {
-    $("#int_throw_proficient").text("○");
-  }
-  $("#int_throw").text((get_ability_mod(character.ability_scores.int) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.int));
-
-  if (character.saving_throw_proficiencies.includes("Wisdom")) {
-    $("#wis_throw_proficient").text("●");
-  } else {
-    $("#wis_throw_proficient").text("○");
-  }
-  $("#wis_throw").text((get_ability_mod(character.ability_scores.wis) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.wis));
-
-  if (character.saving_throw_proficiencies.includes("Charisma")) {
-    $("#cha_throw_proficient").text("●");
-  } else {
-    $("#cha_throw_proficient").text("○");
-  }
-  $("#cha_throw").text((get_ability_mod(character.ability_scores.cha) > 0 ? "+" : "") + get_ability_mod(character.ability_scores.cha));
 
   // extra saving throws
   // make copy of saving throws without the base ones
-  var saving_throw_copy = character.saving_throw_proficiencies.slice().filter(function(entry) {
-    if (entry !== "Strength" && 
-        entry !== "Dexterity" && 
-        entry !== "Constitution" && 
-        entry !== "Intelligence" && 
-        entry !== "Wisdom" && 
-        entry !== "Charisma") {
-      return entry;
-    }
-  });
+  var saving_throw_copy = character.saving_throw_proficiencies.slice().filter(entry => !ability_long.includes(entry));
   for (var i in saving_throw_copy) {
     $("#saving_throws tr:last").after("<tr><td></td><td class=\"throw_label\">● " + saving_throw_copy[i] + "</td></tr>");
   }
@@ -981,25 +628,15 @@ function fill_page() {
     $("#languages tr:last").after("<tr><td class=\"language_label\">● " + character.languages[i] + "</td></tr>");
   }
 
-  // add other proficiencies
-  // armor proficiencies
-  for (var i in character.armor_proficiencies) {
-    $("#armor_proficiencies tr:last").after("<tr><td>" + character.armor_proficiencies[i] + "</td></tr>");
-  }
-
-  // weapon proficiencies
-  for (var i in character.weapon_proficiencies) {
-    $("#weapon_proficiencies tr:last").after("<tr><td>" + character.weapon_proficiencies[i] + "</td></tr>");
-  }
-
-  // tool proficiencies
-  for (var i in character.tool_proficiencies) {
-    $("#tool_proficiencies tr:last").after("<tr><td>" + character.tool_proficiencies[i] + "</td></tr>");
-  }
-
-  // add equipment
-  for (var i in character.equipment) {
-    $("#equipment tr:last").after("<tr><td>" + character.equipment[i] + "</td></tr>");
+  // add other things
+  var things = ["armor_proficiencies",
+                "weapon_proficiencies",
+                "tool_proficiencies",
+                "equipment"];
+  for (var i in things) {
+    for (var j in character[things[i]]) {
+      $("#" + things[i] + " tr:last").after("<tr><td>" + character[things[i]][j] + "</td></tr>");
+    }
   }
 
   // add spells
@@ -1010,9 +647,8 @@ function fill_page() {
     for (var i in character.spells.cantrips) {
       $("#cantrips tr:last").after("<tr><td>" + character.spells.cantrips[i] + "</td></tr>");
     }
-  
-      for (var i in character.spells.first_level) {
-        $("#first_level tr:last").after("<tr><td>" + character.spells.first_level[i] + "</td></tr>");
+    for (var i in character.spells.first_level) {
+      $("#first_level tr:last").after("<tr><td>" + character.spells.first_level[i] + "</td></tr>");
     }
   }
 }
@@ -1022,7 +658,8 @@ $.when(character_promise,
        base_classes_promise, 
        backgrounds_promise, 
        weapon_categories_promise, 
-       spells_promise)
+       spells_promise,
+       skills_promise)
        .done(function() {
   // random ability scores
   character.ability_scores.str = roll_dice("4d6", true);
