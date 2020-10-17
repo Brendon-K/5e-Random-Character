@@ -3,7 +3,7 @@ Generates a random character for Dungeons &amp; Dragons 5th Edition
 
 https://brendon-k.github.io/5e-Random-Character/
 
-##TODO
+## TODO
 
 - [x] Make code prettier (could probably be way better, not sure what else to do though)
 - [ ] Neaten equipment. e.g. consolidate duplicates, maybe add some kind of order
