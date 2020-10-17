@@ -5,15 +5,11 @@ https://brendon-k.github.io/5e-Random-Character/
 
 ##TODO
 
-[x] Make code prettier (could probably be way better, not sure what else to do though)
-
-[ ] Neaten equipment. e.g. consolidate duplicates, maybe add some kind of order
-
-[ ] Add leveling up
-
-[ ] Add point buy option
-
-[ ] Make it Baldur's Gate 3 friendly
+-[x] Make code prettier (could probably be way better, not sure what else to do though)
+-[ ] Neaten equipment. e.g. consolidate duplicates, maybe add some kind of order
+-[ ] Add leveling up
+-[ ] Add point buy option
+-[ ] Make it Baldur's Gate 3 friendly
 
 
 ## NOTES FOR SPECIFIC RACES IF I ADD LEVELING UP
