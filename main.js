@@ -1,36 +1,36 @@
-var character = null;
-var races = null;
-var base_classes = null;
-var backgrounds = null;
-var spells = null;
-var skills = null;
+let character = null;
+let races = null;
+let base_classes = null;
+let backgrounds = null;
+let spells = null;
+let skills = null;
 
 // load all the json
-var character_promise = $.getJSON("character.json", function(data) {
+const character_promise = $.getJSON("character.json", function(data) {
   character = data;
 });
 
-var races_promise = $.getJSON("races.json", function(data) {
+const races_promise = $.getJSON("races.json", function(data) {
   races = data;
 });
 
-var base_classes_promise = $.getJSON("base_classes.json", function(data) {
+const base_classes_promise = $.getJSON("base_classes.json", function(data) {
   base_classes = data;
 });
 
-var backgrounds_promise = $.getJSON("backgrounds.json", function(data) {
+const backgrounds_promise = $.getJSON("backgrounds.json", function(data) {
   backgrounds = data;
 });
 
-var weapon_categories_promise = $.getJSON("weapon_categories.json", function(data) {
+const weapon_categories_promise = $.getJSON("weapon_categories.json", function(data) {
   weapon_categories = data;
 });
 
-var spells_promise = $.getJSON("spells.json", function(data) {
+const spells_promise = $.getJSON("spells.json", function(data) {
   spells = data;
 });
 
-var skills_promise = $.getJSON("skills.json", function(data) {
+const skills_promise = $.getJSON("skills.json", function(data) {
   skills = data;
 });
 
@@ -52,16 +52,15 @@ function random_range(min, max) {
  *          which would drop a 3, and return 12
  */
 function roll_dice(dice_string, drop_lowest=false) {
-  var split_notation = dice_string.split("d");
-  var num_rolls = split_notation[0];
-  var num_faces = split_notation[1];
+  const split_notation = dice_string.split("d");
+  const num_rolls = split_notation[0];
+  const num_faces = split_notation[1];
 
-  var roll;
-  var lowest = Number.MAX_SAFE_INTEGER;
-  var total = 0;
+  let lowest = Number.MAX_SAFE_INTEGER;
+  let total = 0;
 
-  for (var i = 0; i < num_rolls; ++i) {
-    var roll = random_range(1, num_faces);
+  for (let i = 0; i < num_rolls; ++i) {
+    const roll = random_range(1, num_faces);
     total += roll;
     if (drop_lowest) {
       if (lowest > roll) {
@@ -85,13 +84,13 @@ function get_ability_mod(ability_value) {
 // Source: https://stackoverflow.com/a/19270021
 /* Gets n items from an array without any duplicates */
 function get_items_in_array(arr, n) {
-  var result = new Array(n),
+  let result = new Array(n),
     len = arr.length,
     taken = new Array(len);
   if (n > len)
     throw new RangeError("get_items_in_array: more elements taken than available");
   while (n--) {
-    var x = Math.floor(Math.random() * len);
+    const x = Math.floor(Math.random() * len);
     result[n] = arr[x in taken ? taken[x] : x];
     taken[x] = --len in taken ? taken[len] : len;
   }
@@ -103,7 +102,7 @@ function get_items_in_array(arr, n) {
  *   that's not being stored in the character
  */
 function get_race_data(race_name) {
-  for (var i in races) {
+  for (let i in races) {
     if (races[i].name == race_name) {
         return races[i];
     }
@@ -117,16 +116,16 @@ function get_race_data(race_name) {
  * then "Shortsword" will be removed, as well as any other martial weapons.
 */
 function neaten_weapon_proficiencies() {
-  var temp_weapon_proficiencies = character.weapon_proficiencies.slice();
+  const temp_weapon_proficiencies = character.weapon_proficiencies.slice();
   if (temp_weapon_proficiencies.includes("Simple Weapons")) {
-    for (var i in temp_weapon_proficiencies) {
+    for (let i in temp_weapon_proficiencies) {
       if (weapon_categories.simple_weapons.includes(temp_weapon_proficiencies[i])) {
         character.weapon_proficiencies = character.weapon_proficiencies.filter(entry => entry !== temp_weapon_proficiencies[i]);
       }
     }
   }
   if (temp_weapon_proficiencies.includes("Martial Weapons")) {
-    for (var i in temp_weapon_proficiencies) {
+    for (let i in temp_weapon_proficiencies) {
       if (weapon_categories.martial_weapons.includes(temp_weapon_proficiencies[i])) {
         character.weapon_proficiencies = character.weapon_proficiencies.filter(entry => entry !== temp_weapon_proficiencies[i]);
       }
@@ -263,16 +262,16 @@ function neaten_weapon_proficiencies() {
 
 /* Applies a random race to the character */
 function random_race() {
-  var num_races = races.length;
+  const num_races = races.length;
 
-  var race = races[random_range(0, num_races)];
+  const race = races[random_range(0, num_races)];
   // apply name
   character.race = race.name;
 
   // Half-Elf gets two random ability scores +1
   if (race.name == "Half-Elf") {
-    var ability_idxs = get_items_in_array([0, 1, 2, 3, 4, 5], 2);
-    for (var i in ability_idxs) {
+    const ability_idxs = get_items_in_array([0, 1, 2, 3, 4, 5], 2);
+    for (let i in ability_idxs) {
       switch (ability_idxs[i]) {
         case 0:
           ++race.ability_scores.str;
@@ -313,26 +312,26 @@ function random_race() {
   if (race.trait !== null) {
     character.racial_trait = [];
     // push a random trait from each choice the race has
-    for (var i in race.trait) {
-      var num_traits = race.trait[i].length
+    for (let i in race.trait) {
+      const num_traits = race.trait[i].length
       character.racial_trait.push(race.trait[i][random_range(0, num_traits)]);
     }
   }
 
   // add various racial attributes
-  var things = ["armor_proficiencies", 
+  const things = ["armor_proficiencies", 
                 "weapon_proficiencies", 
                 "tool_proficiencies", 
                 "saving_throw_proficiencies", 
                 "skill_proficiencies", 
                 "languages"];
-  for (var i in things) {
+  for (let i in things) {
     if (race[things[i]] !== null) {
-      for (var j in race[things[i]]) {
+      for (let j in race[things[i]]) {
         if (typeof race[things[i]][j][0] == "number") {
           // choose number of items in list
-          var items = get_items_in_array(race[things[i]][j].slice(1), race[things[i]][j][0]);
-          for (var k in items) {
+          const items = get_items_in_array(race[things[i]][j].slice(1), race[things[i]][j][0]);
+          for (let k in items) {
             if (!character[things[i]].includes(items[k])) {
               character[things[i]].push(items[k])
             }
@@ -350,14 +349,14 @@ function random_race() {
 
 /* Applies a random base class to the character */
 function random_base_class() {
-  var num_classes = base_classes.length;
+  const num_classes = base_classes.length;
 
-  var base_class = base_classes[random_range(0, base_classes.length)];
+  const base_class = base_classes[random_range(0, base_classes.length)];
   // apply class name
   character.class.push(base_class.name);
 
   // add hit points
-  var new_hit_points = roll_dice(base_class.hit_die) + get_ability_mod(character.ability_scores.con);
+  let new_hit_points = roll_dice(base_class.hit_die) + get_ability_mod(character.ability_scores.con);
   // if character is a Hill Dwarf, they get an extra hit point per level
   if (character.race == "Hill Dwarf") {
     ++new_hit_points;
@@ -369,18 +368,18 @@ function random_base_class() {
   character.hit_points += new_hit_points;
 
   // apply various class attributes
-  var things = ["armor_proficiencies",
+  const things = ["armor_proficiencies",
                 "weapon_proficiencies",
                 "tool_proficiencies",
                 "saving_throw_proficiencies",
                 "skill_proficiencies"];
-  for (var i in things) {
+  for (let i in things) {
     if (base_class[things[i]] !== null) {
-      for (var j in base_class[things[i]]) {
+      for (let j in base_class[things[i]]) {
         if (typeof base_class[things[i]][j][0] == "number") {
           // choose number of items in list
-          var items = get_items_in_array(base_class[things[i]][j].slice(1), base_class[things[i]][j][0]);
-          for (var k in items) {
+          const items = get_items_in_array(base_class[things[i]][j].slice(1), base_class[things[i]][j][0]);
+          for (let k in items) {
             if (!character[things[i]].includes(items[k])) {
               character[things[i]].push(items[k])
             }
@@ -397,11 +396,11 @@ function random_base_class() {
 
   // sort out equipment
   if (base_class.equipment !== null) {
-    for (var i in base_class.equipment) {
+    for (let i in base_class.equipment) {
       if (typeof base_class.equipment[i][0] == "number") {
         // choose number of items in list
-        var items = get_items_in_array(base_class.equipment[i].slice(1), base_class.equipment[i][0]);
-        for (var j in items) {
+        const items = get_items_in_array(base_class.equipment[i].slice(1), base_class.equipment[i][0]);
+        for (let j in items) {
           character.equipment.push(items[j]);
         }
       } else {
@@ -414,23 +413,23 @@ function random_base_class() {
 
 /* Applies a random background to the character */
 function random_background() {
-  var num_backgrounds = backgrounds.length;
+  const num_backgrounds = backgrounds.length;
 
-  var background = backgrounds[random_range(0, backgrounds.length)];
+  const background = backgrounds[random_range(0, backgrounds.length)];
   // apply background name
   character.background = background.name;
 
   // apply various attributes
-  var things = ["skill_proficiencies",
+  const things = ["skill_proficiencies",
                 "tool_proficiencies",
                 "languages"];
-  for (var i in things) {
+  for (let i in things) {
     if (background[things[i]] !== null) {
-      for (var j in background[things[i]]) {
+      for (let j in background[things[i]]) {
         if (typeof background[things[i]][j][0] == "number") {
           // choose number of items in list
-          var items = get_items_in_array(background[things[i]][j].slice(1), background[things[i]][j][0]);
-          for (var k in items) {
+          const items = get_items_in_array(background[things[i]][j].slice(1), background[things[i]][j][0]);
+          for (let k in items) {
             if (!character[things[i]].includes(items[k])) {
               character[things[i]].push(items[k])
             }
@@ -447,11 +446,11 @@ function random_background() {
 
   // sort out equipment
   if (background.equipment !== null) {
-    for (var i in background.equipment) {
+    for (let i in background.equipment) {
       if (typeof background.equipment[i][0] == "number") {
         // choose number of items in list
-        var items = get_items_in_array(background.equipment[i].slice(1), background.equipment[i][0]);
-        for (var j in items) {
+        const items = get_items_in_array(background.equipment[i].slice(1), background.equipment[i][0]);
+        for (let j in items) {
           character.equipment.push(items[j]);
         }
       } else {
@@ -472,7 +471,7 @@ function random_spells() {
     switch (character.race) {
       case "High Elf":
         // High Elves get a Wizard cantrip
-        var new_spell = get_items_in_array(spells.wizard.cantrips, 1);
+        const new_spell = get_items_in_array(spells.wizard.cantrips, 1);
         character.spells.cantrips.push(new_spell);
         // remove the cantrip so it's not possible to get duplicates
         spells.wizard.cantrips = spells.wizard.cantrips.filter(entry => entry !== new_spell);
@@ -504,8 +503,8 @@ function random_spells() {
   }
 
   // now do class spells
-  var new_cantrips = [];
-  var new_first_level_spells = [];
+  let new_cantrips = [];
+  let new_first_level_spells = [];
 
   switch (character.class[0]) {
     case "Bard":
@@ -546,10 +545,10 @@ function random_spells() {
       break;
   }
   
-  for (var i in new_cantrips) {
+  for (let i in new_cantrips) {
     character.spells.cantrips.push(new_cantrips[i]);
   }
-  for (var i in new_first_level_spells) {
+  for (let i in new_first_level_spells) {
     character.spells.first_level.push(new_first_level_spells[i]);
   }
 }
@@ -557,7 +556,7 @@ function random_spells() {
 
 /* Adds the character information to the HTML */
 function fill_page() {
-  var race = get_race_data(character.race);
+  const race = get_race_data(character.race);
 
   // draw race
   $("#race").text(character.race);
@@ -574,20 +573,20 @@ function fill_page() {
   $("#age_value").text(character.age + " yrs");
   $("#weight_value").text(character.weight + " lbs");
   // convert to feet and inches
-  var feet = Math.floor(character.height / 12);
-  var inches = character.height % 12;
+  const feet = Math.floor(character.height / 12);
+  const inches = character.height % 12;
   $("#height_value").text(feet + "' " + inches + "\"");
 
   // draw ability scores
-  var ability_short = ["str", "dex", "con", "int", "wis", "cha"];
-  for (var i in ability_short) {
+  const ability_short = ["str", "dex", "con", "int", "wis", "cha"];
+  for (let i in ability_short) {
     $("#" + ability_short[i]).text(character.ability_scores[ability_short[i]]);
     $("#" + ability_short[i] + "_mod").text((get_ability_mod(character.ability_scores[ability_short[i]]) > 0 ? "+" : "") + get_ability_mod(character.ability_scores[ability_short[i]]));
     $("#" + ability_short[i] + "_detailed").text("(" + (character.ability_scores[ability_short[i]] - race.ability_scores[ability_short[i]]) + " + " + (race.ability_scores[ability_short[i]]) + ")");
   }
 
   // draw base class
-  for (var i in character.class) {
+  for (let i in character.class) {
     $("#class").text(character.class[i]);
   }
 
@@ -595,46 +594,46 @@ function fill_page() {
   $("#hp").text(character.hit_points);
 
   // draw skills
-  for (var i in skills) {
+  for (let i in skills) {
     if (character.skill_proficiencies.includes(i)) {
-      $("#" + skills[i]["lower"] + "_proficient").text("●");
+      $("#" + skills[i]["lower"] + "_proficient").html("&#9899");
     } else {
-      $("#" + skills[i]["lower"] + "_proficient").text("○");
+      $("#" + skills[i]["lower"] + "_proficient").html("&#9898");
     }
     $("#" + skills[i]["lower"]).text((get_ability_mod(character.ability_scores[skills[i]["ability"]]) > 0 ? "+" : "") + get_ability_mod(character.ability_scores[skills[i]["ability"]]));
   }
 
   // draw saving throws
   // main ability throws
-  var ability_long = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"];
-  for (var i in ability_long) {
+  const ability_long = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"];
+  for (let i in ability_long) {
       if (character.saving_throw_proficiencies.includes(ability_long[i])) {
-      $("#" + ability_short[i] + "_throw_proficient").text("●");
+      $("#" + ability_short[i] + "_throw_proficient").html("&#9899");
     } else {
-      $("#" + ability_short[i] + "_throw_proficient").text("○");
+      $("#" + ability_short[i] + "_throw_proficient").html("&#9898");
     }
     $("#" + ability_short[i] + "_throw").text((get_ability_mod(character.ability_scores[ability_short[i]]) > 0 ? "+" : "") + get_ability_mod(character.ability_scores[ability_short[i]]));
   }
 
   // extra saving throws
   // make copy of saving throws without the base ones
-  var saving_throw_copy = character.saving_throw_proficiencies.slice().filter(entry => !ability_long.includes(entry));
-  for (var i in saving_throw_copy) {
-    $("#saving_throws tr:last").after("<tr><td></td><td class=\"throw_label\">● " + saving_throw_copy[i] + "</td></tr>");
+  const saving_throw_copy = character.saving_throw_proficiencies.slice().filter(entry => !ability_long.includes(entry));
+  for (let i in saving_throw_copy) {
+    $("#saving_throws tr:last").after("<tr><td></td><td class=\"throw_label\"><span class=\"proficient\">&#9899</span> " + saving_throw_copy[i] + "</td></tr>");
   }
 
   // add languages
-  for (var i in character.languages) {
-    $("#languages tr:last").after("<tr><td class=\"language_label\">● " + character.languages[i] + "</td></tr>");
+  for (let i in character.languages) {
+    $("#languages tr:last").after("<tr><td class=\"language_label\"><span class=\"proficient\">&#9899</span> " + character.languages[i] + "</td></tr>");
   }
 
   // add other things
-  var things = ["armor_proficiencies",
+  const things = ["armor_proficiencies",
                 "weapon_proficiencies",
                 "tool_proficiencies",
                 "equipment"];
-  for (var i in things) {
-    for (var j in character[things[i]]) {
+  for (let i in things) {
+    for (let j in character[things[i]]) {
       $("#" + things[i] + " tr:last").after("<tr><td>" + character[things[i]][j] + "</td></tr>");
     }
   }
@@ -644,10 +643,10 @@ function fill_page() {
     // Hide spell table if the character has no spells
     $("#spells").hide();
   } else {
-    for (var i in character.spells.cantrips) {
+    for (let i in character.spells.cantrips) {
       $("#cantrips tr:last").after("<tr><td>" + character.spells.cantrips[i] + "</td></tr>");
     }
-    for (var i in character.spells.first_level) {
+    for (let i in character.spells.first_level) {
       $("#first_level tr:last").after("<tr><td>" + character.spells.first_level[i] + "</td></tr>");
     }
   }
