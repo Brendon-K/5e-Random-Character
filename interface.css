@@ -97,6 +97,10 @@ td {
   text-decoration: underline;
 }
 
+#racial_trait {
+  padding-left: 3em; 
+}
+
 #background {
   text-decoration: underline;
 }

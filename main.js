@@ -744,6 +744,11 @@ function fill_page() {
 
   // draw race
   $("#race").text(character.race);
+  // add additional information if the race has it (e.g. dragon type for Dragonborn)
+  if (character.racial_trait !== null) {
+    $("#race").after("<br /><span id=\"racial_trait\">" + 
+                     character.racial_trait + "</span>");
+  }
 
   // draw background
   $("#background").text(character.background);
