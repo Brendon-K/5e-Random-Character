@@ -12,7 +12,7 @@ https://brendon-k.github.io/5e-Random-Character/
 - [ ] Make it Baldur's Gate 3 friendly
 
 
-## NOTES FOR SPECIFIC RACES IF I ADD LEVELING UP
+### NOTES FOR SPECIFIC RACES IF I ADD LEVELING UP
 
 1. Dark Elf (Drow)
   * +Faerie Fire spell @level 3
