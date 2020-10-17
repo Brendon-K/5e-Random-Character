@@ -114,7 +114,9 @@ function get_race_data(race_name) {
 /* Removes "duplicates" in weapon proficiencies. 
  * For example, if already proficient in "Martial Weapons", and "Shortsword",
  * then "Shortsword" will be removed, as well as any other martial weapons.
-*/
+ *
+ * Also sorts.
+ */
 function neaten_weapon_proficiencies() {
   const temp_weapon_proficiencies = character.weapon_proficiencies.slice();
   if (temp_weapon_proficiencies.includes("Simple Weapons")) {
@@ -258,6 +260,46 @@ function neaten_weapon_proficiencies() {
   character.weapon_proficiencies.sort(function(a, b) {
     return get_value(a) - get_value(b);
   });
+}
+
+/* Assigns random ability scores using the point buy system
+ *   Instead of rolling dice, this uses a pool of points
+ *   that you spend to increase your ability scores
+ */
+function random_point_buy(points=27) {
+  let ability_short = ["str", "dex", "con", "int", "wis", "cha"];
+  const costs = new Map();
+  costs[8] = 1;
+  costs[9] = 1;
+  costs[10] = 1;
+  costs[11] = 1;
+  costs[12] = 1;
+  costs[13] = 2;
+  costs[14] = 2;
+
+  // all stats start at 8
+  for (let i in ability_short) {
+    character.ability_scores[ability_short[i]] = 8;
+  }
+
+  while (points > 0) {
+    // choose a random ability to 
+    const ability = get_items_in_array(ability_short, 1);
+    // check if there are enough points to raise the ability
+    if (points >= costs[character.ability_scores[ability[0]]] && character.ability_scores[ability[0]] < 15) {
+      // subtract cost
+      points -= costs[character.ability_scores[ability[0]]];
+      // increment ability
+      ++character.ability_scores[ability[0]];
+    } else {
+      // if not enough points, then remove from list so it doesn't come up again
+      ability_short = ability_short.filter(entry => entry !== ability[0]);
+      // if ability_short is empty, it's impossible to continue
+      if (ability_short.length == 0) {
+        break;
+      }
+    }
+  }
 }
 
 /* Applies a random race to the character */
