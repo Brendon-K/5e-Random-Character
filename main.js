@@ -350,23 +350,14 @@ function random_race() {
   character.height = race.base_height + roll_dice(race.height_modifier);
   character.weight = race.base_weight * roll_dice(race.weight_modifier);
 
-  // apply racial trait(s), if any exist
-  if (race.trait !== null) {
-    character.racial_trait = [];
-    // push a random trait from each choice the race has
-    for (let i in race.trait) {
-      const num_traits = race.trait[i].length
-      character.racial_trait.push(race.trait[i][random_range(0, num_traits)]);
-    }
-  }
-
   // add various racial attributes
-  const things = ["armor_proficiencies", 
-                "weapon_proficiencies", 
-                "tool_proficiencies", 
-                "saving_throw_proficiencies", 
-                "skill_proficiencies", 
-                "languages"];
+  const things = ["racial_trait",
+                  "armor_proficiencies", 
+                  "weapon_proficiencies", 
+                  "tool_proficiencies", 
+                  "saving_throw_proficiencies", 
+                  "skill_proficiencies", 
+                  "languages"];
   for (let i in things) {
     if (race[things[i]] !== null) {
       for (let j in race[things[i]]) {
