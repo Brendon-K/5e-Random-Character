@@ -347,8 +347,9 @@ function random_race() {
 
   // apply physical attributes
   character.age = random_range(race.age[0], race.age[1]);
-  character.height = race.base_height + roll_dice(race.height_modifier);
-  character.weight = race.base_weight * roll_dice(race.weight_modifier);
+  let height_roll = roll_dice(race.height_modifier);
+  character.height = race.base_height + height_roll;
+  character.weight = race.base_weight + (height_roll * roll_dice(race.weight_modifier));
 
   // add various racial attributes
   const things = ["racial_trait",
