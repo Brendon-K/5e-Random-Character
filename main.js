@@ -505,7 +505,7 @@ function random_spells() {
       case "High Elf":
         // High Elves get a Wizard cantrip
         const new_spell = get_items_in_array(spells.wizard.cantrips, 1);
-        character.spells.cantrips.push(new_spell);
+        character.spells.cantrips.push(new_spell[0]);
         // remove the cantrip so it's not possible to get duplicates
         spells.wizard.cantrips = spells.wizard.cantrips.filter(entry => entry !== new_spell);
         break;
@@ -693,6 +693,9 @@ $.when(character_promise,
        spells_promise,
        skills_promise)
        .done(function() {
+
+  character.level = 1;
+
   // random ability scores
   character.ability_scores.str = roll_dice("4d6", true);
   character.ability_scores.dex = roll_dice("4d6", true);
