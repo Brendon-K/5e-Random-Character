@@ -594,7 +594,7 @@ function fill_page() {
   // draw race
   $("#race").text(character.race);
   // add additional information if the race has it (e.g. dragon type for Dragonborn)
-  if (character.racial_trait !== null) {
+  if (character.racial_trait.length > 0) {
     $("#race").after("<br /><span id=\"racial_trait\">" + 
                      character.racial_trait + "</span>");
   }
@@ -682,6 +682,22 @@ function fill_page() {
     for (let i in character.spells.first_level) {
       $("#first_level tr:last").after("<tr><td>" + character.spells.first_level[i] + "</td></tr>");
     }
+  }
+
+  // add money
+  // gp = 100
+  // sp = 10
+  // cp = 1
+  const gp = Math.floor(character.money / 100);
+  const sp = Math.floor((character.money - gp * 100) / 10);
+  const cp = Math.floor(character.money - (character.money - gp * 100) - (character.money - sp * 10));
+  if (gp > 0) {
+    $("#gp").text(gp + " gp");
+  }
+  if (sp > 0) {
+    $("#sp").text(sp + " sp");
+  }  if (cp > 0) {
+    $("#cp").text(cp + " cp");
   }
 }
 
