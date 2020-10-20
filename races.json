@@ -22,7 +22,7 @@
         "height_modifier": "2d8",
         "base_weight": 175,
         "weight_modifier": "2d6",
-        "trait": [
+        "racial_trait": [
             [1, "Black Dragon", "Blue Dragon", "Brass Dragon", "Bronze Dragon", "Copper Dragon", "Gold Dragon", "Green Dragon", "Red Dragon", "Silver Dragon", "White Dragon"]
         ]
     },
@@ -59,7 +59,7 @@
         "height_modifier": "2d4",
         "base_weight": 115,
         "weight_modifier": "2d6",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Mountain Dwarf",
@@ -97,7 +97,7 @@
         "height_modifier": "2d4",
         "base_weight": 130,
         "weight_modifier": "2d6",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "High Elf",
@@ -133,7 +133,7 @@
         "height_modifier": "2d10",
         "base_weight": 90,
         "weight_modifier": "1d4",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Wood Elf",
@@ -168,7 +168,7 @@
         "height_modifier": "2d10",
         "base_weight": 100,
         "weight_modifier": "1d4",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Dark Elf (Drow)",
@@ -202,7 +202,7 @@
         "height_modifier": "2d6",
         "base_weight": 75,
         "weight_modifier": "1d6",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Forest Gnome",
@@ -232,7 +232,7 @@
         "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Rock Gnome",
@@ -264,7 +264,7 @@
         "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Half-Elf",
@@ -295,7 +295,7 @@
         "height_modifier": "2d8",
         "base_weight": 110,
         "weight_modifier": "2d4",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Half-Orc",
@@ -323,7 +323,7 @@
         "height_modifier": "2d10",
         "base_weight": 140,
         "weight_modifier": "2d6",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Lightfoot Halfling",
@@ -351,7 +351,7 @@
         "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Stout Halfling",
@@ -380,7 +380,7 @@
         "height_modifier": "2d4",
         "base_weight": 35,
         "weight_modifier": "1d1",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Human",
@@ -406,7 +406,7 @@
         "height_modifier": "2d10",
         "base_weight": 110,
         "weight_modifier": "2d4",
-        "trait": null
+        "racial_trait": null
     },
     {
         "name": "Tiefling",
@@ -432,6 +432,6 @@
         "height_modifier": "2d8",
         "base_weight": 110,
         "weight_modifier": "2d4",
-        "trait": null
+        "racial_trait": null
     }
 ]
